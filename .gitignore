@@ -1,0 +1,5 @@
+wordpress-theme/bower_components/*
+wordpress-theme/node_modules/*
+wordpress-theme/theme/*
+wordpress-theme/img/*
+wordpress-theme/*.map

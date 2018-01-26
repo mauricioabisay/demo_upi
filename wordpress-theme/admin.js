@@ -1,0 +1,2 @@
+jQuery(document).ready(function(){jQuery(".wc-tabs li").css("display","block","important"),jQuery(".wc-tabs li").removeClass("active"),jQuery(".wc-tabs li").on("click",function(){var t=jQuery(this).find("a").attr("href").replace("#","");jQuery(".panel.woocommerce_options_panel").each(function(){this.id!=t?this.style.setProperty("display","none","important"):this.style.setProperty("display","block","important")})})});
+//# sourceMappingURL=admin.js.map

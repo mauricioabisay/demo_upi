@@ -1,0 +1,33 @@
+.post {
+	background: white;
+	margin: -10em 3em 2em;
+	overflow-y: auto;
+	overflow-x: hidden;
+	.header {
+		h2, .share {
+			padding: 1em 0;
+		}
+		h2 {
+			font-size: 1.1em;
+			background: black;
+			color: white;
+			margin: 0;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		.share {
+		}
+	}
+	.date {
+		h3 {
+			text-align: center;
+			font-size: 1.1em;
+		}
+	}
+	.info {
+		h1 {
+		}
+	}
+	.content {
+	}
+}

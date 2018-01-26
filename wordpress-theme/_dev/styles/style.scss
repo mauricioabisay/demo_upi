@@ -1,0 +1,29 @@
+/*
+Theme Name: NWM Wordpress development template
+Theme URI: http://mauricioabisay.es/nwm_dev/
+Author: mauricio@nwm.mx
+Description: NWM project to accelerate Wordpress theme and plugin development
+Version: 0.1
+License: GNU General Public License v2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:
+Text Domain: nwm-dev-wp
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+$primary: #4d657f;
+$secondary: #37396b;
+$strong: #cddbd9;
+
+$gastro: #ee9a5d;
+$golf: red;/*#115b9b;*/
+$horse: #983620;
+
+$dark: #272742;
+$text: #fee0c7;
+
+@import 'animate';
+@import 'main_styles';
+@import 'modals';
+@import 'overrides';
+@import 'post_content';
