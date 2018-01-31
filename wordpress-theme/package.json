@@ -25,5 +25,8 @@
     "gulp-watch": "^4.3.11",
     "pug-php-filter": "0.0.1",
     "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "jquery-scrollify": "^1.0.19"
   }
 }

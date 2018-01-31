@@ -74,6 +74,7 @@
 
 	var jsPublicFunction = function() {
 		gulp.src([
+				'./bower_components/Scrollify/jquery.scrollify.js',
 				'./_dev/scripts/public/**/*.js',
 			])
 			.pipe(plumber(errorHandler))

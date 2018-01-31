@@ -99,5 +99,5 @@ function deg2rad(deg) {
 }
 
 jQuery(document).ready(function () {
-  jQuery('.mv-carousel').slick({dots: true});
+  jQuery.scrollify({section: '.mv-scrollify'});
 });
