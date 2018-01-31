@@ -2640,7 +2640,8 @@ nav.navbar {
     height: 30vh;
     width: auto;
     min-width: 100%;
-    background: #37396b; }
+    background: #37396b;
+    margin-bottom: 1em; }
 
 .mv-section .gallery .side, .mv-section .gallery .center {
   padding: 0; }
@@ -2688,11 +2689,13 @@ nav.navbar {
 
 .mv-section.mv-membership {
   background: #cddbd9; }
-  .mv-section.mv-membership .title h2 {
-    width: 100%;
-    text-align: center; }
-    .mv-section.mv-membership .title h2:after {
-      border: none; }
+  .mv-section.mv-membership .title {
+    margin-top: 2em; }
+    .mv-section.mv-membership .title h2 {
+      width: 100%;
+      text-align: center; }
+      .mv-section.mv-membership .title h2:after {
+        border: none; }
   .mv-section.mv-membership .mv-packet .image-wrapper {
     text-align: center;
     vertical-align: center; }

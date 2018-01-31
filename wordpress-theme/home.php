@@ -71,7 +71,7 @@
     <div class="col-md-6 col-lg">
       <div class="image"></div>
     </div>
-    <div class="col-sm-12 d-md-none col-lg">
+    <div class="col-sm-12 d-block d-md-none d-lg-block col-lg">
       <div class="image"></div>
     </div>
   </div>
@@ -230,19 +230,19 @@
       <h3>Logros</h3>
     </div>
     <div class="row gallery">
-      <div class="col">
+      <div class="col-md-6 col-lg">
         <div class="image"></div>
       </div>
-      <div class="col">
+      <div class="col-md-6 col-lg">
         <div class="image"></div>
       </div>
-      <div class="col">
+      <div class="col-md-6 col-lg">
         <div class="image"></div>
       </div>
-      <div class="col">
+      <div class="col-md-6 col-lg">
         <div class="image"></div>
       </div>
-      <div class="col">
+      <div class="col-sm-12 d-block d-md-none d-lg-block col-lg">
         <div class="image"></div>
       </div>
     </div>

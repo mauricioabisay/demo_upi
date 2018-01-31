@@ -278,6 +278,7 @@ nav.navbar {
                 width: auto;
                 min-width: 100%;
                 background: $secondary;
+                margin-bottom: 1em;
             }
         }
     }
@@ -345,6 +346,7 @@ nav.navbar {
 .mv-section.mv-membership {
     background: $strong;
     .title {
+        margin-top: 2em;
         h2 {
             width: 100%;
             text-align: center;
