@@ -19,13 +19,13 @@
     ?>
     <title><?php echo $title;?></title>
     <meta name="description" content="<?php echo $description;?>" />
-    <meta name="keywords"  content="<?php //pll_e('keywords');?>" />
+    <meta name="keywords"  content="<?php echo get_option('seo_keywords', '');?>" />
 
     <?php if(is_home()) : ?>
       <meta property="og:url" content="<?php echo $link;?>">
       <meta property="og:image" content="<?php echo $img_url;?>">
-      <meta property="og:title" content="<?php //pll_e('home-title-fb-ln');?>">
-      <meta property="og:description" content="<?php //pll_e('home-desc-fb-ln');?>">
+      <meta property="og:title" content="<?php echo get_option('seo_description', '');?>">
+      <meta property="og:description" content="<?php echo get_option('seo_description', '');?>">
 
       <meta name="twitter:card" content="summary">
       <meta name="twitter:title" content="<?php //pll_e('home-title-tw');?>">
@@ -84,13 +84,13 @@
             <a class="nav-link" href="#contacto">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><div class="fb"></div></a>
+            <a class="nav-link" target="_blank" href="<?php echo get_option('fb');?>"><div class="fb"></div></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><div class="tw"></div></a>
+            <a class="nav-link" target="_blank" href="<?php echo get_option('tw');?>"><div class="tw"></div></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><div class="itg"></div></a>
+            <a class="nav-link" target="_blank" href="<?php echo get_option('itg');?>"><div class="itg"></div></a>
           </li>
 
         </ul>

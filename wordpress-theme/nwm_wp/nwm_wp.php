@@ -74,6 +74,7 @@ abstract class Theme {
 	public $styles_admin = array();
 	public $public_ajax = array();
 	public $admin_ajax = array();
+	public $theme_menu = array();
 	/**
 	* NWM Theme Constructor
 	* - Cleans up wordpress by disabling default settings
@@ -88,6 +89,9 @@ abstract class Theme {
 		add_action('init', array($this, 'hookScripts'));
 		add_action( 'dbx_post_sidebar', array($this, 'fixedPostSaveButton'), 10, 1 );
 		add_theme_support('post-thumbnails');
+
+		add_action('admin_menu', array($this, 'themeMenu'));
+
 		if(is_admin()) {
 			$this->adminFilters();
 			$this->adminActions();
@@ -240,6 +244,38 @@ abstract class Theme {
 	function fixedPostSaveButton( $post ) {
 	    echo '<button id="nwm-submit" class="button button-primary button-large">Update</button>';
 	    return;
+	}
+
+	function themeMenu() {
+		add_menu_page(
+			'Ajustes Sitio',
+			'Ajustes Sitio',
+			'manage_options',//For more info check https://codex.wordpress.org/Roles_and_Capabilities
+			sanitize_key('nwm-ajustes'),
+			array($this, 'themeMenuTemplate'),
+			'dashicons-admin-generic',//Icon check https://developer.wordpress.org/resource/dashicons/#googleplus
+			null//Position in the menu order
+		);
+		/*add_submenu_page(
+			'nwm-ajustes',
+			'Sub Sitio',//Title added to head
+			'Sub Sitio',//Title added to menu
+			'manage_options',
+			sanitize_key('nwm-ajustes-sub'),
+			array($this, 'themeMenuTemplate')
+		);*/
+	}
+
+	function themeMenuTemplate() {
+		if (!current_user_can('manage_options')) {
+		    wp_die('You do not have sufficient permissions to access this page.');
+		}
+		if ( (isset($_POST)) && (sizeof($_POST)>0) ) {
+			foreach ($_POST as $key => $option) {
+				update_option( $key, $option, true );
+			}
+		}
+		include 'templates/theme_menu.php';
 	}
 
 }
@@ -469,7 +505,7 @@ abstract class SimplePost {
 	    			}
 	    			break;
 	    		}
-	    		default: {		
+	    		default: {
 	    			if ( isset($_POST[$field->id]) ) {
 	    				if ( get_post_meta( $post->ID, $field->id, FALSE ) ) {
 	    				    update_post_meta( $post->ID, $field->id, $_POST[$field->id] );
@@ -528,7 +564,7 @@ abstract class SimplePost {
 				'n'
 			);
 		}
-		
+
 		switch ($field->type) {
 			case 'text':{
 				include 'templates/input_type_text.php';
@@ -559,7 +595,7 @@ abstract class SimplePost {
 					if( is_array($field->options) && array_key_exists('query_args', $field->options) ) {
 						$query_posts = get_posts($field->options['query_args']);
 					} else {
-						$query_posts = get_posts(array('post_type' => $field->options));	
+						$query_posts = get_posts(array('post_type' => $field->options));
 					}
 					wp_reset_query();
 					if( sizeof($query_posts) > 0 ) {
@@ -654,7 +690,7 @@ abstract class SimplePost {
 				include 'templates/input_type_checkbox.php';
 				break;
 			}
-			
+
 			case 'map': {
 				include 'templates/map_marker.php';
 			}

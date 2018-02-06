@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="mv-scrollify">
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div id="carousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="wrapper"></div>
@@ -15,11 +15,11 @@
         <img class="d-block" src="<?php echo get_stylesheet_directory_uri();?>/img/golf_shoot.jpg" alt="Third slide">
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
@@ -375,9 +375,10 @@
     <div class="row desc">
       <div class="col-5">
         <h2>Contacto</h2>
-        <h3>lorem ipsum</h3>
-        <p>calle colonia</p>
-        <p>00.00.00.00.00</p>
+        <h3><?php echo get_option('contact_calle');?> <?php echo get_option('contact_colonia');?></h3>
+        <p><?php echo get_option('contact_ciudad');?>, <?php echo get_option('contact_estado');?></p>
+        <p>C.P. <?php echo get_option('contact_cp');?></p>
+        <p><?php echo get_option('contact_phone');?></p>
         <p>
           <span class="itg"></span>
           <span class="fb"></span>
