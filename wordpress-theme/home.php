@@ -32,14 +32,17 @@
 
 <div class="mv-scrollify">
   <div class="row mv-row-center">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <div class="col-xs-2 col-sm-2 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"></div>
+    <div class="col">
+      <p style="margin: 2em auto;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
   </div>
   <div class="row">
       <ul class="nav mv-nav-secondary">
@@ -65,309 +68,246 @@
     <div class="col-md-6 col-lg">
       <div class="image"></div>
     </div>
-    <div class="col-md-6 col-lg">
+    <div class="col-md-6 col-lg d-block d-xs-none d-sm-none d-md-block d-lg-block d-xl-block">
       <div class="image"></div>
     </div>
-    <div class="col-md-6 col-lg">
+    <div class="col-md-6 col-lg d-block d-xs-none d-sm-none d-md-block d-lg-block d-xl-block">
       <div class="image"></div>
     </div>
-    <div class="col-sm-12 d-block d-md-none d-lg-block col-lg">
+    <div class="col-sm-12 col-lg d-block d-xs-none d-sm-none d-md-none d-lg-block d-xl-block">
       <div class="image"></div>
     </div>
   </div>
 </div>
 
-<div id="golf" class="mv-section golf mv-scrollify">
+<?php
+  $categories = get_categories(array(
+    'hide_empty' => 0,
+    'orderby' => 'term_id',
+    'order' => 'ASC'
+  ));
+  foreach ($categories as $category) :
+    if ( $category->term_id!==1 && !stristr($category->slug, 'logros') && !stristr($category->slug, 'menu') ):
+?>
+<div id="<?php echo $category->slug;?>" class="mv-section mv-scrollify <?php echo $category->slug;?>">
   <div class="row title">
-    <h2>Golf</h2>
+    <div class="col-xs-2 col-sm-2 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"></div>
+    <div class="col">
+      <h2><?php echo $category->name;?></h2>
+    </div>
   </div>
   <div class="row desc">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p><?php echo $category->description;?></p>
   </div>
+
+  <?php
+    $menu = get_posts(array(
+      'orderby' => 'ID',
+      'order' => 'ASC',
+      'post_type' => 'post',
+      'post_status' => 'publish',
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'category',
+          'field' => 'slug',
+          'terms' => $category->slug
+        ),
+        array(
+          'taxonomy' => 'category',
+          'field' => 'slug',
+          'terms' => 'menu'
+        )
+      )
+    ));
+    if (sizeof($menu)>0) :
+  ?>
   <div class="row menu">
     <div class="col-2 logo">
       <div class="img"></div>
     </div>
+
     <div class="col-10 navigation">
       <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Horarios</a>
+        <?php
+          foreach ($menu as $key => $menu_item) :
+        ?>
+        <li class="nav-item col-md-12">
+          <a class="nav-link active" href="#"><span><?php echo $menu_item->post_title;?></span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Clinicas y Clases</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Tienda</a>
-        </li>
+        <?php
+          endforeach;
+        ?>
       </ul>
     </div>
-  </div>
 
-  <div class="row gallery">
-    <div class="col-md-5 col-lg-3 side">
-      <div class="image">
-        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/golf_bag.jpg">
-        <div class="info">
-            <div class="bg"></div>
-            <div class="content">
-              <h3>Lorem ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
-      </div>
-      <div class="image">
-        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/golf_course.jpg">
-        <div class="info">
-            <div class="bg"></div>
-            <div class="content">
-              <h3>Lorem ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-7 col-lg-6 center">
-      <div class="image">
-        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/golf_player.jpg">
-        <div class="info">
-            <div class="bg"></div>
-            <div class="content">
-              <h3>Lorem ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
-      </div>
-    </div>
-    <div class="d-block d-md-none d-lg-block col-sm-12 col-lg-3 side">
-      <div class="image">
-        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/golf_pot.jpg">
-        <div class="info">
-            <div class="bg"></div>
-            <div class="content">
-              <h3>Lorem ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
-      </div>
-      <div class="image">
-        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/golf_shoot.jpg">
-        <div class="info">
-            <div class="bg"></div>
-            <div class="content">
-              <h3>Lorem ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
-      </div>
+  </div>
+  <?php
+    endif;
+    wp_reset_postdata();
+  ?>
+
+  <div class="row" class="mv-section-content">
+    <div class="col">
+
     </div>
   </div>
 
-</div>
-
-
-<div id="equitacion" class="mv-section horse mv-scrollify">
-  <div class="row title">
-    <h2>Equitacion</h2>
-  </div>
-  <div class="row desc">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
-  <div class="row menu">
-    <div class="col-2 logo">
-      <div class="img"></div>
-    </div>
-    <div class="col-10 navigation">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Horarios</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Clases</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Competencias</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="achivements">
+  <?php
+    $achievements = get_posts(array(
+      'posts_per_page'   => 5,
+      'orderby'          => 'date',
+      'order'            => 'DESC',
+      'post_type'        => 'post',
+      'post_status'      => 'publish',
+      'tax_query'        => array(
+          array(
+            'taxonomy' => 'category',
+            'field' => 'slug',
+            'terms' => $category->slug
+          ),
+          array(
+            'taxonomy' => 'category',
+            'field' => 'slug',
+            'terms' => 'logros'
+          )
+      )
+    ));
+    if(sizeof($achievements)>0):
+  ?>
+  <div class="achievements">
     <div class="row title">
       <h3>Logros</h3>
     </div>
     <div class="row gallery">
-      <div class="col-md-6 col-lg">
-        <div class="image"></div>
-      </div>
-      <div class="col-md-6 col-lg">
-        <div class="image"></div>
-      </div>
-      <div class="col-md-6 col-lg">
-        <div class="image"></div>
-      </div>
-      <div class="col-md-6 col-lg">
-        <div class="image"></div>
-      </div>
-      <div class="col-sm-12 d-block d-md-none d-lg-block col-lg">
-        <div class="image"></div>
-      </div>
+      <?php
+        $class = 'col-md-6 col-lg';
+        foreach ($achievements as $key => $achievement) :
+      ?>
+        <div class="<?php echo $class;?>">
+          <div class="image" style="background-image: url(<?php echo get_the_post_thumbnail_url($achievement->ID);?>);background-repeat: no-repeat;background-position: center;background-size: cover;"></div>
+        </div>
+      <?php
+        if($key+1==sizeof($achievements)) {
+          $class = 'col-sm-12 d-block d-md-none d-lg-block col-lg';
+        } else {
+          $class = 'col-md-6 col-lg';
+        }
+        endforeach;
+        wp_reset_postdata();
+      ?>
     </div>
   </div>
-
+  <?php
+    endif;
+  ?>
+  <?php
+    $gallery = get_posts(array(
+      'posts_per_page'   => 5,
+      'orderby'          => 'date',
+      'order'            => 'DESC',
+      'post_type'        => 'post',
+      'post_status'      => 'publish',
+      'tax_query'        => array(
+          array(
+            'taxonomy' => 'category',
+            'field' => 'slug',
+            'terms' => $category->slug
+          ),
+          array(
+            'taxonomy' => 'category',
+            'field' => 'slug',
+            'terms' => 'logros',
+            'operator' => 'NOT IN'
+          ),
+          array(
+            'taxonomy' => 'category',
+            'field' => 'slug',
+            'terms' => 'menu',
+            'operator' => 'NOT IN'
+          )
+      )
+    ));
+    $gallery_len = sizeof($gallery);
+    if ($gallery_len>0) :
+  ?>
   <div class="row gallery">
+
     <div class="col-md-5 col-lg-3 side">
-      <div class="image">
-        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/horse_ground.jpg">
+      <?php for($i=0; $i<2; $i++) :?>
+      <div class="image" style="height: 40vh;width: 100%;background-image: url(<?php echo get_the_post_thumbnail_url($gallery[$i]->ID);?>);background-size: cover;background-repeat: no-repeat;background-position: center;">
         <div class="info">
             <div class="bg"></div>
             <div class="content">
-              <h3>Lorem ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <h3><?php echo $gallery[$i]->post_title;?></h3>
+              <p><?php echo $gallery[$i]->post_excerpt;?></p>
             </div>
         </div>
       </div>
-      <div class="image">
-        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/horse_polo.jpg">
-        <div class="info">
-            <div class="bg"></div>
-            <div class="content">
-              <h3>Lorem ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
-      </div>
+      <?php endfor;?>
     </div>
     <div class="col-md-7 col-lg-6 center">
-      <div class="image">
-        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/horse.jpg">
+      <?php for($i=$i; $i<3; $i++) :?>
+      <div class="image" style="height: 100%;width: 100%;background-image: url(<?php echo get_the_post_thumbnail_url($gallery[$i]->ID);?>);background-size: cover;background-repeat: no-repeat;background-position: center;">
         <div class="info">
             <div class="bg"></div>
             <div class="content">
-              <h3>Lorem ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <h3><?php echo $gallery[$i]->post_title;?></h3>
+              <p><?php echo $gallery[$i]->post_excerpt;?></p>
             </div>
         </div>
       </div>
+      <?php endfor;?>
     </div>
+
     <div class="d-block d-md-none d-lg-block col-sm-12 col-lg-3 side">
-      <div class="image">
-        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/horse_sadle.jpg">
+      <?php for($i=$i; $i<$gallery_len; $i++) :?>
+      <div class="image" style="height: 40vh;width: 100%;background-image: url(<?php echo get_the_post_thumbnail_url($gallery[$i]->ID);?>);background-size: cover;background-repeat: no-repeat;background-position: center;">
         <div class="info">
             <div class="bg"></div>
             <div class="content">
-              <h3>Lorem ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <h3><?php echo $gallery[$i]->post_title;?></h3>
+              <p><?php echo $gallery[$i]->post_excerpt;?></p>
             </div>
         </div>
       </div>
-      <div class="image">
-        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri();?>/img/horse_rider.jpg">
-        <div class="info">
-            <div class="bg"></div>
-            <div class="content">
-              <h3>Lorem ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
-      </div>
+      <?php endfor;?>
     </div>
   </div>
+  <?php
+    endif;
+  ?>
 </div>
-
+<?php
+  endif;
+  endforeach;
+  wp_reset_postdata();
+?>
 <div class="mv-scrollify">
   <div id="mv-membership" class="mv-section mv-membership">
     <div class="row title">
       <h2>Membresias</h2>
     </div>
     <div class="desc">
+      <?php
+        $memberships = new WP_Query(array(
+          'post_type' => 'mv-membresias'
+        ));
+        while($memberships->have_posts()):
+          $memberships->the_post();
+      ?>
       <div class="row mv-packet">
-        <div class="align-middle col-2">
-          <div class="image"></div>
-          <h3>Paquete 1</h3>
+        <div class="col-2">
+          <div class="image" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>);background-size: cover;background-position: center;background-repeat: no-repeat;"></div>
+          <h3><?php the_title();?></h3>
         </div>
-        <div class="info col-10">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="info col-10 post_content">
+          <?php the_content();?>
         </div>
       </div>
-
-      <div class="row mv-packet">
-        <div class="align-middle col-2">
-          <div class="image"></div>
-          <h3>Paquete 2</h3>
-        </div>
-        <div class="info col-10">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
+      <?php
+        endwhile;
+        wp_reset_postdata();
+      ?>
     </div>
   </div>
 
@@ -379,16 +319,15 @@
         <p><?php echo get_option('contact_ciudad');?>, <?php echo get_option('contact_estado');?></p>
         <p>C.P. <?php echo get_option('contact_cp');?></p>
         <p><?php echo get_option('contact_phone');?></p>
-        <p>
-          <span class="itg"></span>
-          <span class="fb"></span>
-          <span class="tw"></span>
-        </p>
+        <div class="social">
+          <a target="_blank" href="<?php echo get_option('fb');?>"><div class="fb"></div></a>
+          <a target="_blank" href="<?php echo get_option('tw');?>"><div class="tw"></div></a>
+          <a target="_blank" href="<?php echo get_option('itg');?>"><div class="itg"></div></a>
+        </div>
       </div>
-      <div class="col-7 map">
+      <div id="mv-map-contact" class="col-7 map">
       </div>
     </div>
   </div>
 </div>
-
 <?php get_footer(); ?>

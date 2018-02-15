@@ -328,6 +328,12 @@ abstract class SimplePost {
 	*/
 	public $show_in_rest = false;
 
+	/**
+	 * @var $taxonomy If the post requires a custom taxonomy, else category will be used
+	*/
+	public $taxonomy = false;
+
+	public $taxonomies = array();
 
 	/**
 	* @var array $supports List with the options available to this post type
@@ -383,20 +389,25 @@ abstract class SimplePost {
 	 * Regiters the post type to Wordpress.
 	 */
 	function init() {
-		register_post_type(
-			$this->key_name,
-			array(
-				'labels' => $this->labels,
-				'public' => $this->is_public,
-				'has_archive' => $this->has_archive,
-				'menu_position' => $this->menu_position,
-				'menu_icon' => $this->menu_icon,
-				'show_in_rest' => $this->show_in_rest,
-				'supports' => $this->supports,
-				'register_meta_box_cb' => array($this, 'meta_box')
-			)
+		if ($this->taxonomy) {
 
-		);
+		} else {
+			register_post_type(
+				$this->key_name,
+				array(
+					'labels' => $this->labels,
+					'public' => $this->is_public,
+					'has_archive' => $this->has_archive,
+					'menu_position' => $this->menu_position,
+					'menu_icon' => $this->menu_icon,
+					'show_in_rest' => $this->show_in_rest,
+					'supports' => $this->supports,
+					'register_meta_box_cb' => array($this, 'meta_box'),
+					'taxonomies' => array('category')
+				)
+
+			);
+		}
 	}
 
 	/**

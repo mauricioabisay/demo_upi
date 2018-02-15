@@ -3,20 +3,34 @@
     <footer class="mv-section">
       <div class="wrapper"></div>
         <div class="row map-site">
-          <ul>
-              <li>Terminos y Condiciones</li>
-              <li>Golf</li>
-              <li>Equitacion</li>
-          </ul>
+            <div class="col">
+                <ul>
+                    <li>Terminos y Condiciones</li>
+                    <li>Golf</li>
+                    <li>Equitacion</li>
+                </ul>
+            </div>
         </div>
         <div class="row sponsors">
-            <h3>patrocinadores</h3>
-            <div class="gallery">
-                <div class="sponsor"></div>
-                <div class="sponsor"></div>
-                <div class="sponsor"></div>
-                <div class="sponsor"></div>
-                <div class="sponsor"></div>
+            <div class="col">
+                <h3>patrocinadores</h3>
+            </div>
+        </div>
+        <div class="row logos">
+            <div class="gallery col">
+                <?php
+                    $sponsors = new WP_Query(array(
+                        'post_type' => 'mv-sponsor'
+                    ));
+                    while($sponsors->have_posts()):
+                        $sponsors->the_post();
+                        $link = get_post_meta(get_the_ID(), 'mv-sponsor-link', true);
+                ?>
+                <a href="<?php echo $link;?>"><div class="sponsor" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>);background-size: cover;background-position: center;background-repeat: no-repeat;"></div></a>
+                <?php
+                    endwhile;
+                    wp_reset_postdata();
+                ?>
             </div>
         </div>
     </footer>
@@ -35,6 +49,30 @@
             }
         );
     });
+    <?php if(is_home()): ?>
+    jQuery(document).ready(function () {
+      jQuery.scrollify({section: '.mv-scrollify'});
+      var currentLat = <?php echo get_option('contact_lat');?>;
+      var currentLng = <?php echo get_option('contact_lng');?>;
+      currentMarker = L.marker([currentLat, currentLng]);
+
+      map = new L.Map('mv-map-contact');
+      var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+      var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+      var osm = new L.TileLayer(osmUrl, {minZoom: 10, maxZoom: 18, attribution: osmAttrib});
+
+      map.setView(new L.LatLng(currentLat, currentLng), 13);
+      map.addLayer(osm);
+      map.addLayer(locationsLayer);
+      var currentPopup = L.popup({
+        autoClose: false,
+        closeOnClick: false,
+        className: 'current-popup'
+      }).setContent("Tú estás aquí");
+
+      currentMarker.addTo(map);//.bindPopup(currentPopup).openPopup();
+    });
+    <?php endif;?>
 </script>
 </body>
 </html>

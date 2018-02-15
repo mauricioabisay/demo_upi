@@ -54,47 +54,21 @@
       $current_page = '';
     }
   ?>
-  <nav class="navbar navbar-dark fixed-top navbar-expand-lg navbar-expand-md">
-    <a class="navbar-brand" href="#">
-      <img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg" width="40" height="40" alt="">
-    </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#golf">Golf</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#equitacion">Equitacion</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">...</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav mr-3">
-          <li class="nav-item">
-            <a class="nav-link" href="#mv-membership">Membresias</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contacto">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" target="_blank" href="<?php echo get_option('fb');?>"><div class="fb"></div></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" target="_blank" href="<?php echo get_option('tw');?>"><div class="tw"></div></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" target="_blank" href="<?php echo get_option('itg');?>"><div class="itg"></div></a>
-          </li>
 
-        </ul>
-      </div>
-
+  <nav id="main-menu" class="side">
+    <a href="javascript:void(0)" class="side-close">&times;</a>
+    <div class="links">
+      <a href="#">Inicio</a>
+      <a href="#golf">Golf</a>
+      <a href="#equitacion">Equitación</a>
+      <a href="#mv-membership">Membresias</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div class="social">
+      <a target="_blank" href="<?php echo get_option('fb');?>"><div class="fb"></div></a>
+      <a target="_blank" href="<?php echo get_option('tw');?>"><div class="tw"></div></a>
+      <a target="_blank" href="<?php echo get_option('itg');?>"><div class="itg"></div></a>
+    </div>
   </nav>
+  <div class="side-open"><img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg" width="65" height="65" alt=""></div>
   <div id="fullpage" class="container">

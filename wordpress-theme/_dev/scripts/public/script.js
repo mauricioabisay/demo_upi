@@ -2,6 +2,14 @@ var map;
 var currentMarker;
 var locationsLayer = new L.layerGroup();
 window.onload = function() {
+  jQuery('.side-open').on('click', function() {
+    jQuery('#main-menu').addClass('active');
+    jQuery('.side-open').css('display', 'none');
+  });
+  jQuery('.side-close').on('click', function() {
+    jQuery('.side-open').css('display', 'block');
+    jQuery('#main-menu').removeClass('active');
+  });
   /*
   if (navigator.geolocation) {
     var geo_options = {
@@ -97,7 +105,3 @@ function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
 function deg2rad(deg) {
   return deg * (Math.PI/180);
 }
-
-jQuery(document).ready(function () {
-  jQuery.scrollify({section: '.mv-scrollify'});
-});

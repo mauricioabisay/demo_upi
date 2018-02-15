@@ -10,30 +10,6 @@
     }
 }
 
-
-nav.navbar {
-    padding-top: 0;
-    padding-left: 0;
-    .navbar-brand {
-        background: $dark;
-        padding: 1em;
-    }
-    .fb, .tw, .itg {
-        width: 1.5em;
-        height: 1.5em;
-    }
-    .fb {
-        background: url(img/fb.svg);
-    }
-    .tw {
-        background: url(img/tw.svg);
-    }
-    .itg {
-        background: url(img/itg.svg);
-    }
-}
-
-
 #fullpage {
     margin: 0 auto;
     padding-bottom: 1em;
@@ -56,8 +32,6 @@ nav.navbar {
 .underLine:hover:before {
     border-bottom: 2px solid #fff;
 }
-
-
 
 .carousel {
     .carousel-inner {
@@ -118,7 +92,7 @@ nav.navbar {
     padding: .75em;
 }
 
-.nav {
+.nav.mv-nav-secondary {
     .nav-item {
         text-transform: uppercase;
         font-weight: bolder;
@@ -172,7 +146,7 @@ nav.navbar {
         }
     }
 }
-.mv-section.horse {
+.mv-section.equitacion {
     border-left: 10px solid $horse;
     .underLine:hover:before {
         border-bottom: 2px solid $horse;
@@ -192,7 +166,7 @@ nav.navbar {
         }
     }
 }
-.mv-section.gastro {
+.mv-section.gastronomia {
     border-left: 10px solid $gastro;
     .underLine:hover:before {
         border-bottom: 2px solid $gastro;
@@ -248,6 +222,9 @@ nav.navbar {
         .logo {
             text-align: center;
             .img {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
                 display: inline-block;
                 background: url(img/logo.svg);
                 width: 5em;
@@ -257,9 +234,14 @@ nav.navbar {
 
         .navigation {
             margin: 0 auto;
+            .nav {
+                .nav-item {
+                    @extend .mv-underline;
+                }
+            }
         }
     }
-    .achivements {
+    .achievements {
         margin: 5em auto;
         padding: 0 1em;
         .title {
@@ -273,6 +255,7 @@ nav.navbar {
             }
         }
         .gallery {
+            text-align: center;
             .image {
                 height: 30vh;
                 width: auto;
@@ -309,8 +292,13 @@ nav.navbar {
             position: relative;
             overflow: hidden;
             cursor: pointer;
+            img.img-fluid {
+                width: 100%;
+                height: auto;
+            }
             .info {
                 height: 100%;
+                width: 100%;
                 position: absolute;
                 top: 100%;
                 display: none;
@@ -356,10 +344,7 @@ nav.navbar {
         }
     }
     .mv-packet {
-        .image-wrapper {
-            text-align: center;
-            vertical-align: center;
-        }
+        margin: 2em auto;
         .image {
             background: $primary;
             border-radius: 100%;
@@ -402,6 +387,26 @@ nav.navbar {
             text-transform: uppercase;
             letter-spacing: .2em;
             font-weight: bold !important;
+        }
+        .social {
+            margin: 2em auto;
+        }
+        .social a {
+            display: inline-block;
+            margin: 0em 1em 0em 0em;
+        }
+        .fb, .tw, .itg {
+            width: 1.5em;
+            height: 1.5em;
+        }
+        .fb {
+            background: url(img/fb.svg);
+        }
+        .tw {
+            background: url(img/tw.svg);
+        }
+        .itg {
+            background: url(img/itg.svg);
         }
     }
     .map {
@@ -452,52 +457,26 @@ footer {
             text-align: center;
             text-transform: uppercase;
         }
+    }
+    .logos {
         .gallery {
             margin: 1em auto;
+            text-align: center;
         }
         .sponsor {
-            height: 4em;
-            width: 4em;
+            height: 6vw;
+            width: 6vw;
             border-radius: 100%;
-            margin: 0 .5em;
+            margin: 0 2vw;
             background: $primary;
             display: inline-block;
         }
     }
 
+
     .map-site ul li,
     .sponsors h3 {
         font-size: .9em;
         letter-spacing: .1em;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .mv-row-center {
-        margin: 1em auto;
-    }
-    .mv-section {
-        .title, .desc, .menu {
-            margin: 1em auto;
-        }
-    }
-    .mv-section.mv-membership {
-
-        .mv-packet {
-            display: block;
-            .image {
-                background: red;
-                border-radius: 100%;
-                height: 8em;
-                width: 8em;
-                display: block;
-                margin-top: calc( 100% + 4em );
-            }
-            .info {
-                display: block;
-                width: calc( 100% - 8em );
-                padding: 0 0 1em 1em;
-            }
-        }
     }
 }

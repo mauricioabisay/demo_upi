@@ -9,7 +9,7 @@ $share_url = get_the_permalink();
     <div class="img-header" style="background: url(<?php echo the_post_thumbnail_url();?>);"></div>
     <div class="container">
       <h1 class="text-center"><?php the_title();?></h1>
-      <!-- <h3 class="text-center">OUR PHILOSOPHY, WORK AND LATEST NEWS.</h3> -->
+      <h3 class="text-center">OUR PHILOSOPHY, WORK AND LATEST NEWS.</h3>
       <div class="panel-group">
         <div class="panel ">
           <div class="panel-heading">By: <?php the_author();?></div>

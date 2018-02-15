@@ -1585,6 +1585,15 @@
   }
 }
 
+@keyframes underLineAuto {
+  from {
+    width: 5%;
+  }
+  to {
+    width: auto;
+  }
+}
+
 .underLine {
   display: inline-block;
   position: relative;

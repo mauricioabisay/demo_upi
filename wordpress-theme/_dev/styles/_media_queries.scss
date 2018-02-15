@@ -1,0 +1,40 @@
+@media screen and (max-width: 768px) {
+    nav.side.active {
+        width: 50%;
+    }
+    .mv-row-center {
+        margin: 1em auto;
+    }
+    .mv-section {
+        .title, .desc, .menu {
+            margin: 1em auto;
+        }
+    }
+    .mv-section.mv-membership {
+
+        .mv-packet {
+            display: block;
+            .image {
+                background: red;
+                border-radius: 100%;
+                height: 8em;
+                width: 8em;
+                display: block;
+                margin-top: calc( 100% + 4em );
+            }
+            .info {
+                display: block;
+                width: calc( 100% - 8em );
+                padding: 0 0 1em 1em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .mv-section {
+        .desc p {
+            margin: 1em;
+        }
+    }
+}
