@@ -16,5 +16,6 @@
     "tests"
   ],
   "devDependencies": {
+    "Scrollify": "^1.0.19"
   }
 }
