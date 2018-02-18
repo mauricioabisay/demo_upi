@@ -11,6 +11,8 @@ Text Domain: nwm-dev-wp
 
 This theme, like WordPress, is licensed under the GPL.
 */
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Yantramanav:700,900");
 /*#115b9b;*/
 /*!
  * animate.css -http://daneden.me/animate
@@ -2538,9 +2540,16 @@ nav.side.active {
   color: white;
   position: fixed;
   font-size: 1.5em;
-  padding: .5em;
+  margin: 0;
+  padding: 3px 5px;
   margin: 0em;
-  cursor: pointer; }
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  text-align: center; }
+  .side-open img {
+    margin: 0;
+    padding: 0; }
 
 .loc-sections .col-6 {
   height: 5em; }
@@ -2561,6 +2570,13 @@ nav.side.active {
   overflow-x: hidden; }
   #fullpage * {
     color: #fff; }
+
+.container * {
+  font-size: 97%;
+  font-family: 'Cormorant Garamond', serif; }
+
+.title, .title *, .map-site *, .sponsors * {
+  font-family: 'Yantramanav', sans-serif; }
 
 #mv-membership * {
   color: #37396b; }
@@ -2592,9 +2608,9 @@ nav.side.active {
   text-align: center; }
   .mv-scroll-hint span {
     display: block;
-    margin: -1em auto 0;
-    width: 8em;
-    height: 8em;
+    margin: -1vh auto 0;
+    width: 6em;
+    height: 6em;
     background-repeat: no-repeat !important;
     background-position: center !important; }
 
@@ -2618,6 +2634,8 @@ nav.side.active {
 .mv-image-feed {
   margin: 5em auto;
   padding: 0 1em; }
+  .mv-image-feed .mv-feed {
+    padding: 0em 5px; }
   .mv-image-feed .image {
     height: 30vh;
     width: auto;
@@ -2666,7 +2684,8 @@ nav.side.active {
   padding-top: 2em; }
   .mv-section .title h2 {
     text-transform: uppercase;
-    font-weight: bolder;
+    font-size: 2em;
+    font-weight: bold;
     letter-spacing: .5em; }
     .mv-section .title h2:after {
       content: '';
@@ -2674,6 +2693,9 @@ nav.side.active {
       width: 2em;
       display: block;
       margin-top: 1em; }
+
+.mv-section .desc {
+  font-size: 90%; }
 
 .mv-section .menu {
   margin-bottom: 5em; }
@@ -2791,7 +2813,8 @@ nav.side.active {
       text-transform: uppercase;
       font-size: 130%;
       letter-spacing: .3em;
-      font-weight: bold !important; }
+      font-weight: bold !important;
+      margin: 1em auto; }
       .mv-contact .desc h2:after {
         content: '';
         display: block;
@@ -2832,7 +2855,7 @@ nav.side.active {
 
 footer {
   position: relative;
-  background-color: #37396b;
+  background-color: #272742;
   padding: 1em 2em; }
   footer .wrapper {
     background: url(img/logo_footer.png);

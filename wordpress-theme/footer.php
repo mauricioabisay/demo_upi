@@ -52,6 +52,7 @@
     <?php if(is_home()): ?>
     jQuery(document).ready(function () {
       jQuery.scrollify({section: '.mv-scrollify'});
+      <?php if (get_option('contact_lat') && get_option('contact_lng')) :?>
       var currentLat = <?php echo get_option('contact_lat');?>;
       var currentLng = <?php echo get_option('contact_lng');?>;
       currentMarker = L.marker([currentLat, currentLng]);
@@ -71,6 +72,7 @@
       }).setContent("Tú estás aquí");
 
       currentMarker.addTo(map);//.bindPopup(currentPopup).openPopup();
+      <?php endif;?>
     });
     <?php endif;?>
 </script>

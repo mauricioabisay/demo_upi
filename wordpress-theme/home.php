@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <div class="mv-scrollify">
+  <?php /*
   <div id="carousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -24,7 +25,8 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-
+  */?>
+  <div style="background-image: url(<?php echo get_stylesheet_directory_uri();?>/img/home.jpg);background-repeat: no-repeat;background-size: cover;background-position: center;height: 85vh;width: auto;margin-bottom: 0em;padding-bottom: 0em:"></div>
   <div class="mv-scroll-hint">
     <span style="background: url(<?php echo get_stylesheet_directory_uri();?>/img/logo_bg.svg)"></span>
   </div>
@@ -32,7 +34,7 @@
 
 <div class="mv-scrollify">
   <div class="row mv-row-center">
-    <div class="col-xs-2 col-sm-2 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"></div>
+    <div class="col-xs-1 col-sm-1 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"></div>
     <div class="col">
       <p style="margin: 2em auto;">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -62,19 +64,19 @@
   </div>
 
   <div class="row mv-image-feed">
-    <div class="col-md-6 col-lg">
+    <div class="col-md-6 col-lg mv-feed">
       <div class="image"></div>
     </div>
-    <div class="col-md-6 col-lg">
+    <div class="col-md-6 col-lg mv-feed">
       <div class="image"></div>
     </div>
-    <div class="col-md-6 col-lg d-block d-xs-none d-sm-none d-md-block d-lg-block d-xl-block">
+    <div class="col-md-6 col-lg d-block d-xs-none d-sm-none d-md-block d-lg-block d-xl-block mv-feed">
       <div class="image"></div>
     </div>
-    <div class="col-md-6 col-lg d-block d-xs-none d-sm-none d-md-block d-lg-block d-xl-block">
+    <div class="col-md-6 col-lg d-block d-xs-none d-sm-none d-md-block d-lg-block d-xl-block mv-feed">
       <div class="image"></div>
     </div>
-    <div class="col-sm-12 col-lg d-block d-xs-none d-sm-none d-md-none d-lg-block d-xl-block">
+    <div class="col-sm-12 col-lg d-block d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mv-feed">
       <div class="image"></div>
     </div>
   </div>
@@ -91,7 +93,7 @@
 ?>
 <div id="<?php echo $category->slug;?>" class="mv-section mv-scrollify <?php echo $category->slug;?>">
   <div class="row title">
-    <div class="col-xs-2 col-sm-2 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"></div>
+    <div class="col-xs-1 col-sm-1 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"></div>
     <div class="col">
       <h2><?php echo $category->name;?></h2>
     </div>
@@ -314,7 +316,7 @@
   <div id="contacto" class="mv-section mv-contact">
     <div class="row desc">
       <div class="col-5">
-        <h2>Contacto</h2>
+        <h2 class="title">Contacto</h2>
         <h3><?php echo get_option('contact_calle');?> <?php echo get_option('contact_colonia');?></h3>
         <p><?php echo get_option('contact_ciudad');?>, <?php echo get_option('contact_estado');?></p>
         <p>C.P. <?php echo get_option('contact_cp');?></p>

@@ -70,5 +70,5 @@
       <a target="_blank" href="<?php echo get_option('itg');?>"><div class="itg"></div></a>
     </div>
   </nav>
-  <div class="side-open"><img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg" width="65" height="65" alt=""></div>
+  <div class="side-open"><img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg" width="40" height="40" alt=""></div>
   <div id="fullpage" class="container">

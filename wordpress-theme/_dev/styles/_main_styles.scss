@@ -23,6 +23,15 @@
     }
 }
 
+.container * {
+    font-size: 97%;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.title, .title *, .map-site *, .sponsors * {
+    font-family: 'Yantramanav', sans-serif;
+}
+
 #mv-membership {
     * {
         color: $secondary;
@@ -64,9 +73,9 @@
     text-align: center;
     span {
         display: block;
-        margin: -1em auto 0;
-        width: 8em;
-        height: 8em;
+        margin: -1vh auto 0;
+        width: 6em;
+        height: 6em;
         background-repeat: no-repeat !important;
         background-position: center !important;
     }
@@ -116,7 +125,9 @@
 .mv-image-feed {
     margin: 5em auto;
     padding: 0 1em;
-
+    .mv-feed {
+        padding: 0em 5px;
+    }
     .image {
         height: 30vh;
         width: auto;
@@ -204,7 +215,8 @@
         padding-top: 2em;
         h2 {
             text-transform: uppercase;
-            font-weight: bolder;
+            font-size: 2em;
+            font-weight: bold;
             letter-spacing: .5em;
             &:after {
                 content: '';
@@ -216,6 +228,7 @@
         }
     }
     .desc {
+        font-size: 90%;
     }
     .menu {
         margin-bottom: 5em;
@@ -373,6 +386,7 @@
             font-size: 130%;
             letter-spacing: .3em;
             font-weight: bold !important;
+            margin: 1em auto;
             &:after {
                 content: '';
                 display: block;
@@ -427,7 +441,7 @@
 
 footer {
     position: relative;
-    background-color: $secondary;
+    background-color: $dark;
     padding: 1em 2em;
     .wrapper {
         background: url(img/logo_footer.png);
