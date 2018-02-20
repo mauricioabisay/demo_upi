@@ -48,15 +48,22 @@
   </div>
   <div class="row">
       <ul class="nav mv-nav-secondary">
-        <li class="nav-item">
-          <a class="nav-link active" href="#golf">Golf</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#equitacion">Equitacion</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#gastronomia">Gastronomia</a>
-        </li>
+        <?php
+          $categories = get_categories(array(
+            'hide_empty' => 0,
+            'orderby' => 'term_id',
+            'order' => 'ASC'
+          ));
+          foreach ($categories as $category) :
+            if ( $category->term_id!==1 && !stristr($category->slug, 'logros') && !stristr($category->slug, 'menu') ):
+        ?>
+              <li class="nav-item">
+                <a class="nav-link active" href="#<?php echo $category->slug;?>"><?php echo $category->name;?></a>
+              </li>
+        <?php
+            endif;
+          endforeach;
+        ?>
         <li class="nav-item">
           <a class="nav-link disabled" href="#eventos">Eventos Especiales</a>
         </li>

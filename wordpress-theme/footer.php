@@ -5,9 +5,21 @@
         <div class="row map-site">
             <div class="col">
                 <ul>
-                    <li>Terminos y Condiciones</li>
-                    <li>Golf</li>
-                    <li>Equitacion</li>
+                    <a href="#"><li>Terminos y Condiciones</li></a>
+                    <?php
+                      $categories = get_categories(array(
+                        'hide_empty' => 0,
+                        'orderby' => 'term_id',
+                        'order' => 'ASC'
+                      ));
+                      foreach ($categories as $category) :
+                        if ( $category->term_id!==1 && !stristr($category->slug, 'logros') && !stristr($category->slug, 'menu') ):
+                    ?>
+                          <a href="#<?php echo $category->slug;?>"><li><?php echo $category->name;?></li></a>
+                    <?php
+                        endif;
+                      endforeach;
+                    ?>
                 </ul>
             </div>
         </div>

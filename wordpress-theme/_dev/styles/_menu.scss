@@ -26,7 +26,7 @@ nav.side {
         outline: none;
         padding: 1em;
         text-decoration: none;
-        color: white;
+        color: $white;
         display: block;
         transition: .3s;
         &:hover {
@@ -63,7 +63,7 @@ nav.side.active {
 .side-open {
     background: $dark;
     z-index: 1000;
-    color: white;
+    color: $white;
     position: fixed;
     font-size: 1.5em;
     margin: 0;

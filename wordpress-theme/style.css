@@ -13,7 +13,6 @@ This theme, like WordPress, is licensed under the GPL.
 */
 @import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Yantramanav:700,900");
-/*#115b9b;*/
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.2
@@ -2509,7 +2508,7 @@ nav.side {
     outline: none;
     padding: 1em;
     text-decoration: none;
-    color: white;
+    color: #fee0c7;
     display: block;
     -webkit-transition: .3s;
     transition: .3s; }
@@ -2537,7 +2536,7 @@ nav.side.active {
 .side-open {
   background: #272742;
   z-index: 1000;
-  color: white;
+  color: #fee0c7;
   position: fixed;
   font-size: 1.5em;
   margin: 0;
@@ -2550,6 +2549,9 @@ nav.side.active {
   .side-open img {
     margin: 0;
     padding: 0; }
+
+a, a:hover {
+  text-decoration: none; }
 
 .loc-sections .col-6 {
   height: 5em; }
@@ -2569,7 +2571,7 @@ nav.side.active {
   background: #4d657f;
   overflow-x: hidden; }
   #fullpage * {
-    color: #fff; }
+    color: #fee0c7; }
 
 .container * {
   font-size: 97%;
@@ -2582,7 +2584,7 @@ nav.side.active {
   color: #37396b; }
 
 .underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item:hover:before, .nav.mv-nav-secondary .nav-item:hover:before {
-  border-bottom: 2px solid #fff; }
+  border-bottom: 2px solid #fee0c7; }
 
 .carousel .carousel-inner .carousel-item {
   height: 87vh;
@@ -2644,13 +2646,13 @@ nav.side.active {
     margin-bottom: 1em; }
 
 .mv-section.golf {
-  border-left: 10px solid red; }
+  border-left: 10px solid #115b9b; }
   .mv-section.golf .underLine:hover:before, .mv-section.golf .mv-underline:hover:before, .mv-section.golf .menu .navigation .nav .nav-item:hover:before, .mv-section.golf .nav.mv-nav-secondary .nav-item:hover:before, .nav.mv-nav-secondary .mv-section.golf .nav-item:hover:before {
-    border-bottom: 2px solid red; }
+    border-bottom: 2px solid #115b9b; }
   .mv-section.golf .title h2 {
-    text-shadow: 3px 3px red; }
+    text-shadow: 3px 3px #115b9b; }
   .mv-section.golf .gallery .image .info .bg {
-    background: red; }
+    background: #115b9b; }
 
 .mv-section.equitacion {
   border-left: 10px solid #983620; }
@@ -2689,7 +2691,7 @@ nav.side.active {
     letter-spacing: .5em; }
     .mv-section .title h2:after {
       content: '';
-      border: 1px solid #fff;
+      border: 1px solid #fee0c7;
       width: 2em;
       display: block;
       margin-top: 1em; }
@@ -2762,7 +2764,7 @@ nav.side.active {
     position: absolute;
     top: 100%;
     display: none;
-    color: white; }
+    color: #fee0c7; }
     .mv-section .gallery .image .info .bg {
       top: 0;
       display: none;
@@ -2866,7 +2868,7 @@ footer {
     top: 0;
     left: -.5em; }
   footer * {
-    color: #fff; }
+    color: #fee0c7; }
   footer .map-site {
     opacity: 1; }
     footer .map-site ul {
