@@ -2606,11 +2606,26 @@ a, a:hover {
     width: auto;
     z-index: 5; }
 
-.mv-scroll-hint {
+.mv-featured-img {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+  margin-bottom: 0em;
+  padding-bottom: 0em;
+  position: relative;
   text-align: center; }
+  .mv-featured-img .mv-title {
+    font-size: 200%;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    padding-top: 40vh; }
+
+.mv-scroll-hint {
+  text-align: center;
+  margin: 0; }
   .mv-scroll-hint span {
     display: block;
-    margin: -1vh auto 0;
+    margin: -1vh auto;
     width: 6em;
     height: 6em;
     background-repeat: no-repeat !important;
@@ -2852,7 +2867,7 @@ a, a:hover {
   background: #4d657f;
   display: inline-block; }
 
-#mv-scrollify-footer {
+#mv-scrollify-footer, .mv-scrollify-override {
   height: auto !important; }
 
 footer {

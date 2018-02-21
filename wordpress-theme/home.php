@@ -26,7 +26,9 @@
     </a>
   </div>
   */?>
-  <div style="background-image: url(<?php echo get_stylesheet_directory_uri();?>/img/home.jpg);background-repeat: no-repeat;background-size: cover;background-position: center;height: 85vh;width: auto;margin-bottom: 0em;padding-bottom: 0em:"></div>
+  <div class="mv-featured-img" style="background-image: url(<?php echo get_stylesheet_directory_uri();?>/img/home.jpg);height: 90vh;width: auto;">
+    <h1 class="mv-title title">Molino Viejo</h1>
+  </div>
   <div class="mv-scroll-hint">
     <span style="background: url(<?php echo get_stylesheet_directory_uri();?>/img/logo_bg.svg)"></span>
   </div>
