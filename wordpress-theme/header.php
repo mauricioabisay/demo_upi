@@ -57,6 +57,7 @@
 
   <nav id="main-menu" class="side">
     <a href="javascript:void(0)" class="side-close">&times;</a>
+    <div class="side-open-internal"><a href="<?php echo site_url();?>"><img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg" width="40" height="40" alt=""></a></div>
     <div class="links">
       <a href="#">Inicio</a>
       <a href="#golf">Golf</a>
@@ -70,5 +71,27 @@
       <a target="_blank" href="<?php echo get_option('itg');?>"><div class="itg"></div></a>
     </div>
   </nav>
+
   <div class="side-open"><img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg" width="40" height="40" alt=""></div>
+
+
   <div id="fullpage" class="container">
+    <?php if (is_home()) : ?>
+      <div class="mv-scrollify">
+        <div class="mv-featured-img" style="background-image: url(<?php echo get_stylesheet_directory_uri();?>/img/home.jpg);height: 90vh;width: auto;">
+          <h1 class="mv-title title">Molino Viejo</h1>
+        </div>
+        <div class="mv-scroll-hint">
+          <span style="background: url(<?php echo get_stylesheet_directory_uri();?>/img/logo_bg.svg)"></span>
+        </div>
+      </div>
+    <?php else : ?>
+      <div class="mv-scrollify">
+        <div class="mv-featured-img" style="background-image: url(<?php echo get_stylesheet_directory_uri();?>/img/home.jpg);height: 90vh;width: auto;">
+          <h1 class="mv-title title">Molino Viejo</h1>
+        </div>
+        <div class="mv-scroll-hint">
+          <span style="background: url(<?php echo get_stylesheet_directory_uri();?>/img/logo_bg.svg)"></span>
+        </div>
+      </div>
+    <?php endif;?>

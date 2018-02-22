@@ -20,39 +20,39 @@ This theme, like WordPress, is licensed under the GPL.
  *
  * Copyright (c) 2017 Daniel Eden
  */
-.animated, .underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item:hover:before, .nav.mv-nav-secondary .nav-item:hover:before, .mv-animate .col-6:hover h1, .mv-section .gallery .image:hover .info {
+.animated, .underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item:hover:before, .mv-animate .col-6:hover h1, .mv-section .gallery .image:hover .info {
   -webkit-animation-duration: .5s;
           animation-duration: .5s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
-.animated.infinite, .infinite.underLine:hover:before, .infinite.mv-underline:hover:before, .mv-section .menu .navigation .nav .infinite.nav-item:hover:before, .nav.mv-nav-secondary .infinite.nav-item:hover:before, .mv-animate .col-6:hover h1.infinite, .mv-section .gallery .image:hover .infinite.info {
+.animated.infinite, .infinite.underLine:hover:before, .infinite.mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span.infinite:hover:before, .nav.mv-nav-secondary .infinite.nav-item:hover:before, .mv-animate .col-6:hover h1.infinite, .mv-section .gallery .image:hover .infinite.info {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite; }
 
-.animated.hinge, .hinge.underLine:hover:before, .hinge.mv-underline:hover:before, .mv-section .menu .navigation .nav .hinge.nav-item:hover:before, .nav.mv-nav-secondary .hinge.nav-item:hover:before, .mv-animate .col-6:hover h1.hinge, .mv-section .gallery .image:hover .hinge.info {
+.animated.hinge, .hinge.underLine:hover:before, .hinge.mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span.hinge:hover:before, .nav.mv-nav-secondary .hinge.nav-item:hover:before, .mv-animate .col-6:hover h1.hinge, .mv-section .gallery .image:hover .hinge.info {
   -webkit-animation-duration: 2s;
           animation-duration: 2s; }
 
-.animated.flipOutX, .flipOutX.underLine:hover:before, .flipOutX.mv-underline:hover:before, .mv-section .menu .navigation .nav .flipOutX.nav-item:hover:before, .nav.mv-nav-secondary .flipOutX.nav-item:hover:before, .mv-animate .col-6:hover h1.flipOutX, .mv-section .gallery .image:hover .flipOutX.info,
+.animated.flipOutX, .flipOutX.underLine:hover:before, .flipOutX.mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span.flipOutX:hover:before, .nav.mv-nav-secondary .flipOutX.nav-item:hover:before, .mv-animate .col-6:hover h1.flipOutX, .mv-section .gallery .image:hover .flipOutX.info,
 .animated.flipOutY,
 .flipOutY.underLine:hover:before,
 .flipOutY.mv-underline:hover:before,
-.mv-section .menu .navigation .nav .flipOutY.nav-item:hover:before,
+.mv-section .menu .navigation .nav .nav-item span.flipOutY:hover:before,
 .nav.mv-nav-secondary .flipOutY.nav-item:hover:before,
 .mv-animate .col-6:hover h1.flipOutY,
 .mv-section .gallery .image:hover .flipOutY.info,
 .animated.bounceIn,
 .bounceIn.underLine:hover:before,
 .bounceIn.mv-underline:hover:before,
-.mv-section .menu .navigation .nav .bounceIn.nav-item:hover:before,
+.mv-section .menu .navigation .nav .nav-item span.bounceIn:hover:before,
 .nav.mv-nav-secondary .bounceIn.nav-item:hover:before,
 .mv-animate .col-6:hover h1.bounceIn,
 .mv-section .gallery .image:hover .bounceIn.info,
 .animated.bounceOut,
 .bounceOut.underLine:hover:before,
 .bounceOut.mv-underline:hover:before,
-.mv-section .menu .navigation .nav .bounceOut.nav-item:hover:before,
+.mv-section .menu .navigation .nav .nav-item span.bounceOut:hover:before,
 .nav.mv-nav-secondary .bounceOut.nav-item:hover:before,
 .mv-animate .col-6:hover h1.bounceOut,
 .mv-section .gallery .image:hover .bounceOut.info {
@@ -1279,7 +1279,7 @@ This theme, like WordPress, is licensed under the GPL.
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in; } }
 
-.animated.flip, .flip.underLine:hover:before, .flip.mv-underline:hover:before, .mv-section .menu .navigation .nav .flip.nav-item:hover:before, .nav.mv-nav-secondary .flip.nav-item:hover:before, .mv-animate .col-6:hover h1.flip, .mv-section .gallery .image:hover .flip.info {
+.animated.flip, .flip.underLine:hover:before, .flip.mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span.flip:hover:before, .nav.mv-nav-secondary .flip.nav-item:hover:before, .mv-animate .col-6:hover h1.flip, .mv-section .gallery .image:hover .flip.info {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
   -webkit-animation-name: flip;
@@ -2457,11 +2457,11 @@ This theme, like WordPress, is licensed under the GPL.
   to {
     width: auto; } }
 
-.underLine, .mv-underline, .mv-section .menu .navigation .nav .nav-item, .nav.mv-nav-secondary .nav-item {
+.underLine, .mv-underline, .mv-section .menu .navigation .nav .nav-item span, .nav.mv-nav-secondary .nav-item {
   display: inline-block;
   position: relative; }
 
-.underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item:hover:before, .nav.mv-nav-secondary .nav-item:hover:before {
+.underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item:hover:before {
   position: absolute;
   bottom: 0;
   content: '';
@@ -2574,37 +2574,19 @@ a, a:hover {
     color: #fee0c7; }
 
 .container * {
-  font-size: 97%;
   font-family: 'Cormorant Garamond', serif; }
 
 .title, .title *, .map-site *, .sponsors * {
   font-family: 'Yantramanav', sans-serif; }
 
+a {
+  outline: none; }
+
 #mv-membership * {
   color: #37396b; }
 
-.underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item:hover:before, .nav.mv-nav-secondary .nav-item:hover:before {
+.underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item:hover:before {
   border-bottom: 2px solid #fee0c7; }
-
-.carousel .carousel-inner .carousel-item {
-  height: 87vh;
-  width: 100%;
-  background: #37396b; }
-  .carousel .carousel-inner .carousel-item .wrapper {
-    background: url(img/logo_footer.png);
-    opacity: .1;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: -.5em;
-    z-index: 2; }
-  .carousel .carousel-inner .carousel-item img {
-    position: relative;
-    margin: 0 auto;
-    height: 100%;
-    width: auto;
-    z-index: 5; }
 
 .mv-featured-img {
   background-repeat: no-repeat !important;
@@ -2615,7 +2597,7 @@ a, a:hover {
   position: relative;
   text-align: center; }
   .mv-featured-img .mv-title {
-    font-size: 200%;
+    font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 0.5em;
     padding-top: 40vh; }
@@ -2631,11 +2613,6 @@ a, a:hover {
     background-repeat: no-repeat !important;
     background-position: center !important; }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  background-color: #4d657f;
-  border-radius: 100%;
-  padding: .75em; }
-
 .nav.mv-nav-secondary .nav-item {
   text-transform: uppercase;
   font-weight: bolder;
@@ -2646,7 +2623,7 @@ a, a:hover {
 
 .mv-nav-secondary {
   margin: 1em auto;
-  font-size: 80%; }
+  font-size: 0.9em; }
 
 .mv-image-feed {
   margin: 5em auto;
@@ -2662,7 +2639,7 @@ a, a:hover {
 
 .mv-section.golf {
   border-left: 10px solid #115b9b; }
-  .mv-section.golf .underLine:hover:before, .mv-section.golf .mv-underline:hover:before, .mv-section.golf .menu .navigation .nav .nav-item:hover:before, .mv-section.golf .nav.mv-nav-secondary .nav-item:hover:before, .nav.mv-nav-secondary .mv-section.golf .nav-item:hover:before {
+  .mv-section.golf .underLine:hover:before, .mv-section.golf .mv-underline:hover:before, .mv-section.golf .menu .navigation .nav .nav-item span:hover:before, .mv-section.golf .nav.mv-nav-secondary .nav-item:hover:before, .nav.mv-nav-secondary .mv-section.golf .nav-item:hover:before {
     border-bottom: 2px solid #115b9b; }
   .mv-section.golf .title h2 {
     text-shadow: 3px 3px #115b9b; }
@@ -2671,7 +2648,7 @@ a, a:hover {
 
 .mv-section.equitacion {
   border-left: 10px solid #983620; }
-  .mv-section.equitacion .underLine:hover:before, .mv-section.equitacion .mv-underline:hover:before, .mv-section.equitacion .menu .navigation .nav .nav-item:hover:before, .mv-section.equitacion .nav.mv-nav-secondary .nav-item:hover:before, .nav.mv-nav-secondary .mv-section.equitacion .nav-item:hover:before {
+  .mv-section.equitacion .underLine:hover:before, .mv-section.equitacion .mv-underline:hover:before, .mv-section.equitacion .menu .navigation .nav .nav-item span:hover:before, .mv-section.equitacion .nav.mv-nav-secondary .nav-item:hover:before, .nav.mv-nav-secondary .mv-section.equitacion .nav-item:hover:before {
     border-bottom: 2px solid #983620; }
   .mv-section.equitacion .title h2 {
     text-shadow: 3px 3px #983620; }
@@ -2680,7 +2657,7 @@ a, a:hover {
 
 .mv-section.gastronomia {
   border-left: 10px solid #ee9a5d; }
-  .mv-section.gastronomia .underLine:hover:before, .mv-section.gastronomia .mv-underline:hover:before, .mv-section.gastronomia .menu .navigation .nav .nav-item:hover:before, .mv-section.gastronomia .nav.mv-nav-secondary .nav-item:hover:before, .nav.mv-nav-secondary .mv-section.gastronomia .nav-item:hover:before {
+  .mv-section.gastronomia .underLine:hover:before, .mv-section.gastronomia .mv-underline:hover:before, .mv-section.gastronomia .menu .navigation .nav .nav-item span:hover:before, .mv-section.gastronomia .nav.mv-nav-secondary .nav-item:hover:before, .nav.mv-nav-secondary .mv-section.gastronomia .nav-item:hover:before {
     border-bottom: 2px solid #ee9a5d; }
   .mv-section.gastronomia .title h2 {
     text-shadow: 3px 3px #ee9a5d; }
@@ -2712,7 +2689,7 @@ a, a:hover {
       margin-top: 1em; }
 
 .mv-section .desc {
-  font-size: 90%; }
+  font-size: 1em; }
 
 .mv-section .menu {
   margin-bottom: 5em; }
@@ -2729,16 +2706,18 @@ a, a:hover {
       height: 5em; }
   .mv-section .menu .navigation {
     margin: 0 auto; }
+    .mv-section .menu .navigation .nav .nav-item {
+      font-size: 1.25em; }
 
 .mv-section .achievements {
   margin: 5em auto;
   padding: 0 1em; }
   .mv-section .achievements .title h3 {
-    font-size: 95%;
+    font-size: 1em;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: .2em;
+    letter-spacing: .5em;
     font-weight: bolder; }
   .mv-section .achievements .gallery {
     text-align: center; }
@@ -2807,14 +2786,20 @@ a, a:hover {
       .mv-section.mv-membership .title h2:after {
         border: none; }
   .mv-section.mv-membership .mv-packet {
-    margin: 2em auto; }
+    margin: 0em auto;
+    padding: 2em 0; }
     .mv-section.mv-membership .mv-packet .image {
-      background: #4d657f;
+      background-color: #4d657f;
       border-radius: 100%;
-      width: 100%;
-      padding-top: 100%; }
+      height: 8em;
+      width: 8em;
+      margin: 0 auto;
+      background-image: url(img/logo.svg);
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      background-position: center !important; }
     .mv-section.mv-membership .mv-packet h3 {
-      font-size: 90%;
+      font-size: 1.25em;
       text-align: center;
       margin-top: .75em; }
     .mv-section.mv-membership .mv-packet .info {
@@ -2828,7 +2813,7 @@ a, a:hover {
     padding: 1em 4em; }
     .mv-contact .desc h2 {
       text-transform: uppercase;
-      font-size: 130%;
+      font-size: 1.3em;
       letter-spacing: .3em;
       font-weight: bold !important;
       margin: 1em auto; }
@@ -2839,7 +2824,7 @@ a, a:hover {
         width: calc( 100% - 3em);
         border-bottom: 1px solid #fee0c7; }
     .mv-contact .desc h3 {
-      font-size: 90%;
+      font-size: 1em;
       color: #cddbd9 !important;
       text-transform: uppercase;
       letter-spacing: .2em;
@@ -2899,16 +2884,16 @@ footer {
     margin: 1em auto;
     text-align: center; }
   footer .logos .sponsor {
-    height: 6vw;
-    width: 6vw;
+    height: 4em;
+    width: 4em;
     border-radius: 100%;
-    margin: 0 2vw;
+    margin: 0 1em;
     background: #4d657f;
     display: inline-block; }
   footer .map-site ul li,
   footer .sponsors h3 {
-    font-size: .9em;
-    letter-spacing: .1em; }
+    font-size: 0.9em;
+    letter-spacing: .25em; }
 
 .box-contact {
   margin-top: 35px; }
@@ -3049,6 +3034,54 @@ footer {
   .post .post-container .content blockquote {
     font-style: italic; }
 
+@media screen and (min-width: 769px) {
+  .side-close, .side-open {
+    display: none; }
+  .mv-scrollify-start {
+    padding-top: 50px; }
+  nav.side {
+    width: 100%;
+    height: 50px;
+    padding-top: 0em;
+    overflow: hidden; }
+    nav.side .side-open-internal {
+      background: #272742;
+      z-index: 1000;
+      color: #fee0c7;
+      position: fixed;
+      font-size: 1.5em;
+      margin: 0;
+      padding: 3px 5px;
+      margin: 0em;
+      cursor: pointer;
+      height: 50px;
+      width: 50px;
+      text-align: center; }
+      nav.side .side-open-internal a {
+        margin: 0;
+        padding: 0; }
+      nav.side .side-open-internal img {
+        margin: 0;
+        padding: 0; }
+    nav.side .side-close {
+      display: none; }
+    nav.side a {
+      padding: 1em 0.5em 0em; }
+    nav.side .links, nav.side .social {
+      display: inline-block;
+      margin: 0em; }
+    nav.side .links {
+      position: relative;
+      top: -0.25em; }
+    nav.side .links a {
+      display: inline-block; }
+    nav.side a, nav.side .social {
+      margin: 0em; }
+  .mv-row-center {
+    margin: 1em auto; }
+  .mv-section .title, .mv-section .desc, .mv-section .menu {
+    margin: 1em auto; } }
+
 @media screen and (max-width: 768px) {
   nav.side.active {
     width: 50%; }
@@ -3057,18 +3090,7 @@ footer {
   .mv-section .title, .mv-section .desc, .mv-section .menu {
     margin: 1em auto; }
   .mv-section.mv-membership .mv-packet {
-    display: block; }
-    .mv-section.mv-membership .mv-packet .image {
-      background: red;
-      border-radius: 100%;
-      height: 8em;
-      width: 8em;
-      display: block;
-      margin-top: calc( 100% + 4em); }
-    .mv-section.mv-membership .mv-packet .info {
-      display: block;
-      width: calc( 100% - 8em);
-      padding: 0 0 1em 1em; } }
+    display: block; } }
 
 @media screen and (min-width: 576px) {
   .mv-section .desc p {

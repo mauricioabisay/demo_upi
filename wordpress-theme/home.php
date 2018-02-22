@@ -1,50 +1,10 @@
 <?php get_header(); ?>
 <div class="mv-scrollify">
-  <?php /*
-  <div id="carousel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="wrapper"></div>
-        <img class="d-block" src="<?php echo get_stylesheet_directory_uri();?>/img/golf_bag.jpg" alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <div class="wrapper"></div>
-        <img class="d-block" src="<?php echo get_stylesheet_directory_uri();?>/img/horse_sadle.jpg" alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <div class="wrapper"></div>
-        <img class="d-block" src="<?php echo get_stylesheet_directory_uri();?>/img/golf_shoot.jpg" alt="Third slide">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-  */?>
-  <div class="mv-featured-img" style="background-image: url(<?php echo get_stylesheet_directory_uri();?>/img/home.jpg);height: 90vh;width: auto;">
-    <h1 class="mv-title title">Molino Viejo</h1>
-  </div>
-  <div class="mv-scroll-hint">
-    <span style="background: url(<?php echo get_stylesheet_directory_uri();?>/img/logo_bg.svg)"></span>
-  </div>
-</div>
-
-<div class="mv-scrollify">
   <div class="row mv-row-center">
     <div class="col-xs-1 col-sm-1 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"></div>
     <div class="col">
-      <p style="margin: 2em auto;">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <p class="mv-scrollify-start" style="margin: 2em auto;">
+        Molino Viejo, donde la tranquilidad fluye con sensación de libertad y paz; un espacio de fusión clásica y contemporánea, que convive con actividades de deporte y entretenimiento como el golf, equitación y gastronomía. Perfecta armonía del bienestar, la cercanía, la atención e instalaciones de primera.
       </p>
     </div>
   </div>
@@ -104,7 +64,7 @@
   <div class="row title">
     <div class="col-xs-1 col-sm-1 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"></div>
     <div class="col">
-      <h2><?php echo $category->name;?></h2>
+      <h2 class="mv-scrollify-start"><?php echo $category->name;?></h2>
     </div>
   </div>
   <div class="row desc">
@@ -155,6 +115,7 @@
   <?php
     endif;
     wp_reset_postdata();
+    wp_reset_query();
   ?>
 
   <div class="row" class="mv-section-content">
@@ -205,6 +166,7 @@
         }
         endforeach;
         wp_reset_postdata();
+        wp_reset_query();
       ?>
     </div>
   </div>
@@ -292,11 +254,12 @@
   endif;
   endforeach;
   wp_reset_postdata();
+  wp_reset_query();
 ?>
 <div class="mv-scrollify">
   <div id="mv-membership" class="mv-section mv-membership">
     <div class="row title">
-      <h2>Membresias</h2>
+      <h2 class="mv-scrollify-start">Membresias</h2>
     </div>
     <div class="desc">
       <?php
@@ -307,11 +270,15 @@
           $memberships->the_post();
       ?>
       <div class="row mv-packet">
-        <div class="col-2">
-          <div class="image" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>);background-size: cover;background-position: center;background-repeat: no-repeat;"></div>
+        <div class="col-3 mv-packet-img">
+          <?php if(has_post_thumbnail(get_the_ID())) : ?>
+            <div class="image" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>);background-size: cover;background-position: center;background-repeat: no-repeat;"></div>
+          <?php else : ?>
+            <div class="image" style=""></div>
+          <?php endif;?>
           <h3><?php the_title();?></h3>
         </div>
-        <div class="info col-10 post_content">
+        <div class="info col-9 post_content">
           <?php the_content();?>
         </div>
       </div>
