@@ -11,10 +11,22 @@ class Theme extends NWM\WP\Theme {
 	function __construct() {
 		parent::__construct();
 		add_action('init', array($this, 'init'));
-		$this->add_public_ajax($this, 'getEvents');
-		$this->add_public_ajax($this, 'getEventsNearBy');
-		$this->add_public_ajax($this, 'getEventsInBounds');
-		$this->add_public_ajax($this, 'getEventsInRadius');
+		$this->add_public_ajax($this, 'getSectionContent');
+	}
+
+	function getSectionContent() {
+		if ( isset($_GET['id']) ) {
+			$content = get_post($_GET['id']);
+			if(is_null($content)) {
+				print_r(json_encode(array('msg' => -1)));
+				return;
+			}
+			echo json_encode(array('msg' => $content->post_content));
+			return;
+		} else {
+			print_r(json_encode(array('msg' => -1)));
+			return;
+		}
 	}
 
 	function setScripts() {

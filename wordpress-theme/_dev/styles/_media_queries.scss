@@ -10,9 +10,22 @@
         height: 50px;
         padding-top: 0em;
         overflow: hidden;
+        text-align: center;
+        background: transparent;
+        opacity: 1;
+        &:before {
+            content: '';
+            color: white;
+            width: 100vw;
+            height: 50px;
+            background: $dark;
+            opacity: .3;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
         .side-open-internal {
             background: $dark;
-            z-index: 1000;
             color: $white;
             position: fixed;
             font-size: 1.5em;
@@ -45,7 +58,15 @@
         }
         .links {
             position: relative;
-            top: -0.25em;
+            top: 5px;
+            left: 60px;
+            float: left;
+        }
+        .social {
+            position: relative;
+            top: 5px;
+            float: right;
+            z-index: 1001;
         }
         .links a {
             display: inline-block;
@@ -55,7 +76,7 @@
         }
     }
     .mv-row-center {
-        margin: 1em auto;
+        margin: 1em 20vw !important;
     }
     .mv-section {
         .title, .desc, .menu {
@@ -75,6 +96,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .side-open-internal {
+        display: none;
+    }
     nav.side.active {
         width: 50%;
     }

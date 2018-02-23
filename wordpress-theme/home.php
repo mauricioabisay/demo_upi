@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <div class="mv-scrollify">
   <div class="row mv-row-center">
-    <div class="col-xs-1 col-sm-1 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"></div>
     <div class="col">
       <p class="mv-scrollify-start" style="margin: 2em auto;">
         Molino Viejo, donde la tranquilidad fluye con sensación de libertad y paz; un espacio de fusión clásica y contemporánea, que convive con actividades de deporte y entretenimiento como el golf, equitación y gastronomía. Perfecta armonía del bienestar, la cercanía, la atención e instalaciones de primera.
@@ -61,13 +60,13 @@
     if ( $category->term_id!==1 && !stristr($category->slug, 'logros') && !stristr($category->slug, 'menu') ):
 ?>
 <div id="<?php echo $category->slug;?>" class="mv-section mv-scrollify <?php echo $category->slug;?>">
-  <div class="row title">
+  <div class="row title mv-row-center">
     <div class="col-xs-1 col-sm-1 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"></div>
     <div class="col">
       <h2 class="mv-scrollify-start"><?php echo $category->name;?></h2>
     </div>
   </div>
-  <div class="row desc">
+  <div class="row desc mv-row-center">
     <p><?php echo $category->description;?></p>
   </div>
 
@@ -92,7 +91,7 @@
     ));
     if (sizeof($menu)>0) :
   ?>
-  <div class="row menu">
+  <div class="row menu mv-row-center">
     <div class="col-2 logo">
       <div class="img"></div>
     </div>
@@ -102,7 +101,7 @@
         <?php
           foreach ($menu as $key => $menu_item) :
         ?>
-        <li class="nav-item col-md-12">
+        <li class="nav-item">
           <a class="nav-link active" href="#"><span><?php echo $menu_item->post_title;?></span></a>
         </li>
         <?php

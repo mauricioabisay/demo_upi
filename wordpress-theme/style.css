@@ -13,6 +13,26 @@ This theme, like WordPress, is licensed under the GPL.
 */
 @import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Yantramanav:700,900");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
+@font-face {
+  font-family: "Butler";
+  src: url("font/butler_regular-webfont.woff"); }
+
+@font-face {
+  font-family: "Butler";
+  src: url("font/butler_medium-webfont.woff");
+  font-weight: medium; }
+
+@font-face {
+  font-family: "Butler";
+  src: url("font/butler_bold-webfont.woff");
+  font-weight: bold; }
+
+@font-face {
+  font-family: "Butler";
+  src: url("font/butler_light-webfont.woff");
+  font-weight: light; }
+
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.2
@@ -2489,12 +2509,16 @@ nav.side {
   top: 0;
   left: 0;
   background: #272742;
-  opacity: .7;
+  opacity: .3;
   overflow-x: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding-top: 60px;
-  text-align: right; }
+  padding-top: 2em;
+  text-align: right;
+  text-transform: uppercase;
+  font-family: 'Butler', serif;
+  font-size: 0.7em;
+  letter-spacing: 0.3em; }
   nav.side .side-close {
     position: absolute;
     top: .5em;
@@ -2513,7 +2537,7 @@ nav.side {
     -webkit-transition: .3s;
     transition: .3s; }
     nav.side a:hover {
-      color: red; }
+      color: #272742; }
   nav.side .links {
     margin: 2em auto; }
   nav.side .social a {
@@ -2577,7 +2601,7 @@ a, a:hover {
   font-family: 'Cormorant Garamond', serif; }
 
 .title, .title *, .map-site *, .sponsors * {
-  font-family: 'Yantramanav', sans-serif; }
+  font-family: 'Montserrat', sans-serif; }
 
 a {
   outline: none; }
@@ -2597,10 +2621,11 @@ a {
   position: relative;
   text-align: center; }
   .mv-featured-img .mv-title {
-    font-size: 2em;
+    font-size: 2.2em;
     text-transform: uppercase;
-    letter-spacing: 0.5em;
-    padding-top: 40vh; }
+    letter-spacing: .2em;
+    padding-top: 40vh;
+    font-weight: bold; }
 
 .mv-scroll-hint {
   text-align: center;
@@ -2616,8 +2641,8 @@ a {
 .nav.mv-nav-secondary .nav-item {
   text-transform: uppercase;
   font-weight: bolder;
-  letter-spacing: .2em;
-  margin: 0 1em; }
+  letter-spacing: .1em;
+  margin: 0 0.5em; }
   .nav.mv-nav-secondary .nav-item:hover:before {
     bottom: .1em; }
 
@@ -2706,8 +2731,17 @@ a {
       height: 5em; }
   .mv-section .menu .navigation {
     margin: 0 auto; }
-    .mv-section .menu .navigation .nav .nav-item {
-      font-size: 1.25em; }
+    .mv-section .menu .navigation .nav {
+      position: relative;
+      top: 25%; }
+      .mv-section .menu .navigation .nav .nav-item {
+        display: inline-block; }
+        .mv-section .menu .navigation .nav .nav-item span {
+          text-transform: uppercase;
+          font-size: 0.8em;
+          font-weight: bold;
+          letter-spacing: 0.3em;
+          font-family: 'Montserrat', sans-serif; }
 
 .mv-section .achievements {
   margin: 5em auto;
@@ -2868,7 +2902,8 @@ footer {
     top: 0;
     left: -.5em; }
   footer * {
-    color: #fee0c7; }
+    color: #fee0c7;
+    font-family: 'Butler', serif; }
   footer .map-site {
     opacity: 1; }
     footer .map-site ul {
@@ -2892,8 +2927,9 @@ footer {
     display: inline-block; }
   footer .map-site ul li,
   footer .sponsors h3 {
-    font-size: 0.9em;
-    letter-spacing: .25em; }
+    font-family: 'Montserrat', serif;
+    font-size: 0.5em;
+    letter-spacing: 0.3em; }
 
 .box-contact {
   margin-top: 35px; }
@@ -3043,10 +3079,22 @@ footer {
     width: 100%;
     height: 50px;
     padding-top: 0em;
-    overflow: hidden; }
+    overflow: hidden;
+    text-align: center;
+    background: transparent;
+    opacity: 1; }
+    nav.side:before {
+      content: '';
+      color: white;
+      width: 100vw;
+      height: 50px;
+      background: #272742;
+      opacity: .3;
+      position: absolute;
+      top: 0;
+      left: 0; }
     nav.side .side-open-internal {
       background: #272742;
-      z-index: 1000;
       color: #fee0c7;
       position: fixed;
       font-size: 1.5em;
@@ -3072,17 +3120,26 @@ footer {
       margin: 0em; }
     nav.side .links {
       position: relative;
-      top: -0.25em; }
+      top: 5px;
+      left: 60px;
+      float: left; }
+    nav.side .social {
+      position: relative;
+      top: 5px;
+      float: right;
+      z-index: 1001; }
     nav.side .links a {
       display: inline-block; }
     nav.side a, nav.side .social {
       margin: 0em; }
   .mv-row-center {
-    margin: 1em auto; }
+    margin: 1em 20vw !important; }
   .mv-section .title, .mv-section .desc, .mv-section .menu {
     margin: 1em auto; } }
 
 @media screen and (max-width: 768px) {
+  .side-open-internal {
+    display: none; }
   nav.side.active {
     width: 50%; }
   .mv-row-center {

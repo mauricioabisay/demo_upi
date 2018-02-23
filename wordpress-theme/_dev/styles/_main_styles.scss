@@ -32,7 +32,7 @@ a, a:hover {
 }
 
 .title, .title *, .map-site *, .sponsors * {
-    font-family: 'Yantramanav', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -59,10 +59,11 @@ a {
     text-align: center;
 
     .mv-title {
-        font-size: 2em;
+        font-size: 2.2em;
         text-transform: uppercase;
-        letter-spacing: 0.5em;
+        letter-spacing: .2em;
         padding-top: 40vh;
+        font-weight: bold;
     }
 }
 .mv-scroll-hint {
@@ -96,9 +97,9 @@ a {
     .nav-item {
         text-transform: uppercase;
         font-weight: bolder;
-        letter-spacing: .2em;
+        letter-spacing: .1em;
         @extend .underLine;
-        margin: 0 1em;
+        margin: 0 0.5em;
         &:hover:before {
             bottom: .1em;
         }
@@ -239,9 +240,16 @@ a {
         .navigation {
             margin: 0 auto;
             .nav {
+                position: relative;
+                top: 25%;
                 .nav-item {
-                    font-size: 1.25em;
+                    display: inline-block;
                     span {
+                        text-transform: uppercase;
+                        font-size: 0.8em;
+                        font-weight: bold;
+                        letter-spacing: 0.3em;
+                        font-family: 'Montserrat', sans-serif;
                         @extend .mv-underline;
                     }
                 }
@@ -454,6 +462,7 @@ footer {
     }
     * {
         color: $white;
+        font-family: 'Butler', serif;
     }
     .map-site {
         opacity: 1;
@@ -490,7 +499,8 @@ footer {
 
     .map-site ul li,
     .sponsors h3 {
-        font-size: 0.9em;
-        letter-spacing: .25em;
+        font-family: 'Montserrat', serif;
+        font-size: 0.5em;
+        letter-spacing: 0.3em;
     }
 }

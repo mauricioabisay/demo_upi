@@ -59,11 +59,8 @@
     <a href="javascript:void(0)" class="side-close">&times;</a>
     <div class="side-open-internal"><a href="<?php echo site_url();?>"><img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg" width="40" height="40" alt=""></a></div>
     <div class="links">
-      <a href="#">Inicio</a>
       <a href="#golf">Golf</a>
-      <a href="#equitacion">Equitación</a>
-      <a href="#mv-membership">Membresias</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#equitacion">Equitación</a>      
     </div>
     <div class="social">
       <a target="_blank" href="<?php echo get_option('fb');?>"><div class="fb"></div></a>
