@@ -40,42 +40,42 @@ This theme, like WordPress, is licensed under the GPL.
  *
  * Copyright (c) 2017 Daniel Eden
  */
-.animated, .underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item:hover:before, .mv-animate .col-6:hover h1, .mv-section .gallery .image:hover .info {
+.animated, .underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item:hover:before, .mv-animate .col-6:hover h1, .mv-section .gallery .image.link:hover .info {
   -webkit-animation-duration: .5s;
           animation-duration: .5s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
-.animated.infinite, .infinite.underLine:hover:before, .infinite.mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span.infinite:hover:before, .nav.mv-nav-secondary .infinite.nav-item:hover:before, .mv-animate .col-6:hover h1.infinite, .mv-section .gallery .image:hover .infinite.info {
+.animated.infinite, .infinite.underLine:hover:before, .infinite.mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span.infinite:hover:before, .nav.mv-nav-secondary .infinite.nav-item:hover:before, .mv-animate .col-6:hover h1.infinite, .mv-section .gallery .image.link:hover .infinite.info {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite; }
 
-.animated.hinge, .hinge.underLine:hover:before, .hinge.mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span.hinge:hover:before, .nav.mv-nav-secondary .hinge.nav-item:hover:before, .mv-animate .col-6:hover h1.hinge, .mv-section .gallery .image:hover .hinge.info {
+.animated.hinge, .hinge.underLine:hover:before, .hinge.mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span.hinge:hover:before, .nav.mv-nav-secondary .hinge.nav-item:hover:before, .mv-animate .col-6:hover h1.hinge, .mv-section .gallery .image.link:hover .hinge.info {
   -webkit-animation-duration: 2s;
           animation-duration: 2s; }
 
-.animated.flipOutX, .flipOutX.underLine:hover:before, .flipOutX.mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span.flipOutX:hover:before, .nav.mv-nav-secondary .flipOutX.nav-item:hover:before, .mv-animate .col-6:hover h1.flipOutX, .mv-section .gallery .image:hover .flipOutX.info,
+.animated.flipOutX, .flipOutX.underLine:hover:before, .flipOutX.mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span.flipOutX:hover:before, .nav.mv-nav-secondary .flipOutX.nav-item:hover:before, .mv-animate .col-6:hover h1.flipOutX, .mv-section .gallery .image.link:hover .flipOutX.info,
 .animated.flipOutY,
 .flipOutY.underLine:hover:before,
 .flipOutY.mv-underline:hover:before,
 .mv-section .menu .navigation .nav .nav-item span.flipOutY:hover:before,
 .nav.mv-nav-secondary .flipOutY.nav-item:hover:before,
 .mv-animate .col-6:hover h1.flipOutY,
-.mv-section .gallery .image:hover .flipOutY.info,
+.mv-section .gallery .image.link:hover .flipOutY.info,
 .animated.bounceIn,
 .bounceIn.underLine:hover:before,
 .bounceIn.mv-underline:hover:before,
 .mv-section .menu .navigation .nav .nav-item span.bounceIn:hover:before,
 .nav.mv-nav-secondary .bounceIn.nav-item:hover:before,
 .mv-animate .col-6:hover h1.bounceIn,
-.mv-section .gallery .image:hover .bounceIn.info,
+.mv-section .gallery .image.link:hover .bounceIn.info,
 .animated.bounceOut,
 .bounceOut.underLine:hover:before,
 .bounceOut.mv-underline:hover:before,
 .mv-section .menu .navigation .nav .nav-item span.bounceOut:hover:before,
 .nav.mv-nav-secondary .bounceOut.nav-item:hover:before,
 .mv-animate .col-6:hover h1.bounceOut,
-.mv-section .gallery .image:hover .bounceOut.info {
+.mv-section .gallery .image.link:hover .bounceOut.info {
   -webkit-animation-duration: .75s;
           animation-duration: .75s; }
 
@@ -1299,7 +1299,7 @@ This theme, like WordPress, is licensed under the GPL.
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in; } }
 
-.animated.flip, .flip.underLine:hover:before, .flip.mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span.flip:hover:before, .nav.mv-nav-secondary .flip.nav-item:hover:before, .mv-animate .col-6:hover h1.flip, .mv-section .gallery .image:hover .flip.info {
+.animated.flip, .flip.underLine:hover:before, .flip.mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span.flip:hover:before, .nav.mv-nav-secondary .flip.nav-item:hover:before, .mv-animate .col-6:hover h1.flip, .mv-section .gallery .image.link:hover .flip.info {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
   -webkit-animation-name: flip;
@@ -2497,7 +2497,7 @@ This theme, like WordPress, is licensed under the GPL.
   to {
     top: 0; } }
 
-.rollUp, .mv-section .gallery .image:hover .info {
+.rollUp, .mv-section .gallery .image.link:hover .info {
   -webkit-animation-name: rollUp;
           animation-name: rollUp; }
 
@@ -2791,8 +2791,7 @@ a {
 
 .mv-section .gallery .image {
   position: relative;
-  overflow: hidden;
-  cursor: pointer; }
+  overflow: hidden; }
   .mv-section .gallery .image img.img-fluid {
     width: 100%;
     height: auto; }
@@ -2815,9 +2814,12 @@ a {
       position: relative;
       padding: 1.5em;
       text-align: left; }
-  .mv-section .gallery .image:hover .info {
+
+.mv-section .gallery .image.link {
+  cursor: pointer; }
+  .mv-section .gallery .image.link:hover .info {
     display: block; }
-    .mv-section .gallery .image:hover .info .bg {
+    .mv-section .gallery .image.link:hover .info .bg {
       display: block; }
 
 .mv-section.mv-membership {
