@@ -57,12 +57,26 @@
 
   <nav id="main-menu" class="side">
     <a href="javascript:void(0)" class="side-close">&times;</a>
-    <div class="side-open-internal"><a href="<?php echo site_url();?>"><img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg" width="40" height="40" alt=""></a></div>
+    <div class="side-open-internal"><a href="<?php echo (is_home()) ? '#' : site_url();?>"><img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg" width="40" height="40" alt=""></a></div>
     <div class="links">
-      <a href="#golf">Golf</a>
-      <a href="#equitacion">Equitación</a>      
+      <?php
+        $categories = get_categories(array(
+          'hide_empty' => 0,
+          'orderby' => 'term_id',
+          'order' => 'ASC'
+        ));
+        foreach ($categories as $category) :
+          if ( $category->term_id!==1 && !stristr($category->slug, 'logros') && !stristr($category->slug, 'menu') ):
+      ?>
+            <a href="#<?php echo $category->slug;?>"><?php echo $category->name;?></a>
+      <?php
+          endif;
+        endforeach;
+      ?>
     </div>
     <div class="social">
+      <a class="page-link" href="<?php echo (is_home()) ? '#mv-membership' : site_url().'/#mv-membership';?>">Membresías</a>
+      <a class="page-link" href="<?php echo (is_home()) ? '#contacto' : site_url().'/#contacto';?>">Contacto</a>
       <a target="_blank" href="<?php echo get_option('fb');?>"><div class="fb"></div></a>
       <a target="_blank" href="<?php echo get_option('tw');?>"><div class="tw"></div></a>
       <a target="_blank" href="<?php echo get_option('itg');?>"><div class="itg"></div></a>

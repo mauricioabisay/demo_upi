@@ -25,9 +25,6 @@
             endif;
           endforeach;
         ?>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#eventos">Eventos Especiales</a>
-        </li>
       </ul>
   </div>
 
@@ -38,13 +35,13 @@
     <div class="col-md-6 col-lg mv-feed">
       <div class="image"></div>
     </div>
-    <div class="col-md-6 col-lg d-block d-xs-none d-sm-none d-md-block d-lg-block d-xl-block mv-feed">
+    <div class="col-md-6 col-lg d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mv-feed">
       <div class="image"></div>
     </div>
-    <div class="col-md-6 col-lg d-block d-xs-none d-sm-none d-md-block d-lg-block d-xl-block mv-feed">
+    <div class="col-md-6 col-lg d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mv-feed">
       <div class="image"></div>
     </div>
-    <div class="col-sm-12 col-lg d-block d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mv-feed">
+    <div class="col-sm-12 col-lg d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mv-feed">
       <div class="image"></div>
     </div>
   </div>
@@ -102,7 +99,7 @@
           foreach ($menu as $key => $menu_item) :
         ?>
         <li class="nav-item">
-          <a class="nav-link active" href="#"><span><?php echo $menu_item->post_title;?></span></a>
+          <a href="javascript:void(0)" class="nav-link active mv-section-option" href="#" data-id="<?php echo $menu_item->ID;?>" data-url="<?php echo admin_url('admin-ajax.php');?>" data-target="#mv-section-content-<?php echo $category->slug;?>"><span><?php echo $menu_item->post_title;?></span></a>
         </li>
         <?php
           endforeach;
@@ -117,9 +114,9 @@
     wp_reset_query();
   ?>
 
-  <div class="row" class="mv-section-content">
+  <div class="row mv-row-center" class="mv-section-content">
     <div class="col">
-
+      <div id="mv-section-content-<?php echo $category->slug;?>"></div>
     </div>
   </div>
 
@@ -255,10 +252,10 @@
   wp_reset_postdata();
   wp_reset_query();
 ?>
-<div class="mv-scrollify">
+<div class="mv-scrollify wrapper">
   <div id="mv-membership" class="mv-section mv-membership">
     <div class="row title">
-      <h2 class="mv-scrollify-start">Membresias</h2>
+      <h2 class="mv-scrollify-start">Membresías</h2>
     </div>
     <div class="desc">
       <?php
@@ -269,7 +266,7 @@
           $memberships->the_post();
       ?>
       <div class="row mv-packet">
-        <div class="col-3 mv-packet-img">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 mv-packet-img">
           <?php if(has_post_thumbnail(get_the_ID())) : ?>
             <div class="image" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>);background-size: cover;background-position: center;background-repeat: no-repeat;"></div>
           <?php else : ?>
@@ -277,7 +274,7 @@
           <?php endif;?>
           <h3><?php the_title();?></h3>
         </div>
-        <div class="info col-9 post_content">
+        <div class="info col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 post_content">
           <?php the_content();?>
         </div>
       </div>
@@ -290,7 +287,7 @@
 
   <div id="contacto" class="mv-section mv-contact">
     <div class="row desc">
-      <div class="col-5">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
         <h2 class="title">Contacto</h2>
         <h3><?php echo get_option('contact_calle');?> <?php echo get_option('contact_colonia');?></h3>
         <p><?php echo get_option('contact_ciudad');?>, <?php echo get_option('contact_estado');?></p>
@@ -302,7 +299,7 @@
           <a target="_blank" href="<?php echo get_option('itg');?>"><div class="itg"></div></a>
         </div>
       </div>
-      <div id="mv-map-contact" class="col-7 map">
+      <div id="mv-map-contact" class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 map">
       </div>
     </div>
   </div>

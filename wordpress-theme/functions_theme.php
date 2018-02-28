@@ -18,14 +18,14 @@ class Theme extends NWM\WP\Theme {
 		if ( isset($_GET['id']) ) {
 			$content = get_post($_GET['id']);
 			if(is_null($content)) {
-				print_r(json_encode(array('msg' => -1)));
-				return;
+				print_r(json_encode(array('msg' => false)));
+				exit();
 			}
-			echo json_encode(array('msg' => $content->post_content));
-			return;
+			print_r(json_encode(array('msg' => $content->post_content)));
+			exit();
 		} else {
-			print_r(json_encode(array('msg' => -1)));
-			return;
+			print_r(json_encode(array('msg' => false)));
+			exit();
 		}
 	}
 

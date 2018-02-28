@@ -84,6 +84,7 @@
       }).setContent("Tú estás aquí");
 
       currentMarker.addTo(map);//.bindPopup(currentPopup).openPopup();
+      map.scrollWheelZoom.disable();
       <?php endif;?>
     });
     <?php endif;?>

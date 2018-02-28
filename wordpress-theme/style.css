@@ -2528,7 +2528,7 @@ nav.side {
     margin: 0; }
   nav.side a, nav.side .social {
     margin-right: 1em; }
-  nav.side a {
+  nav.side a, nav.side a.page-link {
     outline: none;
     padding: 1em;
     text-decoration: none;
@@ -2536,7 +2536,7 @@ nav.side {
     display: block;
     -webkit-transition: .3s;
     transition: .3s; }
-    nav.side a:hover {
+    nav.side a:hover, nav.side a.page-link:hover {
       color: #272742; }
   nav.side .links {
     margin: 2em auto; }
@@ -2659,15 +2659,21 @@ a {
     height: 30vh;
     width: auto;
     min-width: 100%;
-    background: #37396b;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    background-color: #37396b;
+    background-image: url(img/itg.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; }
 
 .mv-section.golf {
   border-left: 10px solid #115b9b; }
   .mv-section.golf .underLine:hover:before, .mv-section.golf .mv-underline:hover:before, .mv-section.golf .menu .navigation .nav .nav-item span:hover:before, .mv-section.golf .nav.mv-nav-secondary .nav-item:hover:before, .nav.mv-nav-secondary .mv-section.golf .nav-item:hover:before {
     border-bottom: 2px solid #115b9b; }
   .mv-section.golf .title h2 {
-    text-shadow: 3px 3px #115b9b; }
+    text-shadow: 2px 2px #115b9b; }
+  .mv-section.golf .menu .logo .img {
+    background: url(img/logo_golf.svg); }
   .mv-section.golf .gallery .image .info .bg {
     background: #115b9b; }
 
@@ -2676,7 +2682,9 @@ a {
   .mv-section.equitacion .underLine:hover:before, .mv-section.equitacion .mv-underline:hover:before, .mv-section.equitacion .menu .navigation .nav .nav-item span:hover:before, .mv-section.equitacion .nav.mv-nav-secondary .nav-item:hover:before, .nav.mv-nav-secondary .mv-section.equitacion .nav-item:hover:before {
     border-bottom: 2px solid #983620; }
   .mv-section.equitacion .title h2 {
-    text-shadow: 3px 3px #983620; }
+    text-shadow: 2px 2px #983620; }
+  .mv-section.equitacion .menu .logo .img {
+    background: url(img/logo_equitacion.svg); }
   .mv-section.equitacion .gallery .image .info .bg {
     background: #983620; }
 
@@ -2685,7 +2693,9 @@ a {
   .mv-section.gastronomia .underLine:hover:before, .mv-section.gastronomia .mv-underline:hover:before, .mv-section.gastronomia .menu .navigation .nav .nav-item span:hover:before, .mv-section.gastronomia .nav.mv-nav-secondary .nav-item:hover:before, .nav.mv-nav-secondary .mv-section.gastronomia .nav-item:hover:before {
     border-bottom: 2px solid #ee9a5d; }
   .mv-section.gastronomia .title h2 {
-    text-shadow: 3px 3px #ee9a5d; }
+    text-shadow: 2px 2px #ee9a5d; }
+  .mv-section.gastronomia .menu .logo .img {
+    background: url(img/logo_restaurant.svg); }
   .mv-section.gastronomia .gallery .image .info .bg {
     background: #ee9a5d; }
 
@@ -2834,6 +2844,7 @@ a {
       background-position: center !important; }
     .mv-section.mv-membership .mv-packet h3 {
       font-size: 1.25em;
+      font-weight: bolder;
       text-align: center;
       margin-top: .75em; }
     .mv-section.mv-membership .mv-packet .info {
@@ -2878,7 +2889,8 @@ a {
     .mv-contact .desc .itg {
       background: url(img/itg.svg); }
   .mv-contact .map {
-    background: #fee0c7; }
+    background: #fee0c7;
+    height: 38.8vh; }
 
 .demo-img {
   width: 100%;
@@ -2907,7 +2919,8 @@ footer {
   footer .map-site {
     opacity: 1; }
     footer .map-site ul {
-      list-style: none; }
+      list-style: none;
+      padding: 0; }
       footer .map-site ul li {
         text-transform: uppercase;
         margin: .5em 0; }
@@ -2928,7 +2941,7 @@ footer {
   footer .map-site ul li,
   footer .sponsors h3 {
     font-family: 'Montserrat', serif;
-    font-size: 0.5em;
+    font-size: 0.6em;
     letter-spacing: 0.3em; }
 
 .box-contact {
@@ -3128,6 +3141,13 @@ footer {
       top: 5px;
       float: right;
       z-index: 1001; }
+      nav.side .social .page-link {
+        position: relative;
+        top: -0.5em;
+        padding: 0em 0.5em;
+        color: #fee0c7;
+        border: none;
+        background: transparent; }
     nav.side .links a {
       display: inline-block; }
     nav.side a, nav.side .social {
@@ -3138,16 +3158,46 @@ footer {
     margin: 1em auto; } }
 
 @media screen and (max-width: 768px) {
+  #fullpage {
+    padding-bottom: 0; }
   .side-open-internal {
     display: none; }
   nav.side.active {
     width: 50%; }
+    nav.side.active .social .page-link {
+      display: block;
+      background: transparent;
+      border: none; }
+  .mv-scrollify-start {
+    padding-top: 2em; }
   .mv-row-center {
     margin: 1em auto; }
   .mv-section .title, .mv-section .desc, .mv-section .menu {
     margin: 1em auto; }
+  .mv-section .title {
+    padding-left: 2em; }
+    .mv-section .title h2 {
+      font-size: 5vw; }
+  .mv-section .desc {
+    padding: 0 2em; }
+  .mv-section .menu .logo {
+    display: none; }
   .mv-section.mv-membership .mv-packet {
-    display: block; } }
+    display: block;
+    padding: 0; }
+    .mv-section.mv-membership .mv-packet .mv-packet-img .image {
+      display: none; }
+  .mv-scrollify.wrapper {
+    height: auto !important; }
+  .mv-contact .title {
+    padding: 0; }
+  .mv-contact .desc .map {
+    height: 40vh;
+    margin-bottom: 1em; }
+  .mv-contact .desc .social {
+    margin: 0.5em auto; }
+  footer .map-site ul {
+    text-align: center; } }
 
 @media screen and (min-width: 576px) {
   .mv-section .desc p {

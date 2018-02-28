@@ -10,6 +10,20 @@ window.onload = function() {
     jQuery('.side-open').css('display', 'block');
     jQuery('#main-menu').removeClass('active');
   });
+  jQuery('.mv-section-option').on('click', function(event) {
+    jQuery.get(event.currentTarget.dataset.url,
+    {
+      action: 'getSectionContent',
+      id: event.currentTarget.dataset.id
+    },
+    function(data) {
+      data = JSON.parse(data);
+      if(data.msg) {
+        jQuery(event.currentTarget.dataset.target).text(data.msg);
+      }
+    }
+    );
+  });
   /*
   if (navigator.geolocation) {
     var geo_options = {
