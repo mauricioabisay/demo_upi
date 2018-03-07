@@ -294,9 +294,15 @@
         <p>C.P. <?php echo get_option('contact_cp');?></p>
         <p><?php echo get_option('contact_phone');?></p>
         <div class="social">
-          <a target="_blank" href="<?php echo get_option('fb');?>"><div class="fb"></div></a>
-          <a target="_blank" href="<?php echo get_option('tw');?>"><div class="tw"></div></a>
-          <a target="_blank" href="<?php echo get_option('itg');?>"><div class="itg"></div></a>
+          <?php if (get_option('fb')) : ?>
+            <a target="_blank" href="<?php echo get_option('fb');?>"><div class="fb"></div></a>
+          <?php endif;?>
+          <?php if (get_option('tw')) : ?>
+            <a target="_blank" href="<?php echo get_option('tw');?>"><div class="tw"></div></a>
+          <?php endif;?>
+          <?php if (get_option('itg')) : ?>
+            <a target="_blank" href="<?php echo get_option('itg');?>"><div class="itg"></div></a>
+          <?php endif;?>
         </div>
       </div>
       <div id="mv-map-contact" class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 map">

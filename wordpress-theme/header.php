@@ -86,9 +86,15 @@
       <?php endif;?>
 
       <a class="page-link" href="<?php echo (is_home()) ? '#contacto' : site_url().'/#contacto';?>">Contacto</a>
-      <a target="_blank" href="<?php echo get_option('fb');?>"><div class="fb"></div></a>
-      <a target="_blank" href="<?php echo get_option('tw');?>"><div class="tw"></div></a>
-      <a target="_blank" href="<?php echo get_option('itg');?>"><div class="itg"></div></a>
+      <?php if (get_option('fb')) : ?>
+        <a target="_blank" href="<?php echo get_option('fb');?>"><div class="fb"></div></a>
+      <?php endif;?>
+      <?php if (get_option('tw')) : ?>
+        <a target="_blank" href="<?php echo get_option('tw');?>"><div class="tw"></div></a>
+      <?php endif;?>
+      <?php if (get_option('itg')) : ?>
+        <a target="_blank" href="<?php echo get_option('itg');?>"><div class="itg"></div></a>
+      <?php endif;?>
     </div>
   </nav>
 
