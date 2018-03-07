@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="mv-scrollify">
+<div class="mv-scrollify" data-section-name="itg">
   <div class="row mv-row-center">
     <div class="col">
       <p class="mv-scrollify-start" style="margin: 2em auto;">
@@ -56,7 +56,7 @@
   foreach ($categories as $category) :
     if ( $category->term_id!==1 && !stristr($category->slug, 'logros') && !stristr($category->slug, 'menu') ):
 ?>
-<div id="<?php echo $category->slug;?>" class="mv-section mv-scrollify <?php echo $category->slug;?>">
+<div id="<?php echo $category->slug;?>" data-section-name="<?php echo $category->slug;?>" class="mv-section mv-scrollify <?php echo $category->slug;?>">
   <div class="row title mv-row-center">
     <div class="col-xs-1 col-sm-1 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"></div>
     <div class="col">
@@ -252,7 +252,7 @@
   wp_reset_postdata();
   wp_reset_query();
 ?>
-<div class="mv-scrollify wrapper">
+<div class="mv-scrollify wrapper" data-section-name="membresias">
   <div id="mv-membership" class="mv-section mv-membership">
     <div class="row title">
       <h2 class="mv-scrollify-start">Membresías</h2>
@@ -284,7 +284,7 @@
       ?>
     </div>
   </div>
-
+  <div id="molino-contacto"></div>
   <div id="contacto" class="mv-section mv-contact">
     <div class="row desc">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">

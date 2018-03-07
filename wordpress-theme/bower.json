@@ -16,6 +16,8 @@
     "tests"
   ],
   "devDependencies": {
-    "Scrollify": "^1.0.19"
+    "Scrollify": "^1.0.19",
+    "scroll-parallax": "^2.1.0",
+    "jarallax": "^1.9.3"
   }
 }

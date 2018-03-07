@@ -1,8 +1,8 @@
 /*
-Theme Name: NWM Wordpress development template
-Theme URI: http://mauricioabisay.es/nwm_dev/
+Theme Name: Molino Viejo
+Theme URI: http://mauricioabisay.es/nwm_dev/molino_viejo
 Author: mauricio@nwm.mx
-Description: NWM project to accelerate Wordpress theme and plugin development
+Description: Molino Viejo custom Wordpress theme
 Version: 0.1
 License: GNU General Public License v2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -3069,6 +3069,22 @@ footer {
   color: #385a43;
   font-size: 12px;
   margin-top: 2%; }
+
+.jarallax {
+  position: relative;
+  z-index: 0; }
+
+.jarallax > .jarallax-img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* support for plugin https://github.com/bfred-it/object-fit-images */
+  font-family: 'object-fit: cover;';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
 
 .post .img-featured {
   width: 100%;

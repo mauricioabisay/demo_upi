@@ -38,7 +38,7 @@
                         $sponsors->the_post();
                         $link = get_post_meta(get_the_ID(), 'mv-sponsor-link', true);
                 ?>
-                <a href="<?php echo $link;?>"><div class="sponsor" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>);background-size: cover;background-position: center;background-repeat: no-repeat;"></div></a>
+                <a href="<?php echo $link;?>"><div class="sponsor" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>);background-size: contain;background-position: center;background-repeat: no-repeat;"></div></a>
                 <?php
                     endwhile;
                     wp_reset_postdata();
@@ -63,7 +63,9 @@
     });
     <?php if(is_home()): ?>
     jQuery(document).ready(function () {
-      jQuery.scrollify({section: '.mv-scrollify'});
+      jarallax(document.querySelectorAll('.jarallax'), {
+          speed: 0.2
+      });
       <?php if (get_option('contact_lat') && get_option('contact_lng')) :?>
       var currentLat = <?php echo get_option('contact_lat');?>;
       var currentLng = <?php echo get_option('contact_lng');?>;

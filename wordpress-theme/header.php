@@ -57,7 +57,7 @@
 
   <nav id="main-menu" class="side">
     <a href="javascript:void(0)" class="side-close">&times;</a>
-    <div class="side-open-internal"><a href="<?php echo (is_home()) ? '#' : site_url();?>"><img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg" width="40" height="40" alt=""></a></div>
+    <div class="side-open-internal"><a href="<?php echo (is_home()) ? 'javascript:void(0)' : site_url();?>" onclick="<?php echo (is_home()) ? "jQuery.scrollify.move('#home')" : '';?>"><img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg" width="40" height="40" alt=""></a></div>
     <div class="links">
       <?php
         $categories = get_categories(array(
@@ -67,15 +67,24 @@
         ));
         foreach ($categories as $category) :
           if ( $category->term_id!==1 && !stristr($category->slug, 'logros') && !stristr($category->slug, 'menu') ):
+            if ( is_home() ) :
       ?>
-            <a href="#<?php echo $category->slug;?>"><?php echo $category->name;?></a>
+            <a href="javascript:void(0)" onclick="jQuery.scrollify.move('#<?php echo $category->slug;?>');"><?php echo $category->name;?></a>
+      <?php else : ?>
+            <a href="<?php echo site_url().'/#'.$category->slug;?>"><?php echo $category->name;?></a>
+      <?php endif; ?>
       <?php
           endif;
         endforeach;
       ?>
     </div>
     <div class="social">
-      <a class="page-link" href="<?php echo (is_home()) ? '#mv-membership' : site_url().'/#mv-membership';?>">Membresías</a>
+      <?php if ( is_home() ) :?>
+        <a class="page-link" href="javascript:void(0)" onclick="jQuery.scrollify.move('#membresias')">Membresías</a>
+      <?php else : ?>
+        <a class="page-link" href="<?php echo site_url().'/#membresias';?>">Membresías</a>
+      <?php endif;?>
+
       <a class="page-link" href="<?php echo (is_home()) ? '#contacto' : site_url().'/#contacto';?>">Contacto</a>
       <a target="_blank" href="<?php echo get_option('fb');?>"><div class="fb"></div></a>
       <a target="_blank" href="<?php echo get_option('tw');?>"><div class="tw"></div></a>
@@ -88,8 +97,9 @@
 
   <div id="fullpage" class="container">
     <?php if (is_home()) : ?>
-      <div class="mv-scrollify">
-        <div class="mv-featured-img" style="background-image: url(<?php echo get_stylesheet_directory_uri();?>/img/home.jpg);height: 90vh;width: auto;">
+      <div class="mv-scrollify" data-section-name="home">
+        <div class="mv-featured-img jarallax" style="height: 80vh;width: auto;">
+          <img src="<?php echo get_stylesheet_directory_uri();?>/img/home.jpg" class="jarallax-img">
           <h1 class="mv-title title">Molino Viejo</h1>
         </div>
         <div class="mv-scroll-hint">
@@ -97,9 +107,10 @@
         </div>
       </div>
     <?php else : ?>
-      <div class="mv-scrollify">
-        <div class="mv-featured-img" style="background-image: url(<?php echo get_stylesheet_directory_uri();?>/img/home.jpg);height: 90vh;width: auto;">
-          <h1 class="mv-title title">Molino Viejo</h1>
+      <div class="mv-scrollify" data-section-name="home">
+        <div class="mv-featured-img jarallax" style="height: 80vh;width: auto;">
+          <img src="<?php echo get_stylesheet_directory_uri();?>/img/home.jpg" class="jarallax-img">
+          <h1 class="mv-title title"><?php the_title();?></h1>
         </div>
         <div class="mv-scroll-hint">
           <span style="background: url(<?php echo get_stylesheet_directory_uri();?>/img/logo_bg.svg)"></span>
