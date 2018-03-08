@@ -11,9 +11,8 @@ Text Domain: nwm-dev-wp
 
 This theme, like WordPress, is licensed under the GPL.
 */
-@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700");
-@import url("https://fonts.googleapis.com/css?family=Yantramanav:700,900");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700");
 @font-face {
   font-family: "Butler";
   src: url("font/butler_regular-webfont.woff"); }
@@ -32,6 +31,13 @@ This theme, like WordPress, is licensed under the GPL.
   font-family: "Butler";
   src: url("font/butler_light-webfont.woff");
   font-weight: light; }
+
+.serif, .container *, footer * {
+  font-family: 'EB Garamont', serif; }
+
+.sans, .title, .title *, .map-site *, .sponsors *, .mv-section .menu .navigation .nav .nav-item span, footer .map-site ul li,
+footer .sponsors h3 {
+  font-family: 'Montserrat', sans-serif; }
 
 /*!
  * animate.css -http://daneden.me/animate
@@ -2598,10 +2604,10 @@ a, a:hover {
     color: #fee0c7; }
 
 .container * {
-  font-family: 'Cormorant Garamond', serif; }
-
-.title, .title *, .map-site *, .sponsors * {
-  font-family: 'Montserrat', sans-serif; }
+  font-weight: 300; }
+  .container * p {
+    line-height: 2em;
+    font-size: 0.9em; }
 
 a {
   outline: none; }
@@ -2651,7 +2657,7 @@ a {
   font-size: 0.9em; }
 
 .mv-image-feed {
-  margin: 5em auto;
+  margin: 5em auto 0;
   padding: 0 1em; }
   .mv-image-feed .mv-feed {
     padding: 0em 5px; }
@@ -2670,10 +2676,9 @@ a {
   border-left: 10px solid #115b9b; }
   .mv-section.golf .underLine:hover:before, .mv-section.golf .mv-underline:hover:before, .mv-section.golf .menu .navigation .nav .nav-item span:hover:before, .mv-section.golf .nav.mv-nav-secondary .nav-item:hover:before, .nav.mv-nav-secondary .mv-section.golf .nav-item:hover:before {
     border-bottom: 2px solid #115b9b; }
-  .mv-section.golf .title h2 {
-    text-shadow: 2px 2px #115b9b; }
   .mv-section.golf .menu .logo .img {
-    background: url(img/logo_golf.svg); }
+    background: url(img/logo_golf.svg);
+    left: -35%; }
   .mv-section.golf .gallery .image .info .bg {
     background: #115b9b; }
 
@@ -2681,8 +2686,6 @@ a {
   border-left: 10px solid #983620; }
   .mv-section.equitacion .underLine:hover:before, .mv-section.equitacion .mv-underline:hover:before, .mv-section.equitacion .menu .navigation .nav .nav-item span:hover:before, .mv-section.equitacion .nav.mv-nav-secondary .nav-item:hover:before, .nav.mv-nav-secondary .mv-section.equitacion .nav-item:hover:before {
     border-bottom: 2px solid #983620; }
-  .mv-section.equitacion .title h2 {
-    text-shadow: 2px 2px #983620; }
   .mv-section.equitacion .menu .logo .img {
     background: url(img/logo_equitacion.svg); }
   .mv-section.equitacion .gallery .image .info .bg {
@@ -2692,8 +2695,6 @@ a {
   border-left: 10px solid #ee9a5d; }
   .mv-section.gastronomia .underLine:hover:before, .mv-section.gastronomia .mv-underline:hover:before, .mv-section.gastronomia .menu .navigation .nav .nav-item span:hover:before, .mv-section.gastronomia .nav.mv-nav-secondary .nav-item:hover:before, .nav.mv-nav-secondary .mv-section.gastronomia .nav-item:hover:before {
     border-bottom: 2px solid #ee9a5d; }
-  .mv-section.gastronomia .title h2 {
-    text-shadow: 2px 2px #ee9a5d; }
   .mv-section.gastronomia .menu .logo .img {
     background: url(img/logo_restaurant.svg); }
   .mv-section.gastronomia .gallery .image .info .bg {
@@ -2709,8 +2710,7 @@ a {
   margin: 1em 20%; }
 
 .mv-section .title {
-  margin-top: 0;
-  padding-top: 2em; }
+  margin-top: 0; }
   .mv-section .title h2 {
     text-transform: uppercase;
     font-size: 2em;
@@ -2724,7 +2724,7 @@ a {
       margin-top: 1em; }
 
 .mv-section .desc {
-  font-size: 1em; }
+  font-size: 0.9em; }
 
 .mv-section .menu {
   margin-bottom: 5em; }
@@ -2749,9 +2749,8 @@ a {
         .mv-section .menu .navigation .nav .nav-item span {
           text-transform: uppercase;
           font-size: 0.8em;
-          font-weight: bold;
-          letter-spacing: 0.3em;
-          font-family: 'Montserrat', sans-serif; }
+          font-weight: 500;
+          letter-spacing: 0.3em; }
 
 .mv-section .achievements {
   margin: 5em auto;
@@ -2916,8 +2915,7 @@ footer {
     top: 0;
     left: -.5em; }
   footer * {
-    color: #fee0c7;
-    font-family: 'Butler', serif; }
+    color: #fee0c7; }
   footer .map-site {
     opacity: 1; }
     footer .map-site ul {
@@ -2942,7 +2940,6 @@ footer {
     display: inline-block; }
   footer .map-site ul li,
   footer .sponsors h3 {
-    font-family: 'Montserrat', serif;
     font-size: 0.6em;
     letter-spacing: 0.3em; }
 
@@ -3159,13 +3156,23 @@ footer {
       top: 5px;
       float: right;
       z-index: 1001; }
-      nav.side .social .page-link {
+      nav.side .social .sections, nav.side .social .networks {
+        display: inline-block; }
+      nav.side .social a.page-link {
         position: relative;
         top: -0.5em;
         padding: 0em 0.5em;
+        margin: 0;
         color: #fee0c7;
         border: none;
         background: transparent; }
+        nav.side .social a.page-link:hover {
+          color: #272742; }
+      nav.side .social .networks {
+        padding: 0em 0em 0em 1em;
+        margin-right: 1em; }
+        nav.side .social .networks a {
+          margin-left: -1.5em; }
     nav.side .links a {
       display: inline-block; }
     nav.side a, nav.side .social {

@@ -79,13 +79,11 @@
       ?>
     </div>
     <div class="social">
-      <?php if ( is_home() ) :?>
-        <a class="page-link" href="javascript:void(0)" onclick="jQuery.scrollify.move('#membresias')">Membresías</a>
-      <?php else : ?>
+      <div class="sections">
         <a class="page-link" href="<?php echo site_url().'/#membresias';?>">Membresías</a>
-      <?php endif;?>
-
-      <a class="page-link" href="<?php echo (is_home()) ? '#contacto' : site_url().'/#contacto';?>">Contacto</a>
+        <a class="page-link" href="<?php echo (is_home()) ? '#contacto' : site_url().'/#contacto';?>">Contacto</a>
+      </div>
+      <div class="networks">
       <?php if (get_option('fb')) : ?>
         <a target="_blank" href="<?php echo get_option('fb');?>"><div class="fb"></div></a>
       <?php endif;?>
@@ -95,6 +93,7 @@
       <?php if (get_option('itg')) : ?>
         <a target="_blank" href="<?php echo get_option('itg');?>"><div class="itg"></div></a>
       <?php endif;?>
+      </div>
     </div>
   </nav>
 

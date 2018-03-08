@@ -2,7 +2,7 @@
 <div class="mv-scrollify" data-section-name="itg">
   <div class="row mv-row-center">
     <div class="col">
-      <p class="mv-scrollify-start" style="margin: 2em auto;">
+      <p class="" style="margin: 2em auto;text-align: center;">
         Molino Viejo, donde la tranquilidad fluye con sensación de libertad y paz; un espacio de fusión clásica y contemporánea, que convive con actividades de deporte y entretenimiento como el golf, equitación y gastronomía. Perfecta armonía del bienestar, la cercanía, la atención e instalaciones de primera.
       </p>
     </div>
@@ -60,7 +60,7 @@
   <div class="row title mv-row-center">
     <div class="col-xs-1 col-sm-1 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"></div>
     <div class="col">
-      <h2 class="mv-scrollify-start"><?php echo $category->name;?></h2>
+      <h2 class=""><?php echo $category->name;?></h2>
     </div>
   </div>
   <div class="row desc mv-row-center">

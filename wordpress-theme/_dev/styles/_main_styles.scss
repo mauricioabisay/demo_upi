@@ -28,11 +28,16 @@ a, a:hover {
 }
 
 .container * {
-    font-family: 'Cormorant Garamond', serif;
+    @extend .serif;
+    font-weight: 300;
+    p {
+        line-height: 2em;
+        font-size: 0.9em;
+    }
 }
 
 .title, .title *, .map-site *, .sponsors * {
-    font-family: 'Montserrat', sans-serif;
+    @extend .sans;
 }
 
 a {
@@ -115,7 +120,7 @@ a {
 }
 
 .mv-image-feed {
-    margin: 5em auto;
+    margin: 5em auto 0;
     padding: 0 1em;
     .mv-feed {
         padding: 0em 5px;
@@ -140,13 +145,14 @@ a {
     }
     .title {
         h2 {
-            text-shadow: 2px 2px $golf;
+            
         }
     }
     .menu {
         .logo {
             .img {
                 background: url(img/logo_golf.svg);
+                left: -35%;
             }
         }
     }
@@ -167,7 +173,7 @@ a {
     }
     .title {
         h2 {
-            text-shadow: 2px 2px $horse;
+            
         }
     }
     .menu {
@@ -194,7 +200,7 @@ a {
     }
     .title {
         h2 {
-            text-shadow: 2px 2px $gastro;
+            
         }
     }
     .menu {
@@ -229,7 +235,6 @@ a {
     }
     .title {
         margin-top: 0;
-        padding-top: 2em;
         h2 {
             text-transform: uppercase;
             font-size: 2em;
@@ -245,7 +250,7 @@ a {
         }
     }
     .desc {
-        font-size: 1em;
+        font-size: 0.9em;
     }
     .menu {
         margin-bottom: 5em;
@@ -272,10 +277,9 @@ a {
                     span {
                         text-transform: uppercase;
                         font-size: 0.8em;
-                        font-weight: bold;
+                        font-weight: 500;
                         letter-spacing: 0.3em;
-                        font-family: 'Montserrat', sans-serif;
-                        @extend .mv-underline;
+                        @extend .mv-underline, .sans;
                     }
                 }
             }
@@ -491,7 +495,7 @@ footer {
     }
     * {
         color: $white;
-        font-family: 'Butler', serif;
+        @extend .serif;
     }
     .map-site {
         opacity: 1;
@@ -529,7 +533,7 @@ footer {
 
     .map-site ul li,
     .sponsors h3 {
-        font-family: 'Montserrat', serif;
+        @extend .sans;
         font-size: 0.6em;
         letter-spacing: 0.3em;
     }
