@@ -255,7 +255,7 @@
 <div class="mv-scrollify wrapper" data-section-name="membresias">
   <div id="mv-membership" class="mv-section mv-membership">
     <div class="row title">
-      <h2 class="mv-scrollify-start">Membresías</h2>
+      <h2 class="">Membresías</h2>
     </div>
     <div class="desc">
       <?php

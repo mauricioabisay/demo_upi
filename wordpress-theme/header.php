@@ -106,6 +106,7 @@
         <div class="mv-featured-img jarallax" style="height: 80vh;width: auto;">
           <img src="<?php echo get_stylesheet_directory_uri();?>/img/home.jpg" class="jarallax-img">
           <h1 class="mv-title title">Molino Viejo</h1>
+          <h2>Golf and Country Club</h2>
         </div>
         <div class="mv-scroll-hint">
           <span style="background: url(<?php echo get_stylesheet_directory_uri();?>/img/logo_bg.svg)"></span>
