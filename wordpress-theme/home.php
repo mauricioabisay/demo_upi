@@ -28,21 +28,21 @@
       </ul>
   </div>
 
-  <div class="row mv-image-feed">
+  <div id="mv-instagram" class="row mv-image-feed">
     <div class="col-md-6 col-lg mv-feed">
-      <div class="image"></div>
+      <img id="mv-itg-1" class="image">
     </div>
     <div class="col-md-6 col-lg mv-feed">
-      <div class="image"></div>
+      <img id="mv-itg-2" class="image">
     </div>
     <div class="col-md-6 col-lg d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mv-feed">
-      <div class="image"></div>
+      <img id="mv-itg-3" class="image">
     </div>
     <div class="col-md-6 col-lg d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mv-feed">
-      <div class="image"></div>
+      <img id="mv-itg-4" class="image">
     </div>
     <div class="col-sm-12 col-lg d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mv-feed">
-      <div class="image"></div>
+      <img id="mv-itg-5" class="image">
     </div>
   </div>
 </div>

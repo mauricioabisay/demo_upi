@@ -33,6 +33,31 @@
                     <th><label for="itg">Instagram:</label></th>
                     <td><input name="itg" id="itg" value="<?php echo get_option('itg', '');?>" class="regular-text" type="text" placeholder="Link a Instagram"></td>
                 </tr>
+                <?php /*
+                <tr class="user-first-name-wrap">
+                    <th><label for="itg-client-id">Instagram Client ID:</label></th>
+                    <td><input name="itg-client-id" id="itg-client-id" value="<?php echo get_option('itg-client-id', '');?>" class="regular-text" type="text" placeholder="Instagram Client ID"></td>
+                </tr>
+                <tr class="user-first-name-wrap">
+                    <th><label for="itg-client-secret">Instagram Client Secret:</label></th>
+                    <td><input name="itg-client-secret" id="itg-client-secret" value="<?php echo get_option('itg-client-secret', '');?>" class="regular-text" type="text" placeholder="Instagram Client Secret"></td>
+                </tr>
+                <tr class="user-first-name-wrap">
+                    <th></th>
+                    <?php
+                        $access_itg = "https://api.instagram.com/oauth/authorize/?client_id=";
+                        $access_itg.= get_option('itg-client-id', '');
+                        $access_itg.= "&redirect_uri=";
+                        $access_itg.= urlencode(admin_url().'admin.php?page=nwm-ajustes');;
+                        $access_itg.= '&response_type=code';
+                    ?>
+                    <td><a href="<?php echo $access_itg;?>">Conseguir Token</a></td>
+                </tr>
+                */?>
+                <tr class="user-first-name-wrap">
+                    <th><label for="itg-token">Instagram Token, obtener usando <a href="https://rudrastyh.com/tools/access-token">https://rudrastyh.com/tools/access-token</a>:</label></th>
+                    <td><input name="itg-token" id="itg-token" value="<?php echo get_option('itg-token', '');?>" class="regular-text" type="text" placeholder="Instagram Token"></td>
+                </tr>
             </tbody>
         </table>
         <h2>Contacto</h2>

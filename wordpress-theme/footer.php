@@ -88,6 +88,34 @@
       currentMarker.addTo(map);//.bindPopup(currentPopup).openPopup();
       map.scrollWheelZoom.disable();
       <?php endif;?>
+      var token = '<?php echo get_option('itg-token');?>';
+      var numPhotos = 5;
+      jQuery.ajax({
+        url: 'https://api.instagram.com/v1/users/search',
+        data: {access_token: token, q: 'lalo00798'},
+        type: 'GET',
+        success: function(userData) {
+          jQuery.ajax({
+            url: 'https://api.instagram.com/v1/users/'+userData.data[0].id+'/media/recent',
+            dataType: 'jsonp',
+            type: 'GET',
+            data: {access_token: token, count: numPhotos},
+            success: function(data) {
+              var i = 1;
+              for(x in data.data) {
+                jQuery('#mv-itg-'+i).attr('src', ''+data.data[x].images.thumbnail.url+'');
+                i++;
+              }
+            },
+            error: function() {
+              console.log('Error retrieving data from user account');
+            }
+          });
+        },
+        error: function() {
+          console.log('Error connecting to Instagram or finding user account');
+        }
+      });
     });
     <?php endif;?>
 </script>

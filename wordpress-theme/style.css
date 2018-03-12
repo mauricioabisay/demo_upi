@@ -2665,15 +2665,9 @@ a {
   .mv-image-feed .mv-feed {
     padding: 0em 5px; }
   .mv-image-feed .image {
-    height: 30vh;
-    width: auto;
-    min-width: 100%;
-    margin-bottom: 1em;
-    background-color: #37396b;
-    background-image: url(img/itg.svg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat; }
+    height: auto;
+    width: 100%;
+    margin-bottom: 1em; }
 
 .mv-section.golf {
   border-left: 10px solid #115b9b; }

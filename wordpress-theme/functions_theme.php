@@ -92,31 +92,7 @@ class Theme extends NWM\WP\Theme {
 		return 15;
 	}
 
-	function add_notice_query_var($location) {
-		remove_filter( 'redirect_post_location', array( $this, 'add_notice_query_var' ), 99 );
-		return add_query_arg( array( 'YOUR_QUERY_VAR' => 'ID' ), $location );
-	}
-
-	function investors_limit_notice() {
-		if ( ! isset( $_GET['YOUR_QUERY_VAR'] ) ) {
-			return;
-		}
-		echo '<div class="notice notice-warning">
-		   <p>You may only have 5 investors publish, this investor has been saved but will not show on the site.</p>
-		</div>';
-	}
-
-	function investors_limit_check($post_id, $post) {
-		if(wp_count_posts('investors')->publish > 5) {
-			wp_update_post( array( 'ID' => $post_id, 'post_status' => 'private' ) );
-			add_filter( 'redirect_post_location', array( $this, 'add_notice_query_var' ), 99 );
-		}
-		return;
-	}
-
 	function adminActions() {
-		add_action('save_post_investors', array($this, 'investors_limit_check'), 10 , 2);
-		add_action('admin_notices', array($this, 'investors_limit_notice'));
 	}
 
 	function adminFilters() {
