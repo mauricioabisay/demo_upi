@@ -24,9 +24,7 @@
             </div>
         </div>
         <div class="row sponsors">
-            <div class="col">
-                <h3>patrocinadores</h3>
-            </div>
+            <div class="col"></div>
         </div>
         <div class="row logos">
             <div class="gallery col">
@@ -89,10 +87,14 @@
       map.scrollWheelZoom.disable();
       <?php endif;?>
       var token = '<?php echo get_option('itg-token');?>';
+      <?php
+        $account = explode('/', get_option('itg'));
+        $len = sizeof($account)-2;
+      ?>
       var numPhotos = 5;
       jQuery.ajax({
         url: 'https://api.instagram.com/v1/users/search',
-        data: {access_token: token, q: 'lalo00798'},
+        data: {access_token: token, q: '<?php echo $account[$len];?>'},
         type: 'GET',
         success: function(userData) {
           jQuery.ajax({

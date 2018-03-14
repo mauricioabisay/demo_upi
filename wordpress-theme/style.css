@@ -35,7 +35,7 @@ This theme, like WordPress, is licensed under the GPL.
 .serif, .container *, .mv-featured-img h2, footer * {
   font-family: 'EB Garamont', serif; }
 
-.sans, .title, .title *, .map-site *, .sponsors *, .mv-section .menu .navigation .nav .nav-item span, footer .map-site ul li,
+.sans, .title, .title *, .map-site *, .sponsors *, .mv-section .menu .nav-item span, footer .map-site ul li,
 footer .sponsors h3 {
   font-family: 'Montserrat', sans-serif; }
 
@@ -46,40 +46,40 @@ footer .sponsors h3 {
  *
  * Copyright (c) 2017 Daniel Eden
  */
-.animated, .underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item:hover:before, .mv-animate .col-6:hover h1, .mv-section .gallery .image.link:hover .info {
+.animated, .underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item span:hover:before, .mv-animate .col-6:hover h1, .mv-section .gallery .image.link:hover .info {
   -webkit-animation-duration: .5s;
           animation-duration: .5s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
-.animated.infinite, .infinite.underLine:hover:before, .infinite.mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span.infinite:hover:before, .nav.mv-nav-secondary .infinite.nav-item:hover:before, .mv-animate .col-6:hover h1.infinite, .mv-section .gallery .image.link:hover .infinite.info {
+.animated.infinite, .infinite.underLine:hover:before, .infinite.mv-underline:hover:before, .mv-section .menu .nav-item span.infinite:hover:before, .nav.mv-nav-secondary .nav-item span.infinite:hover:before, .mv-animate .col-6:hover h1.infinite, .mv-section .gallery .image.link:hover .infinite.info {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite; }
 
-.animated.hinge, .hinge.underLine:hover:before, .hinge.mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span.hinge:hover:before, .nav.mv-nav-secondary .hinge.nav-item:hover:before, .mv-animate .col-6:hover h1.hinge, .mv-section .gallery .image.link:hover .hinge.info {
+.animated.hinge, .hinge.underLine:hover:before, .hinge.mv-underline:hover:before, .mv-section .menu .nav-item span.hinge:hover:before, .nav.mv-nav-secondary .nav-item span.hinge:hover:before, .mv-animate .col-6:hover h1.hinge, .mv-section .gallery .image.link:hover .hinge.info {
   -webkit-animation-duration: 2s;
           animation-duration: 2s; }
 
-.animated.flipOutX, .flipOutX.underLine:hover:before, .flipOutX.mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span.flipOutX:hover:before, .nav.mv-nav-secondary .flipOutX.nav-item:hover:before, .mv-animate .col-6:hover h1.flipOutX, .mv-section .gallery .image.link:hover .flipOutX.info,
+.animated.flipOutX, .flipOutX.underLine:hover:before, .flipOutX.mv-underline:hover:before, .mv-section .menu .nav-item span.flipOutX:hover:before, .nav.mv-nav-secondary .nav-item span.flipOutX:hover:before, .mv-animate .col-6:hover h1.flipOutX, .mv-section .gallery .image.link:hover .flipOutX.info,
 .animated.flipOutY,
 .flipOutY.underLine:hover:before,
 .flipOutY.mv-underline:hover:before,
-.mv-section .menu .navigation .nav .nav-item span.flipOutY:hover:before,
-.nav.mv-nav-secondary .flipOutY.nav-item:hover:before,
+.mv-section .menu .nav-item span.flipOutY:hover:before,
+.nav.mv-nav-secondary .nav-item span.flipOutY:hover:before,
 .mv-animate .col-6:hover h1.flipOutY,
 .mv-section .gallery .image.link:hover .flipOutY.info,
 .animated.bounceIn,
 .bounceIn.underLine:hover:before,
 .bounceIn.mv-underline:hover:before,
-.mv-section .menu .navigation .nav .nav-item span.bounceIn:hover:before,
-.nav.mv-nav-secondary .bounceIn.nav-item:hover:before,
+.mv-section .menu .nav-item span.bounceIn:hover:before,
+.nav.mv-nav-secondary .nav-item span.bounceIn:hover:before,
 .mv-animate .col-6:hover h1.bounceIn,
 .mv-section .gallery .image.link:hover .bounceIn.info,
 .animated.bounceOut,
 .bounceOut.underLine:hover:before,
 .bounceOut.mv-underline:hover:before,
-.mv-section .menu .navigation .nav .nav-item span.bounceOut:hover:before,
-.nav.mv-nav-secondary .bounceOut.nav-item:hover:before,
+.mv-section .menu .nav-item span.bounceOut:hover:before,
+.nav.mv-nav-secondary .nav-item span.bounceOut:hover:before,
 .mv-animate .col-6:hover h1.bounceOut,
 .mv-section .gallery .image.link:hover .bounceOut.info {
   -webkit-animation-duration: .75s;
@@ -1305,7 +1305,7 @@ footer .sponsors h3 {
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in; } }
 
-.animated.flip, .flip.underLine:hover:before, .flip.mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span.flip:hover:before, .nav.mv-nav-secondary .flip.nav-item:hover:before, .mv-animate .col-6:hover h1.flip, .mv-section .gallery .image.link:hover .flip.info {
+.animated.flip, .flip.underLine:hover:before, .flip.mv-underline:hover:before, .mv-section .menu .nav-item span.flip:hover:before, .nav.mv-nav-secondary .nav-item span.flip:hover:before, .mv-animate .col-6:hover h1.flip, .mv-section .gallery .image.link:hover .flip.info {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
   -webkit-animation-name: flip;
@@ -2483,11 +2483,11 @@ footer .sponsors h3 {
   to {
     width: auto; } }
 
-.underLine, .mv-underline, .mv-section .menu .navigation .nav .nav-item span, .nav.mv-nav-secondary .nav-item {
+.underLine, .mv-underline, .mv-section .menu .nav-item span, .nav.mv-nav-secondary .nav-item span {
   display: inline-block;
   position: relative; }
 
-.underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item:hover:before {
+.underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item span:hover:before {
   position: absolute;
   bottom: 0;
   content: '';
@@ -2615,7 +2615,7 @@ a {
 #mv-membership * {
   color: #37396b; }
 
-.underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .navigation .nav .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item:hover:before {
+.underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item span:hover:before {
   border-bottom: 2px solid #fee0c7; }
 
 .mv-featured-img {
@@ -2634,7 +2634,9 @@ a {
     font-weight: bold; }
   .mv-featured-img h2 {
     font-size: 1.5em;
-    margin-top: 0.5em; }
+    margin-top: 0em;
+    text-transform: uppercase;
+    letter-spacing: 0.7em; }
 
 .mv-scroll-hint {
   text-align: center;
@@ -2652,8 +2654,8 @@ a {
   font-weight: bolder;
   letter-spacing: .1em;
   margin: 0 0.5em; }
-  .nav.mv-nav-secondary .nav-item:hover:before {
-    bottom: .1em; }
+  .nav.mv-nav-secondary .nav-item span:hover:before {
+    bottom: 0em; }
 
 .mv-nav-secondary {
   margin: 1em auto;
@@ -2671,17 +2673,16 @@ a {
 
 .mv-section.golf {
   border-left: 10px solid #115b9b; }
-  .mv-section.golf .underLine:hover:before, .mv-section.golf .mv-underline:hover:before, .mv-section.golf .menu .navigation .nav .nav-item span:hover:before, .mv-section.golf .nav.mv-nav-secondary .nav-item:hover:before, .nav.mv-nav-secondary .mv-section.golf .nav-item:hover:before {
+  .mv-section.golf .underLine:hover:before, .mv-section.golf .mv-underline:hover:before, .mv-section.golf .menu .nav-item span:hover:before, .mv-section.golf .nav.mv-nav-secondary .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item .mv-section.golf span:hover:before {
     border-bottom: 2px solid #115b9b; }
   .mv-section.golf .menu .logo .img {
-    background: url(img/logo_golf.svg);
-    left: -15%; }
+    background: url(img/logo_golf.svg); }
   .mv-section.golf .gallery .image .info .bg {
     background: #115b9b; }
 
 .mv-section.equitacion {
   border-left: 10px solid #983620; }
-  .mv-section.equitacion .underLine:hover:before, .mv-section.equitacion .mv-underline:hover:before, .mv-section.equitacion .menu .navigation .nav .nav-item span:hover:before, .mv-section.equitacion .nav.mv-nav-secondary .nav-item:hover:before, .nav.mv-nav-secondary .mv-section.equitacion .nav-item:hover:before {
+  .mv-section.equitacion .underLine:hover:before, .mv-section.equitacion .mv-underline:hover:before, .mv-section.equitacion .menu .nav-item span:hover:before, .mv-section.equitacion .nav.mv-nav-secondary .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item .mv-section.equitacion span:hover:before {
     border-bottom: 2px solid #983620; }
   .mv-section.equitacion .menu .logo .img {
     background: url(img/logo_equitacion.svg); }
@@ -2690,7 +2691,7 @@ a {
 
 .mv-section.gastronomia {
   border-left: 10px solid #ee9a5d; }
-  .mv-section.gastronomia .underLine:hover:before, .mv-section.gastronomia .mv-underline:hover:before, .mv-section.gastronomia .menu .navigation .nav .nav-item span:hover:before, .mv-section.gastronomia .nav.mv-nav-secondary .nav-item:hover:before, .nav.mv-nav-secondary .mv-section.gastronomia .nav-item:hover:before {
+  .mv-section.gastronomia .underLine:hover:before, .mv-section.gastronomia .mv-underline:hover:before, .mv-section.gastronomia .menu .nav-item span:hover:before, .mv-section.gastronomia .nav.mv-nav-secondary .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item .mv-section.gastronomia span:hover:before {
     border-bottom: 2px solid #ee9a5d; }
   .mv-section.gastronomia .menu .logo .img {
     background: url(img/logo_restaurant.svg); }
@@ -2736,18 +2737,14 @@ a {
         background: url(img/logo.svg);
         width: 5em;
         height: 5em; }
-    .mv-section .menu .navigation {
-      margin: 0 auto; }
-      .mv-section .menu .navigation .nav {
-        position: relative;
-        top: 25%; }
-        .mv-section .menu .navigation .nav .nav-item {
-          display: inline-block; }
-          .mv-section .menu .navigation .nav .nav-item span {
-            text-transform: uppercase;
-            font-size: 0.8em;
-            font-weight: 500;
-            letter-spacing: 0.3em; }
+    .mv-section .menu .nav-item .nav-link {
+      position: relative;
+      top: 25%; }
+    .mv-section .menu .nav-item span {
+      text-transform: uppercase;
+      font-size: 0.8em;
+      font-weight: 500;
+      letter-spacing: 0.3em; }
   .mv-section .achievements {
     margin: 5em auto;
     padding: 0 1em; }
@@ -2829,7 +2826,6 @@ a {
       height: 8em;
       width: 8em;
       margin: 0 auto;
-      background-image: url(img/logo.svg);
       background-size: cover !important;
       background-repeat: no-repeat !important;
       background-position: center !important; }
@@ -2840,6 +2836,8 @@ a {
       margin-top: .75em; }
     .mv-section.mv-membership .mv-packet .info {
       padding: .5em 0 1em 1em; }
+      .mv-section.mv-membership .mv-packet .info p {
+        font-size: 1.1em; }
 
 .mv-contact {
   background: transparent; }
@@ -2865,6 +2863,8 @@ a {
       text-transform: uppercase;
       letter-spacing: .2em;
       font-weight: bold !important; }
+    .mv-contact .desc p {
+      margin: 1em 0; }
     .mv-contact .desc .social {
       margin: 2em auto; }
     .mv-contact .desc .social a {
@@ -2913,7 +2913,7 @@ footer {
       padding: 0; }
       footer .map-site ul li {
         text-transform: uppercase;
-        margin: .5em 0; }
+        margin: 2em 0; }
   footer .sponsors h3 {
     width: 100%;
     text-align: center;
@@ -3089,6 +3089,8 @@ footer {
     font-style: italic; }
 
 @media screen and (min-width: 769px) {
+  .hidden-lg {
+    display: none; }
   .side-close, .side-open {
     display: none; }
   .mv-scrollify-start {
@@ -3138,7 +3140,7 @@ footer {
       margin: 0em; }
     nav.side .links {
       position: relative;
-      top: 5px;
+      top: 3px;
       left: 60px;
       float: left; }
     nav.side .social {
@@ -3163,6 +3165,9 @@ footer {
         margin-right: 1em; }
         nav.side .social .networks a {
           margin-left: -1.5em; }
+        nav.side .social .networks .fb, nav.side .social .networks .tw, nav.side .social .networks .itg {
+          position: relative;
+          top: -2px; }
     nav.side .links a {
       display: inline-block; }
     nav.side a, nav.side .social {
@@ -3170,9 +3175,19 @@ footer {
   .mv-row-center {
     margin: 0 20vw !important; }
   .mv-section .title, .mv-section .desc, .mv-section .menu {
-    margin: 1em auto; } }
+    margin: 1em auto; }
+  .mv-section .title .col {
+    padding-left: 0; }
+  .mv-section .menu .logo {
+    margin-right: 0.5em; }
+  .mv-section .menu .nav-item {
+    text-align: center; }
+    .mv-section .menu .nav-item .nav-link {
+      padding: 0.5rem; } }
 
 @media screen and (max-width: 768px) {
+  .hidden-md {
+    display: none; }
   #fullpage {
     padding-bottom: 0; }
   .side-open-internal {
@@ -3190,13 +3205,15 @@ footer {
   .mv-section .title, .mv-section .desc, .mv-section .menu {
     margin: 1em auto; }
   .mv-section .title {
-    padding-left: 2em; }
+    padding-left: 1em; }
     .mv-section .title h2 {
       font-size: 5vw; }
   .mv-section .desc {
     padding: 0 2em; }
-  .mv-section .menu .logo {
-    display: none; }
+  .mv-section .menu {
+    padding: 0; }
+    .mv-section .menu .logo {
+      display: none; }
   .mv-section.mv-membership .mv-packet {
     display: block;
     padding: 0; }
@@ -3216,6 +3233,6 @@ footer {
 
 @media screen and (min-width: 576px) {
   .mv-section .desc p {
-    margin: 1em; } }
+    margin: 1em 0; } }
 
 /*# sourceMappingURL=style.css.map */

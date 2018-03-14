@@ -2,7 +2,7 @@
 <div class="mv-scrollify" data-section-name="itg">
   <div class="row mv-row-center">
     <div class="col">
-      <p class="" style="margin: 2em auto;text-align: center;">
+      <p class="" style="margin: 2em auto;text-align: center;font-size: 1.1em;">
         Molino Viejo, donde la tranquilidad fluye con sensación de libertad y paz; un espacio de fusión clásica y contemporánea, que convive con actividades de deporte y entretenimiento como el golf, equitación y gastronomía. Perfecta armonía del bienestar, la cercanía, la atención e instalaciones de primera.
       </p>
     </div>
@@ -19,7 +19,7 @@
             if ( $category->term_id!==1 && !stristr($category->slug, 'logros') && !stristr($category->slug, 'menu') ):
         ?>
               <li class="nav-item">
-                <a class="nav-link active" href="#<?php echo $category->slug;?>"><?php echo $category->name;?></a>
+                <a class="nav-link active" href="#<?php echo $category->slug;?>"><span><?php echo $category->name;?></span></a>
               </li>
         <?php
             endif;
@@ -58,7 +58,7 @@
 ?>
 <div id="<?php echo $category->slug;?>" data-section-name="<?php echo $category->slug;?>" class="mv-section mv-scrollify <?php echo $category->slug;?>">
   <div class="row title mv-row-center">
-    <div class="col-xs-1 col-sm-1 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"></div>
+    <!--<div class="col-xs-1 col-sm-1 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"></div>-->
     <div class="col">
       <h2 class=""><?php echo $category->name;?></h2>
     </div>
@@ -89,24 +89,21 @@
     if (sizeof($menu)>0) :
   ?>
   <div class="row menu mv-row-center">
-    <div class="col-2 logo">
+    <div class="logo col-1">
       <div class="img"></div>
     </div>
-
-    <div class="col-10 navigation">
-      <ul class="nav">
-        <?php
-          foreach ($menu as $key => $menu_item) :
-        ?>
-        <li class="nav-item">
-          <a href="javascript:void(0)" class="nav-link active mv-section-option" href="#" data-id="<?php echo $menu_item->ID;?>" data-url="<?php echo admin_url('admin-ajax.php');?>" data-target="#mv-section-content-<?php echo $category->slug;?>"><span><?php echo $menu_item->post_title;?></span></a>
-        </li>
-        <?php
-          endforeach;
-        ?>
-      </ul>
+    <?php
+      foreach ($menu as $key => $menu_item) :
+    ?>
+    <div class="nav-item col hidden-md">
+      <a href="javascript:void(0)" class="nav-link active mv-section-option" href="#" data-id="<?php echo $menu_item->ID;?>" data-url="<?php echo admin_url('admin-ajax.php');?>" data-target="#mv-section-content-<?php echo $category->slug;?>"><span><?php echo $menu_item->post_title;?></span></a>
     </div>
-
+    <div class="nav-item col-12 hidden-lg">
+      <a href="javascript:void(0)" class="nav-link active mv-section-option" href="#" data-id="<?php echo $menu_item->ID;?>" data-url="<?php echo admin_url('admin-ajax.php');?>" data-target="#mv-section-content-<?php echo $category->slug;?>"><span><?php echo $menu_item->post_title;?></span></a>
+    </div>
+    <?php
+      endforeach;
+    ?>
   </div>
   <?php
     endif;
@@ -274,7 +271,7 @@
           <?php endif;?>
           <h3><?php the_title();?></h3>
         </div>
-        <div class="info col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 post_content">
+        <div class="info col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 post_content">
           <?php the_content();?>
         </div>
       </div>

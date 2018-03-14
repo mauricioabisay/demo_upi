@@ -1,4 +1,7 @@
 @media screen and (min-width: 769px) {
+    .hidden-lg {
+        display: none;
+    }
     .side-close, .side-open {
         display: none;
     }
@@ -58,7 +61,7 @@
         }
         .links {
             position: relative;
-            top: 5px;
+            top: 3px;
             left: 60px;
             float: left;
         }
@@ -88,6 +91,10 @@
                 a {
                     margin-left: -1.5em;
                 }
+                .fb, .tw, .itg {
+                    position: relative;
+                    top: -2px;
+                }
             }
         }
         .links a {
@@ -104,6 +111,22 @@
         .title, .desc, .menu {
             margin: 1em auto;
         }
+        .title {
+            .col {
+                padding-left: 0;
+            }
+        }
+        .menu {
+            .logo {
+                margin-right: 0.5em;
+            }
+            .nav-item {
+                text-align: center;
+                .nav-link {
+                    padding: 0.5rem;
+                }
+            }
+        }
     }
     .mv-section.mv-membership {
         .mv-packet {
@@ -118,6 +141,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .hidden-md {
+        display: none;
+    }
     #fullpage {
         padding-bottom: 0;
     }
@@ -145,7 +171,7 @@
             margin: 1em auto;
         }
         .title {
-            padding-left: 2em;
+            padding-left: 1em;
             h2 {
                 font-size: 5vw;
             }
@@ -154,8 +180,11 @@
             padding: 0 2em;
         }
         .menu {
+            padding: 0;
             .logo {
                 display: none;
+            }
+            .nav-item {
             }
         }
     }
@@ -199,7 +228,7 @@
 @media screen and (min-width: 576px) {
     .mv-section {
         .desc p {
-            margin: 1em;
+            margin: 1em 0;
         }
     }
 }

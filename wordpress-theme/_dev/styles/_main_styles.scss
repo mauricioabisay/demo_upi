@@ -72,7 +72,9 @@ a {
     }
     h2 {
         font-size: 1.5em;
-        margin-top: 0.5em;
+        margin-top: 0em;
+        text-transform: uppercase;
+        letter-spacing: 0.7em;
         @extend .serif;
     }
 }
@@ -108,10 +110,12 @@ a {
         text-transform: uppercase;
         font-weight: bolder;
         letter-spacing: .1em;
-        @extend .underLine;
         margin: 0 0.5em;
-        &:hover:before {
-            bottom: .1em;
+        span {
+            @extend .underLine;
+            &:hover:before {
+                bottom: 0em;
+            }
         }
     }
 }
@@ -151,7 +155,6 @@ a {
         .logo {
             .img {
                 background: url(img/logo_golf.svg);
-                left: -15%;
             }
         }
     }
@@ -268,21 +271,17 @@ a {
             }
         }
 
-        .navigation {
-            margin: 0 auto;
-            .nav {
+        .nav-item {
+            .nav-link {
                 position: relative;
                 top: 25%;
-                .nav-item {
-                    display: inline-block;
-                    span {
-                        text-transform: uppercase;
-                        font-size: 0.8em;
-                        font-weight: 500;
-                        letter-spacing: 0.3em;
-                        @extend .mv-underline, .sans;
-                    }
-                }
+            }
+            span {
+                text-transform: uppercase;
+                font-size: 0.8em;
+                font-weight: 500;
+                letter-spacing: 0.3em;
+                @extend .mv-underline, .sans;
             }
         }
     }
@@ -399,7 +398,6 @@ a {
             height: 8em;
             width: 8em;
             margin: 0 auto;
-            background-image: url(img/logo.svg);
             background-size: cover !important;
             background-repeat: no-repeat !important;
             background-position: center !important;
@@ -412,6 +410,9 @@ a {
         }
         .info {
             padding: .5em 0 1em 1em;
+            p {
+                font-size: 1.1em;
+            }
         }
     }
 }
@@ -442,6 +443,9 @@ a {
             text-transform: uppercase;
             letter-spacing: .2em;
             font-weight: bold !important;
+        }
+        p {
+            margin: 1em 0;
         }
         .social {
             margin: 2em auto;
@@ -505,7 +509,7 @@ footer {
             padding: 0;
             li {
                 text-transform: uppercase;
-                margin: .5em 0;
+                margin: 2em 0;
             }
         }
     }
