@@ -12,9 +12,9 @@ nav.side {
     padding-top: 2em;
     text-align: right;
     text-transform: uppercase;
-    font-family: 'Butler', serif;
     font-size: 0.7em;
     letter-spacing: 0.3em;
+    @extend .serif;
     .side-close {
         position: absolute;
         top: .5em;
@@ -71,7 +71,7 @@ nav.side.active {
     position: fixed;
     font-size: 1.5em;
     margin: 0;
-    padding: 3px 5px;
+    padding: 5px;
     margin: 0em;
     cursor: pointer;
     height: 50px;

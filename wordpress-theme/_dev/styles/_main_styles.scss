@@ -67,14 +67,14 @@ a {
         font-size: 2.2em;
         text-transform: uppercase;
         letter-spacing: .2em;
-        padding-top: 40vh;
+        padding-top: calc( 40vh - 1.5em );
         font-weight: bold;
     }
     h2 {
-        font-size: 1.5em;
+        font-size: 0.7em;
+        letter-spacing: 0.3em;
         margin-top: 0em;
         text-transform: uppercase;
-        letter-spacing: 0.7em;
         @extend .serif;
     }
 }
@@ -103,6 +103,9 @@ a {
 
 .mv-underline {
     @extend .underLine;
+    &:hover:before {
+        bottom: -0.2em;
+    }
 }
 
 .nav.mv-nav-secondary {
@@ -114,7 +117,7 @@ a {
         span {
             @extend .underLine;
             &:hover:before {
-                bottom: 0em;
+                bottom: -0.2em;
             }
         }
     }
@@ -253,7 +256,7 @@ a {
         }
     }
     .desc {
-        font-size: 0.9em;
+        font-size: 1.1em;
     }
     .menu {
         margin-bottom: 5em;
@@ -378,6 +381,7 @@ a {
 }
 
 .mv-section.mv-membership {
+    padding-bottom: 50px;
     background: $strong;
     .title {
         margin-top: 2em;
@@ -401,15 +405,16 @@ a {
             background-size: cover !important;
             background-repeat: no-repeat !important;
             background-position: center !important;
+            transform: translateY(50%);
         }
         h3 {
             font-size: 1.25em;
             font-weight: bolder;
             text-align: center;
-            margin-top: .75em;
+            text-align: left;
         }
         .info {
-            padding: .5em 0 1em 1em;
+            padding: 0em 1em;
             p {
                 font-size: 1.1em;
             }
@@ -443,6 +448,7 @@ a {
             text-transform: uppercase;
             letter-spacing: .2em;
             font-weight: bold !important;
+            @extend .sans;
         }
         p {
             margin: 1em 0;
@@ -530,7 +536,7 @@ footer {
             width: 4em;
             border-radius: 100%;
             margin: 0 1em;
-            background: $primary;
+            background: transparent;
             display: inline-block;
         }
     }

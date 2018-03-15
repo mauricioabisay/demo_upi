@@ -57,7 +57,7 @@
 
   <nav id="main-menu" class="side">
     <a href="javascript:void(0)" class="side-close">&times;</a>
-    <div class="side-open-internal"><a href="<?php echo (is_home()) ? 'javascript:void(0)' : site_url();?>" onclick="<?php echo (is_home()) ? "jQuery.scrollify.move('#home')" : '';?>"><img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg" width="40" height="40" alt=""></a></div>
+    <div class="side-open-internal"><a href="<?php echo (is_home()) ? '#' : site_url();?>"><img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg" width="40" height="40" alt=""></a></div>
     <div class="links">
       <?php
         $categories = get_categories(array(
@@ -69,7 +69,7 @@
           if ( $category->term_id!==1 && !stristr($category->slug, 'logros') && !stristr($category->slug, 'menu') ):
             if ( is_home() ) :
       ?>
-            <a href="javascript:void(0)" onclick="jQuery.scrollify.move('#<?php echo $category->slug;?>');"><?php echo $category->name;?></a>
+            <a href="#<?php echo $category->slug;?>"><?php echo $category->name;?></a>
       <?php else : ?>
             <a href="<?php echo site_url().'/#'.$category->slug;?>"><?php echo $category->name;?></a>
       <?php endif; ?>
@@ -80,7 +80,7 @@
     </div>
     <div class="social">
       <div class="sections">
-        <a class="page-link" href="<?php echo site_url().'/#membresias';?>">Membresías</a>
+        <a class="page-link" href="<?php echo (is_home()) ? '#mv-membership' : site_url().'/#mv-membership';?>">Membresías</a>
         <a class="page-link" href="<?php echo (is_home()) ? '#contacto' : site_url().'/#contacto';?>">Contacto</a>
       </div>
       <div class="networks">

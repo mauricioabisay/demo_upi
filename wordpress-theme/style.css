@@ -32,10 +32,10 @@ This theme, like WordPress, is licensed under the GPL.
   src: url("font/butler_light-webfont.woff");
   font-weight: light; }
 
-.serif, .container *, .mv-featured-img h2, footer * {
+.serif, nav.side, .container *, .mv-featured-img h2, footer * {
   font-family: 'EB Garamont', serif; }
 
-.sans, .title, .title *, .map-site *, .sponsors *, .mv-section .menu .nav-item span, footer .map-site ul li,
+.sans, .title, .title *, .map-site *, .sponsors *, .mv-section .menu .nav-item span, .mv-contact .desc h3, footer .map-site ul li,
 footer .sponsors h3 {
   font-family: 'Montserrat', sans-serif; }
 
@@ -2522,7 +2522,6 @@ nav.side {
   padding-top: 2em;
   text-align: right;
   text-transform: uppercase;
-  font-family: 'Butler', serif;
   font-size: 0.7em;
   letter-spacing: 0.3em; }
   nav.side .side-close {
@@ -2570,7 +2569,7 @@ nav.side.active {
   position: fixed;
   font-size: 1.5em;
   margin: 0;
-  padding: 3px 5px;
+  padding: 5px;
   margin: 0em;
   cursor: pointer;
   height: 50px;
@@ -2630,13 +2629,13 @@ a {
     font-size: 2.2em;
     text-transform: uppercase;
     letter-spacing: .2em;
-    padding-top: 40vh;
+    padding-top: calc( 40vh - 1.5em);
     font-weight: bold; }
   .mv-featured-img h2 {
-    font-size: 1.5em;
+    font-size: 0.7em;
+    letter-spacing: 0.3em;
     margin-top: 0em;
-    text-transform: uppercase;
-    letter-spacing: 0.7em; }
+    text-transform: uppercase; }
 
 .mv-scroll-hint {
   text-align: center;
@@ -2649,13 +2648,16 @@ a {
     background-repeat: no-repeat !important;
     background-position: center !important; }
 
+.mv-underline:hover:before, .mv-section .menu .nav-item span:hover:before {
+  bottom: -0.2em; }
+
 .nav.mv-nav-secondary .nav-item {
   text-transform: uppercase;
   font-weight: bolder;
   letter-spacing: .1em;
   margin: 0 0.5em; }
   .nav.mv-nav-secondary .nav-item span:hover:before {
-    bottom: 0em; }
+    bottom: -0.2em; }
 
 .mv-nav-secondary {
   margin: 1em auto;
@@ -2722,7 +2724,7 @@ a {
         display: block;
         margin-top: 1em; }
   .mv-section .desc {
-    font-size: 0.9em; }
+    font-size: 1.1em; }
   .mv-section .menu {
     margin-bottom: 5em;
     padding: 50px 0; }
@@ -2809,6 +2811,7 @@ a {
         display: block; }
 
 .mv-section.mv-membership {
+  padding-bottom: 50px;
   background: #cddbd9; }
   .mv-section.mv-membership .title {
     margin-top: 2em; }
@@ -2828,14 +2831,16 @@ a {
       margin: 0 auto;
       background-size: cover !important;
       background-repeat: no-repeat !important;
-      background-position: center !important; }
+      background-position: center !important;
+      -webkit-transform: translateY(50%);
+              transform: translateY(50%); }
     .mv-section.mv-membership .mv-packet h3 {
       font-size: 1.25em;
       font-weight: bolder;
       text-align: center;
-      margin-top: .75em; }
+      text-align: left; }
     .mv-section.mv-membership .mv-packet .info {
-      padding: .5em 0 1em 1em; }
+      padding: 0em 1em; }
       .mv-section.mv-membership .mv-packet .info p {
         font-size: 1.1em; }
 
@@ -2926,7 +2931,7 @@ footer {
     width: 4em;
     border-radius: 100%;
     margin: 0 1em;
-    background: #4d657f;
+    background: transparent;
     display: inline-block; }
   footer .map-site ul li,
   footer .sponsors h3 {
@@ -3119,7 +3124,7 @@ footer {
       position: fixed;
       font-size: 1.5em;
       margin: 0;
-      padding: 3px 5px;
+      padding: 5px;
       margin: 0em;
       cursor: pointer;
       height: 50px;
@@ -3134,22 +3139,26 @@ footer {
     nav.side .side-close {
       display: none; }
     nav.side a {
-      padding: 1em 0.5em 0em; }
+      padding: 0em 0.5em; }
     nav.side .links, nav.side .social {
       display: inline-block;
-      margin: 0em; }
+      margin: 0em;
+      height: 50px; }
     nav.side .links {
       position: relative;
-      top: 3px;
       left: 60px;
       float: left; }
+      nav.side .links a {
+        position: relative;
+        top: calc( 25px - 0.7em); }
     nav.side .social {
       position: relative;
-      top: 5px;
       float: right;
       z-index: 1001; }
       nav.side .social .sections, nav.side .social .networks {
-        display: inline-block; }
+        display: inline-block;
+        position: relative;
+        top: calc( 25px - 0.7em); }
       nav.side .social a.page-link {
         position: relative;
         top: -0.5em;
@@ -3181,7 +3190,7 @@ footer {
   .mv-section .menu .logo {
     margin-right: 0.5em; }
   .mv-section .menu .nav-item {
-    text-align: center; }
+    text-align: left; }
     .mv-section .menu .nav-item .nav-link {
       padding: 0.5rem; } }
 

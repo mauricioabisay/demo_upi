@@ -269,9 +269,9 @@
           <?php else : ?>
             <div class="image" style=""></div>
           <?php endif;?>
-          <h3><?php the_title();?></h3>
         </div>
         <div class="info col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 post_content">
+          <h3><?php the_title();?></h3>
           <?php the_content();?>
         </div>
       </div>

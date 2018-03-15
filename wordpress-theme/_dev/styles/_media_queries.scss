@@ -33,7 +33,7 @@
             position: fixed;
             font-size: 1.5em;
             margin: 0;
-            padding: 3px 5px;
+            padding: 5px;
             margin: 0em;
             cursor: pointer;
             height: 50px;
@@ -53,25 +53,30 @@
         }
 
         a {
-            padding: 1em 0.5em 0em;
+            padding: 0em 0.5em;
         }
         .links, .social {
             display: inline-block;
             margin: 0em;
+            height: 50px;
         }
         .links {
             position: relative;
-            top: 3px;
             left: 60px;
             float: left;
+            a {
+                position: relative;
+                top: calc( 25px - 0.7em );
+            }
         }
         .social {
             position: relative;
-            top: 5px;
             float: right;
             z-index: 1001;
             .sections, .networks {
                 display: inline-block;
+                position: relative;
+                top: calc( 25px - 0.7em );
             }
             a.page-link {
                 position: relative;
@@ -121,7 +126,7 @@
                 margin-right: 0.5em;
             }
             .nav-item {
-                text-align: center;
+                text-align: left;
                 .nav-link {
                     padding: 0.5rem;
                 }
