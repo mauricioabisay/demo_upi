@@ -2679,6 +2679,8 @@ a {
     border-bottom: 2px solid #115b9b; }
   .mv-section.golf .menu .logo .img {
     background: url(img/logo_golf.svg); }
+  .mv-section.golf .menu .active span {
+    border-bottom: 2px solid #115b9b !important; }
   .mv-section.golf .gallery .image .info .bg {
     background: #115b9b; }
 
@@ -2688,6 +2690,8 @@ a {
     border-bottom: 2px solid #983620; }
   .mv-section.equitacion .menu .logo .img {
     background: url(img/logo_equitacion.svg); }
+  .mv-section.equitacion .menu .active span {
+    border-bottom: 2px solid #983620 !important; }
   .mv-section.equitacion .gallery .image .info .bg {
     background: #983620; }
 
@@ -2697,6 +2701,8 @@ a {
     border-bottom: 2px solid #ee9a5d; }
   .mv-section.gastronomia .menu .logo .img {
     background: url(img/logo_restaurant.svg); }
+  .mv-section.gastronomia .menu .active span {
+    border-bottom: 2px solid #ee9a5d !important; }
   .mv-section.gastronomia .gallery .image .info .bg {
     background: #ee9a5d; }
 
@@ -2747,8 +2753,13 @@ a {
       font-size: 0.8em;
       font-weight: 500;
       letter-spacing: 0.3em; }
+    .mv-section .menu .nav-item .active span {
+      width: auto;
+      border-bottom: 2px solid #fee0c7; }
+  .mv-section .mv-section-content {
+    margin-bottom: 5em !important; }
   .mv-section .achievements {
-    margin: 5em auto;
+    margin: 0 auto 5em;
     padding: 0 1em; }
     .mv-section .achievements .title h3 {
       font-size: 1em;
@@ -3188,11 +3199,15 @@ footer {
   .mv-section .title .col {
     padding-left: 0; }
   .mv-section .menu .logo {
-    margin-right: 0.5em; }
+    margin-right: 1em; }
   .mv-section .menu .nav-item {
     text-align: left; }
     .mv-section .menu .nav-item .nav-link {
-      padding: 0.5rem; } }
+      padding: 0.5rem; }
+  .mv-section.mv-membership .mv-packet .mv-packet-img .image {
+    -webkit-transform: none;
+            transform: none;
+    margin-bottom: 1em; } }
 
 @media screen and (max-width: 768px) {
   .hidden-md {

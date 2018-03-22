@@ -89,17 +89,18 @@
     if (sizeof($menu)>0) :
   ?>
   <div class="row menu mv-row-center">
-    <div class="logo col-1">
+    <div class="logo">
       <div class="img"></div>
     </div>
     <?php
+      $len = sizeof($menu);
       foreach ($menu as $key => $menu_item) :
     ?>
-    <div class="nav-item col hidden-md">
-      <a href="javascript:void(0)" class="nav-link active mv-section-option" href="#" data-id="<?php echo $menu_item->ID;?>" data-url="<?php echo admin_url('admin-ajax.php');?>" data-target="#mv-section-content-<?php echo $category->slug;?>"><span><?php echo $menu_item->post_title;?></span></a>
+    <div class="nav-item col hidden-md <?php echo ($key==0) ? 'mv-default-content' : '';?>" style="<?php echo 'padding:0em;width: calc( ( 100% - 6em ) / '.$len.' );';?>">
+      <a href="javascript:void(0)" class="nav-link mv-section-option" href="#" data-id="<?php echo $menu_item->ID;?>" data-url="<?php echo admin_url('admin-ajax.php');?>" data-target="#mv-section-content-<?php echo $category->slug;?>"><span><?php echo $menu_item->post_title;?></span></a>
     </div>
     <div class="nav-item col-12 hidden-lg">
-      <a href="javascript:void(0)" class="nav-link active mv-section-option" href="#" data-id="<?php echo $menu_item->ID;?>" data-url="<?php echo admin_url('admin-ajax.php');?>" data-target="#mv-section-content-<?php echo $category->slug;?>"><span><?php echo $menu_item->post_title;?></span></a>
+      <a href="javascript:void(0)" class="nav-link mv-section-option" href="#" data-id="<?php echo $menu_item->ID;?>" data-url="<?php echo admin_url('admin-ajax.php');?>" data-target="#mv-section-content-<?php echo $category->slug;?>"><span><?php echo $menu_item->post_title;?></span></a>
     </div>
     <?php
       endforeach;
@@ -111,7 +112,7 @@
     wp_reset_query();
   ?>
 
-  <div class="row mv-row-center" class="mv-section-content">
+  <div class="row mv-row-center mv-section-content">
     <div class="col">
       <div id="mv-section-content-<?php echo $category->slug;?>"></div>
     </div>

@@ -160,6 +160,11 @@ a {
                 background: url(img/logo_golf.svg);
             }
         }
+        .active {
+            span {
+                border-bottom: 2px solid $golf !important;
+            }
+        }
     }
     .gallery {
         .image {
@@ -187,6 +192,11 @@ a {
                 background: url(img/logo_equitacion.svg);
             }
         }
+        .active {
+            span {
+                border-bottom: 2px solid $horse !important;
+            }
+        }
     }
     .gallery {
         .image {
@@ -212,6 +222,11 @@ a {
         .logo {
             .img {
                 background: url(img/logo_restaurant.svg);
+            }
+        }
+        .active {
+            span {
+                border-bottom: 2px solid $gastro !important;
             }
         }
     }
@@ -286,10 +301,19 @@ a {
                 letter-spacing: 0.3em;
                 @extend .mv-underline, .sans;
             }
+            .active {
+                span {
+                    width: auto;
+                    border-bottom: 2px solid $white;
+                }
+            }
         }
     }
+    .mv-section-content {
+        margin-bottom: 5em !important;
+    }
     .achievements {
-        margin: 5em auto;
+        margin: 0 auto 5em;
         padding: 0 1em;
         .title {
             h3 {

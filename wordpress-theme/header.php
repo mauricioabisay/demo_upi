@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <link rel="icon" href="<?php echo get_stylesheet_directory_uri();?>/img/fav.ico" type="image/x-icon">
+    <link rel="icon" href="<?php echo get_stylesheet_directory_uri();?>/img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri();?>/img/fav.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -123,12 +123,14 @@
         }
         .menu {
             .logo {
-                margin-right: 0.5em;
+                margin-right: 1em;
             }
             .nav-item {
                 text-align: left;
                 .nav-link {
                     padding: 0.5rem;
+                    span {
+                    }
                 }
             }
         }
@@ -137,6 +139,8 @@
         .mv-packet {
             .mv-packet-img {
                 .image {
+                    transform: none;
+                    margin-bottom: 1em;
                 }
             }
             .info {

@@ -64,6 +64,21 @@
       jarallax(document.querySelectorAll('.jarallax'), {
           speed: 0.2
       });
+      jQuery('.mv-default-content').each(function (index, element) {
+        jQuery(element).addClass('active');
+        jQuery.get(element.children[0].dataset.url,
+        {
+          action: 'getSectionContent',
+          id: element.children[0].dataset.id
+        },
+        function(data) {
+          data = JSON.parse(data);
+          if(data.msg) {
+            jQuery(element.children[0].dataset.target).text(data.msg);
+          }
+        }
+        );
+      });
       <?php if (get_option('contact_lat') && get_option('contact_lng')) :?>
       var currentLat = <?php echo get_option('contact_lat');?>;
       var currentLng = <?php echo get_option('contact_lng');?>;

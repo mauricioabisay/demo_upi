@@ -11,6 +11,8 @@ window.onload = function() {
     jQuery('#main-menu').removeClass('active');
   });
   jQuery('.mv-section-option').on('click', function(event) {
+    jQuery(event.currentTarget.parentElement.parentElement).children('.active').removeClass('active');
+    jQuery(event.currentTarget.parentElement).addClass('active');
     jQuery.get(event.currentTarget.dataset.url,
     {
       action: 'getSectionContent',
