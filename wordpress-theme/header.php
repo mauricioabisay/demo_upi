@@ -77,12 +77,8 @@
           endif;
         endforeach;
       ?>
-    </div>
-    <div class="social">
-      <div class="sections">
-        <a class="page-link" href="<?php echo (is_home()) ? '#mv-membership' : site_url().'/#mv-membership';?>">Membresías</a>
-        <a class="page-link" href="<?php echo (is_home()) ? '#contacto' : site_url().'/#contacto';?>">Contacto</a>
-      </div>
+      <a href="<?php echo (is_home()) ? '#mv-membership' : site_url().'/#mv-membership';?>">Membresías</a>
+      <a href="<?php echo (is_home()) ? '#contacto' : site_url().'/#contacto';?>">Contacto</a>
       <div class="networks">
       <?php if (get_option('fb')) : ?>
         <a target="_blank" href="<?php echo get_option('fb');?>"><div class="fb"></div></a>
@@ -102,7 +98,7 @@
 
   <div id="fullpage" class="container">
     <?php if (is_home()) : ?>
-      <div class="mv-scrollify" data-section-name="home">
+      <div id="mv-featured-img" class="mv-scrollify" data-section-name="home">
         <div class="mv-featured-img jarallax" style="height: 80vh;width: auto;">
           <img src="<?php echo get_stylesheet_directory_uri();?>/img/home.jpg" class="jarallax-img">
           <h1 class="mv-title title">Molino Viejo</h1>
@@ -113,7 +109,7 @@
         </div>
       </div>
     <?php else : ?>
-      <div class="mv-scrollify" data-section-name="home">
+      <div id="mv-featured-img" class="mv-scrollify" data-section-name="home">
         <div class="mv-featured-img jarallax" style="height: 80vh;width: auto;">
           <img src="<?php echo get_stylesheet_directory_uri();?>/img/home.jpg" class="jarallax-img">
           <h1 class="mv-title title"><?php the_title();?></h1>

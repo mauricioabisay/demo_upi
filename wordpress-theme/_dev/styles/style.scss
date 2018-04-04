@@ -13,28 +13,9 @@ Text Domain: nwm-dev-wp
 This theme, like WordPress, is licensed under the GPL.
 */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700');
-@font-face {
-    font-family: "Butler";
-    src: url("font/butler_regular-webfont.woff");
-}
-@font-face {
-    font-family: "Butler";
-    src: url("font/butler_medium-webfont.woff");
-    font-weight: medium;
-}
-@font-face {
-    font-family: "Butler";
-    src: url("font/butler_bold-webfont.woff");
-    font-weight: bold;
-}
-@font-face {
-    font-family: "Butler";
-    src: url("font/butler_light-webfont.woff");
-    font-weight: light;
-}
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700');
 
-$primary: #4d657f;
+$primary: #fff8f6;
 $secondary: #37396b;
 $strong: #cddbd9;
 
@@ -45,9 +26,10 @@ $horse: #983620;
 $dark: #272742;
 $text: #fee0c7;
 $white: #fee0c7;
+$black: #1d2c3c;
 
 .serif {
-    font-family: 'EB Garamont', serif;
+    font-family: 'EB Garamond', serif;
 }
 
 .sans {

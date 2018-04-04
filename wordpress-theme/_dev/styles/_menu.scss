@@ -15,6 +15,13 @@ nav.side {
     font-size: 0.7em;
     letter-spacing: 0.3em;
     @extend .serif;
+    &:before {
+        opacity: .5;
+        transition: 0.5s;
+    }
+    &:hover::before {
+        opacity: .7;
+    }
     .side-close {
         position: absolute;
         top: .5em;

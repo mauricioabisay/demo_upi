@@ -12,28 +12,9 @@ Text Domain: nwm-dev-wp
 This theme, like WordPress, is licensed under the GPL.
 */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700");
-@font-face {
-  font-family: "Butler";
-  src: url("font/butler_regular-webfont.woff"); }
-
-@font-face {
-  font-family: "Butler";
-  src: url("font/butler_medium-webfont.woff");
-  font-weight: medium; }
-
-@font-face {
-  font-family: "Butler";
-  src: url("font/butler_bold-webfont.woff");
-  font-weight: bold; }
-
-@font-face {
-  font-family: "Butler";
-  src: url("font/butler_light-webfont.woff");
-  font-weight: light; }
-
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700");
 .serif, nav.side, .container *, .mv-featured-img h2, footer * {
-  font-family: 'EB Garamont', serif; }
+  font-family: 'EB Garamond', serif; }
 
 .sans, .title, .title *, .map-site *, .sponsors *, .mv-section .menu .nav-item span, .mv-contact .desc h3, footer .map-site ul li,
 footer .sponsors h3 {
@@ -2524,6 +2505,12 @@ nav.side {
   text-transform: uppercase;
   font-size: 0.7em;
   letter-spacing: 0.3em; }
+  nav.side:before {
+    opacity: .5;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+  nav.side:hover::before {
+    opacity: .7; }
   nav.side .side-close {
     position: absolute;
     top: .5em;
@@ -2597,16 +2584,18 @@ a, a:hover {
   padding-left: 0;
   padding-right: 0;
   max-width: 100vw;
-  background: #4d657f;
+  background: #fff8f6;
   overflow-x: hidden; }
   #fullpage * {
+    color: #1d2c3c; }
+  #fullpage #mv-featured-img * {
     color: #fee0c7; }
 
 .container * {
-  font-weight: 300; }
+  font-weight: 400; }
   .container * p {
     line-height: 2em;
-    font-size: 0.9em; }
+    font-size: 1.5em; }
 
 a {
   outline: none; }
@@ -2614,8 +2603,11 @@ a {
 #mv-membership * {
   color: #37396b; }
 
+.underLine:hover, .mv-underline:hover, .mv-section .menu .nav-item span:hover, .nav.mv-nav-secondary .nav-item span:hover {
+  font-weight: 700; }
+
 .underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item span:hover:before {
-  border-bottom: 2px solid #fee0c7; }
+  border-bottom: 2px solid #1d2c3c; }
 
 .mv-featured-img {
   background-repeat: no-repeat !important;
@@ -2655,13 +2647,14 @@ a {
   text-transform: uppercase;
   font-weight: bolder;
   letter-spacing: .1em;
-  margin: 0 0.5em; }
+  margin: 0 0.5em;
+  text-align: center; }
   .nav.mv-nav-secondary .nav-item span:hover:before {
     bottom: -0.2em; }
 
 .mv-nav-secondary {
   margin: 1em auto;
-  font-size: 0.9em; }
+  font-size: 1em; }
 
 .mv-image-feed {
   margin: 5em auto 0;
@@ -2673,38 +2666,14 @@ a {
     width: 100%;
     margin-bottom: 1em; }
 
-.mv-section.golf {
-  border-left: 10px solid #115b9b; }
-  .mv-section.golf .underLine:hover:before, .mv-section.golf .mv-underline:hover:before, .mv-section.golf .menu .nav-item span:hover:before, .mv-section.golf .nav.mv-nav-secondary .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item .mv-section.golf span:hover:before {
-    border-bottom: 2px solid #115b9b; }
-  .mv-section.golf .menu .logo .img {
-    background: url(img/logo_golf.svg); }
-  .mv-section.golf .menu .active span {
-    border-bottom: 2px solid #115b9b !important; }
-  .mv-section.golf .gallery .image .info .bg {
-    background: #115b9b; }
+.mv-section.golf .gallery .image .info .bg {
+  background: #115b9b; }
 
-.mv-section.equitacion {
-  border-left: 10px solid #983620; }
-  .mv-section.equitacion .underLine:hover:before, .mv-section.equitacion .mv-underline:hover:before, .mv-section.equitacion .menu .nav-item span:hover:before, .mv-section.equitacion .nav.mv-nav-secondary .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item .mv-section.equitacion span:hover:before {
-    border-bottom: 2px solid #983620; }
-  .mv-section.equitacion .menu .logo .img {
-    background: url(img/logo_equitacion.svg); }
-  .mv-section.equitacion .menu .active span {
-    border-bottom: 2px solid #983620 !important; }
-  .mv-section.equitacion .gallery .image .info .bg {
-    background: #983620; }
+.mv-section.equitacion .gallery .image .info .bg {
+  background: #983620; }
 
-.mv-section.gastronomia {
-  border-left: 10px solid #ee9a5d; }
-  .mv-section.gastronomia .underLine:hover:before, .mv-section.gastronomia .mv-underline:hover:before, .mv-section.gastronomia .menu .nav-item span:hover:before, .mv-section.gastronomia .nav.mv-nav-secondary .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item .mv-section.gastronomia span:hover:before {
-    border-bottom: 2px solid #ee9a5d; }
-  .mv-section.gastronomia .menu .logo .img {
-    background: url(img/logo_restaurant.svg); }
-  .mv-section.gastronomia .menu .active span {
-    border-bottom: 2px solid #ee9a5d !important; }
-  .mv-section.gastronomia .gallery .image .info .bg {
-    background: #ee9a5d; }
+.mv-section.gastronomia .gallery .image .info .bg {
+  background: #ee9a5d; }
 
 .mv-row-center {
   margin: 1em 20%; }
@@ -2714,6 +2683,8 @@ a {
 
 .mv-section {
   padding-top: 50px; }
+  .mv-section .underLine:hover:before, .mv-section .mv-underline:hover:before, .mv-section .menu .nav-item span:hover:before, .mv-section .nav.mv-nav-secondary .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item .mv-section span:hover:before {
+    border-bottom: 2px solid #1d2c3c; }
   .mv-section .title, .mv-section .desc, .mv-section .menu {
     margin: 1em 20%; }
   .mv-section .title {
@@ -2722,15 +2693,10 @@ a {
       text-transform: uppercase;
       font-size: 2em;
       font-weight: bold;
-      letter-spacing: .5em; }
-      .mv-section .title h2:after {
-        content: '';
-        border: 1px solid #fee0c7;
-        width: 2em;
-        display: block;
-        margin-top: 1em; }
+      letter-spacing: .5em;
+      text-align: center; }
   .mv-section .desc {
-    font-size: 1.1em; }
+    text-align: center; }
   .mv-section .menu {
     margin-bottom: 5em;
     padding: 50px 0; }
@@ -2745,19 +2711,25 @@ a {
         background: url(img/logo.svg);
         width: 5em;
         height: 5em; }
+    .mv-section .menu .active span {
+      font-weight: 700 !important; }
     .mv-section .menu .nav-item .nav-link {
       position: relative;
       top: 25%; }
     .mv-section .menu .nav-item span {
       text-transform: uppercase;
-      font-size: 0.8em;
+      font-size: 1em;
       font-weight: 500;
       letter-spacing: 0.3em; }
     .mv-section .menu .nav-item .active span {
       width: auto;
-      border-bottom: 2px solid #fee0c7; }
+      border-bottom: 2px solid #1d2c3c; }
   .mv-section .mv-section-content {
     margin-bottom: 5em !important; }
+    .mv-section .mv-section-content * {
+      font-size: 1.05em;
+      font-weight: bold;
+      text-align: center; }
   .mv-section .achievements {
     margin: 0 auto 5em;
     padding: 0 1em; }
@@ -2835,7 +2807,7 @@ a {
     margin: 0em auto;
     padding: 2em 0; }
     .mv-section.mv-membership .mv-packet .image {
-      background-color: #4d657f;
+      background-color: #fff8f6;
       border-radius: 100%;
       height: 8em;
       width: 8em;
@@ -2846,41 +2818,44 @@ a {
       -webkit-transform: translateY(50%);
               transform: translateY(50%); }
     .mv-section.mv-membership .mv-packet h3 {
-      font-size: 1.25em;
+      font-size: 1.5em;
       font-weight: bolder;
       text-align: center;
       text-align: left; }
     .mv-section.mv-membership .mv-packet .info {
-      padding: 0em 1em; }
+      padding: 0em 1em;
+      text-align: left; }
       .mv-section.mv-membership .mv-packet .info p {
-        font-size: 1.1em; }
+        font-size: 1.25em; }
 
 .mv-contact {
+  padding-top: 0;
   background: transparent; }
   .mv-contact .desc {
     background: transparent;
     margin: 0;
-    padding: 1em 4em; }
+    padding: 1em 4em;
+    text-align: left; }
     .mv-contact .desc h2 {
       text-transform: uppercase;
       font-size: 1.3em;
       letter-spacing: .3em;
       font-weight: bold !important;
-      margin: 1em auto; }
+      margin: 0 auto 1em; }
       .mv-contact .desc h2:after {
         content: '';
         display: block;
         margin: 1em 0;
         width: calc( 100% - 3em);
-        border-bottom: 1px solid #fee0c7; }
+        border-bottom: 1px solid #1d2c3c; }
     .mv-contact .desc h3 {
       font-size: 1em;
-      color: #cddbd9 !important;
       text-transform: uppercase;
       letter-spacing: .2em;
       font-weight: bold !important; }
     .mv-contact .desc p {
-      margin: 1em 0; }
+      margin: 1em 0;
+      font-size: 1.25em; }
     .mv-contact .desc .social {
       margin: 2em auto; }
     .mv-contact .desc .social a {
@@ -2890,11 +2865,11 @@ a {
       width: 1.5em;
       height: 1.5em; }
     .mv-contact .desc .fb {
-      background: url(img/fb.svg); }
+      background: url(img/fb_dark.svg); }
     .mv-contact .desc .tw {
-      background: url(img/tw.svg); }
+      background: url(img/tw_dark.svg); }
     .mv-contact .desc .itg {
-      background: url(img/itg.svg); }
+      background: url(img/itg_dark.svg); }
   .mv-contact .map {
     background: #fee0c7;
     height: 38.8vh; }
@@ -2902,7 +2877,7 @@ a {
 .demo-img {
   width: 100%;
   height: 10em;
-  background: #4d657f;
+  background: #fff8f6;
   display: inline-block; }
 
 #mv-scrollify-footer, .mv-scrollify-override {
@@ -3125,7 +3100,6 @@ footer {
       width: 100vw;
       height: 50px;
       background: #272742;
-      opacity: .3;
       position: absolute;
       top: 0;
       left: 0; }
@@ -3162,9 +3136,15 @@ footer {
       nav.side .links a {
         position: relative;
         top: calc( 25px - 0.7em); }
+      nav.side .links .networks {
+        display: inline-block;
+        padding: 0em 0em 0em 1em; }
+        nav.side .links .networks .fb, nav.side .links .networks .tw, nav.side .links .networks .itg {
+          position: relative;
+          top: 3px; }
     nav.side .social {
       position: relative;
-      float: right;
+      float: left;
       z-index: 1001; }
       nav.side .social .sections, nav.side .social .networks {
         display: inline-block;
@@ -3197,11 +3177,12 @@ footer {
   .mv-section .title, .mv-section .desc, .mv-section .menu {
     margin: 1em auto; }
   .mv-section .title .col {
-    padding-left: 0; }
+    padding-left: 0;
+    padding-right: 0; }
   .mv-section .menu .logo {
     margin-right: 1em; }
   .mv-section .menu .nav-item {
-    text-align: left; }
+    text-align: center; }
     .mv-section .menu .nav-item .nav-link {
       padding: 0.5rem; }
   .mv-section.mv-membership .mv-packet .mv-packet-img .image {
@@ -3218,10 +3199,13 @@ footer {
     display: none; }
   nav.side.active {
     width: 50%; }
-    nav.side.active .social .page-link {
-      display: block;
-      background: transparent;
-      border: none; }
+    nav.side.active .networks {
+      text-align: center; }
+      nav.side.active .networks a {
+        display: inline-block;
+        background: transparent;
+        border: none;
+        margin: 0; }
   .mv-scrollify-start {
     padding-top: 2em; }
   .mv-row-center {
@@ -3229,15 +3213,18 @@ footer {
   .mv-section .title, .mv-section .desc, .mv-section .menu {
     margin: 1em auto; }
   .mv-section .title {
-    padding-left: 1em; }
+    padding-left: 1em;
+    padding-right: 1em; }
     .mv-section .title h2 {
       font-size: 5vw; }
   .mv-section .desc {
-    padding: 0 2em; }
+    padding: 0 1em; }
   .mv-section .menu {
     padding: 0; }
     .mv-section .menu .logo {
       display: none; }
+    .mv-section .menu .nav-item {
+      text-align: center; }
   .mv-section.mv-membership .mv-packet {
     display: block;
     padding: 0; }
@@ -3247,6 +3234,8 @@ footer {
     height: auto !important; }
   .mv-contact .title {
     padding: 0; }
+  .mv-contact .desc h2 {
+    font-size: 5vw; }
   .mv-contact .desc .map {
     height: 40vh;
     margin-bottom: 1em; }

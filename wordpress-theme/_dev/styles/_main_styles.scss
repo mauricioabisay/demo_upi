@@ -23,16 +23,19 @@ a, a:hover {
     background: $primary;
     overflow-x: hidden;
     * {
+        color: $black;
+    }
+    #mv-featured-img * {
         color: $white;
     }
 }
 
 .container * {
     @extend .serif;
-    font-weight: 300;
+    font-weight: 400;
     p {
         line-height: 2em;
-        font-size: 0.9em;
+        font-size: 1.5em;
     }
 }
 
@@ -50,8 +53,11 @@ a {
     }
 }
 
+.underLine:hover {
+    font-weight: 700;
+}
 .underLine:hover:before {
-    border-bottom: 2px solid $white;
+    border-bottom: 2px solid $black;
 }
 
 .mv-featured-img {
@@ -114,6 +120,7 @@ a {
         font-weight: bolder;
         letter-spacing: .1em;
         margin: 0 0.5em;
+        text-align: center;
         span {
             @extend .underLine;
             &:hover:before {
@@ -125,7 +132,7 @@ a {
 
 .mv-nav-secondary {
     margin: 1em auto;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 .mv-img-block {
@@ -145,27 +152,6 @@ a {
 }
 
 .mv-section.golf {
-    border-left: 10px solid $golf;
-    .underLine:hover:before {
-        border-bottom: 2px solid $golf;
-    }
-    .title {
-        h2 {
-
-        }
-    }
-    .menu {
-        .logo {
-            .img {
-                background: url(img/logo_golf.svg);
-            }
-        }
-        .active {
-            span {
-                border-bottom: 2px solid $golf !important;
-            }
-        }
-    }
     .gallery {
         .image {
             .info {
@@ -177,27 +163,6 @@ a {
     }
 }
 .mv-section.equitacion {
-    border-left: 10px solid $horse;
-    .underLine:hover:before {
-        border-bottom: 2px solid $horse;
-    }
-    .title {
-        h2 {
-
-        }
-    }
-    .menu {
-        .logo {
-            .img {
-                background: url(img/logo_equitacion.svg);
-            }
-        }
-        .active {
-            span {
-                border-bottom: 2px solid $horse !important;
-            }
-        }
-    }
     .gallery {
         .image {
             .info {
@@ -209,27 +174,6 @@ a {
     }
 }
 .mv-section.gastronomia {
-    border-left: 10px solid $gastro;
-    .underLine:hover:before {
-        border-bottom: 2px solid $gastro;
-    }
-    .title {
-        h2 {
-
-        }
-    }
-    .menu {
-        .logo {
-            .img {
-                background: url(img/logo_restaurant.svg);
-            }
-        }
-        .active {
-            span {
-                border-bottom: 2px solid $gastro !important;
-            }
-        }
-    }
     .gallery {
         .image {
             .info {
@@ -251,6 +195,9 @@ a {
 
 .mv-section {
     padding-top: 50px;
+    .underLine:hover:before {
+        border-bottom: 2px solid $black;
+    }
     .title, .desc, .menu {
         margin: 1em 20%;
     }
@@ -261,17 +208,11 @@ a {
             font-size: 2em;
             font-weight: bold;
             letter-spacing: .5em;
-            &:after {
-                content: '';
-                border: 1px solid $white;
-                width: 2em;
-                display: block;
-                margin-top: 1em;
-            }
+            text-align: center;
         }
     }
     .desc {
-        font-size: 1.1em;
+        text-align: center;
     }
     .menu {
         margin-bottom: 5em;
@@ -289,6 +230,12 @@ a {
             }
         }
 
+        .active {
+            span {
+                font-weight: 700 !important;
+            }
+        }
+
         .nav-item {
             .nav-link {
                 position: relative;
@@ -296,7 +243,7 @@ a {
             }
             span {
                 text-transform: uppercase;
-                font-size: 0.8em;
+                font-size: 1em;
                 font-weight: 500;
                 letter-spacing: 0.3em;
                 @extend .mv-underline, .sans;
@@ -304,13 +251,18 @@ a {
             .active {
                 span {
                     width: auto;
-                    border-bottom: 2px solid $white;
+                    border-bottom: 2px solid $black;
                 }
             }
         }
     }
     .mv-section-content {
         margin-bottom: 5em !important;
+        * {
+            font-size: 1.05em;
+            font-weight: bold;
+            text-align: center;
+        }
     }
     .achievements {
         margin: 0 auto 5em;
@@ -432,43 +384,45 @@ a {
             transform: translateY(50%);
         }
         h3 {
-            font-size: 1.25em;
+            font-size: 1.5em;
             font-weight: bolder;
             text-align: center;
             text-align: left;
         }
         .info {
             padding: 0em 1em;
+            text-align: left;
             p {
-                font-size: 1.1em;
+                font-size: 1.25em;
             }
         }
     }
 }
 
 .mv-contact {
+    padding-top: 0;
     background: transparent;
     .desc {
         background: transparent;
         margin: 0;
         padding: 1em 4em;
+        text-align: left;
         h2 {
             text-transform: uppercase;
             font-size: 1.3em;
             letter-spacing: .3em;
             font-weight: bold !important;
-            margin: 1em auto;
+            margin: 0 auto 1em;
             &:after {
                 content: '';
                 display: block;
                 margin: 1em 0;
                 width: calc( 100% - 3em );;
-                border-bottom: 1px solid $text;
+                border-bottom: 1px solid $black;
             }
         }
         h3 {
             font-size: 1em;
-            color: $strong !important;
             text-transform: uppercase;
             letter-spacing: .2em;
             font-weight: bold !important;
@@ -476,6 +430,7 @@ a {
         }
         p {
             margin: 1em 0;
+            font-size: 1.25em;
         }
         .social {
             margin: 2em auto;
@@ -489,13 +444,13 @@ a {
             height: 1.5em;
         }
         .fb {
-            background: url(img/fb.svg);
+            background: url(img/fb_dark.svg);
         }
         .tw {
-            background: url(img/tw.svg);
+            background: url(img/tw_dark.svg);
         }
         .itg {
-            background: url(img/itg.svg);
+            background: url(img/itg_dark.svg);
         }
     }
     .map {
