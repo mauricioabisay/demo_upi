@@ -12,10 +12,15 @@
             }
             .map {
                 width: calc( 59vw - 4em );
-                height: 33em;
+                height: 37em;
                 display: inline-block;
                 float: right;
             }
+        }
+    }
+    #mv-membership {
+        .desc {
+            margin-top: 50px;
         }
     }
 }

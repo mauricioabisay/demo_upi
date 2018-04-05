@@ -1,3 +1,6 @@
+body {
+    overflow-x: hidden;
+}
 a, a:hover {
     text-decoration: none;
 }
@@ -214,7 +217,7 @@ a {
         text-align: center;
     }
     .menu {
-        padding: 0 0 1.5em;
+        padding: 1.5em 0;
         .logo {
             text-align: left;
             .img {
@@ -257,7 +260,6 @@ a {
         margin-bottom: 5em !important;
         * {
             font-size: 1.05em;
-            font-weight: bold;
             text-align: center;
         }
     }
@@ -357,10 +359,11 @@ a {
     padding-bottom: 50px;
     background: $strong;
     .title {
-        margin-top: 2em;
+        margin: 0;
         h2 {
             width: 100%;
             text-align: center;
+            margin: 0;
             &:after {
                 border: none;
             }
@@ -381,7 +384,8 @@ a {
             background-position: center !important;
         }
         h3 {
-            font-size: 1.5em;
+            font-size: 1.1em;
+            letter-spacing: 0.3em;
             font-weight: bold;
             text-align: center;
             text-transform: uppercase;
@@ -391,10 +395,10 @@ a {
             padding: 0em 1em;
             text-align: left;
             h3 {
-                margin: 0.5em auto;
+                margin: 0.5em auto 1em;
             }
             p {
-                font-size: 1.25em;
+                font-size: 1.1em;
             }
         }
     }
@@ -425,10 +429,15 @@ a {
             font-size: 1.1em;
             text-transform: uppercase;
             letter-spacing: .2em;
-            font-weight: bold !important;
+            font-weight: 600 !important;
             color: $dark !important;
-            margin: 1em 0;
+            margin: 2em 0 0;
             @extend .sans;
+            font-size: 0.9em;
+            letter-spacing: 0.3em;
+        }
+        h3:first-of-type {
+            margin-top: 5em;
         }
         p {
             margin: 0.25em 0;
@@ -436,6 +445,9 @@ a {
             font-weight: 500;
             letter-spacing: 0.3em;
             @extend .sans;
+            font-size: 0.7em;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
         }
         .social {
             margin: 2em auto;
@@ -449,13 +461,14 @@ a {
             height: 1.5em;
         }
         .fb {
-            background: url(img/fb_dark.svg);
+            background: url(img/fb.svg);
+            margin-left: -0.5em;
         }
         .tw {
-            background: url(img/tw_dark.svg);
+            background: url(img/tw.svg);
         }
         .itg {
-            background: url(img/itg_dark.svg);
+            background: url(img/itg.svg);
         }
     }
     .map {
@@ -476,15 +489,14 @@ a {
 }
 
 footer {
+    padding: 0 !important;
     position: relative;
     background-color: $dark;
-    padding: 1em 2em;
     .wrapper {
         background: url(img/logo_footer.png);
         opacity: .1;
         height: 100%;
         width: 100%;
-        position: absolute;
         top: 0;
         left: -.5em;
     }
@@ -494,6 +506,18 @@ footer {
     }
     .map-site {
         opacity: 1;
+        background-color: #1a1a34;
+        /*&:before {
+            content: '';
+            width: calc( 100% + 60px );
+            height: 100%;
+            background: url(img/logo_footer.png);
+            background-repeat: repeat;
+            opacity: .1;
+            position: absolute;
+            top: 0;
+            left: -30px;
+        }*/
         ul {
             list-style: none;
             padding: 0;
@@ -504,10 +528,11 @@ footer {
             }
             li {
                 margin: 1em 0;
+                opacity: .8;
             }
             a:first-of-type li {
-                border-right: 2px solid $main_text_color;
-                padding: 0 1em;
+                border-right: 1px solid $main_text_color;
+                padding: 0 2em;
             }
         }
     }
@@ -519,15 +544,16 @@ footer {
         }
     }
     .logos {
+        padding: 40px 2em !important;
         .gallery {
-            margin: 1em auto;
+            margin: 0 auto;
             text-align: center;
         }
         .sponsor {
             height: 4em;
             width: 4em;
             border-radius: 100%;
-            margin: 0 1em;
+            margin: 1em;
             background: transparent;
             display: inline-block;
         }
@@ -538,7 +564,5 @@ footer {
     .sponsors h3 {
         @extend .sans;
         font-size: 0.6em;
-        font-weight: 600;
-        letter-spacing: 0.3em;
     }
 }
