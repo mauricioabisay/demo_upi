@@ -21,7 +21,7 @@ window.onload = function() {
     function(data) {
       data = JSON.parse(data);
       if(data.msg) {
-        jQuery(event.currentTarget.dataset.target).text(data.msg);
+        jQuery(event.currentTarget.dataset.target).html(data.msg);
       }
     }
     );

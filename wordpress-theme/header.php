@@ -99,7 +99,7 @@
   <div id="fullpage" class="container">
     <?php if (is_home()) : ?>
       <div id="mv-featured-img" class="mv-scrollify" data-section-name="home">
-        <div class="mv-featured-img jarallax" style="height: 80vh;width: auto;">
+        <div class="mv-featured-img jarallax" style="height: 99vh;width: auto;">
           <img src="<?php echo get_stylesheet_directory_uri();?>/img/home.jpg" class="jarallax-img">
           <h1 class="mv-title title">Molino Viejo</h1>
           <h2>Golf and Country Club</h2>
@@ -110,7 +110,7 @@
       </div>
     <?php else : ?>
       <div id="mv-featured-img" class="mv-scrollify" data-section-name="home">
-        <div class="mv-featured-img jarallax" style="height: 80vh;width: auto;">
+        <div class="mv-featured-img jarallax" style="height: 99vh;width: auto;">
           <img src="<?php echo get_stylesheet_directory_uri();?>/img/home.jpg" class="jarallax-img">
           <h1 class="mv-title title"><?php the_title();?></h1>
         </div>

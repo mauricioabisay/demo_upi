@@ -13,9 +13,8 @@ Text Domain: nwm-dev-wp
 This theme, like WordPress, is licensed under the GPL.
 */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700');
-
-$primary: #fff8f6;
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,700');
+$primary: #4d657f;
 $secondary: #37396b;
 $strong: #cddbd9;
 
@@ -24,12 +23,13 @@ $golf: #115b9b;
 $horse: #983620;
 
 $dark: #272742;
+$main_text_color: #ffffff;
 $text: #fee0c7;
 $white: #fee0c7;
 $black: #1d2c3c;
 
 .serif {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .sans {

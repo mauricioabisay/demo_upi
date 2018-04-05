@@ -16,23 +16,22 @@ a, a:hover {
 
 #fullpage {
     margin: 0 auto;
-    padding-bottom: 1em;
     padding-left: 0;
     padding-right: 0;
     max-width: 100vw;
     background: $primary;
     overflow-x: hidden;
     * {
-        color: $black;
+        color: $main_text_color;
     }
     #mv-featured-img * {
-        color: $white;
+        color: $main_text_color;
     }
 }
 
 .container * {
     @extend .serif;
-    font-weight: 400;
+    font-weight: 300;
     p {
         line-height: 2em;
         font-size: 1.5em;
@@ -57,7 +56,7 @@ a {
     font-weight: 700;
 }
 .underLine:hover:before {
-    border-bottom: 2px solid $black;
+    border-bottom: 2px solid $main_text_color;
 }
 
 .mv-featured-img {
@@ -73,7 +72,7 @@ a {
         font-size: 2.2em;
         text-transform: uppercase;
         letter-spacing: .2em;
-        padding-top: calc( 40vh - 1.5em );
+        padding-top: calc( 49.5vh - 1.5em );
         font-weight: bold;
     }
     h2 {
@@ -131,7 +130,7 @@ a {
 }
 
 .mv-nav-secondary {
-    margin: 1em auto;
+    margin: 0 auto;
     font-size: 1em;
 }
 
@@ -196,7 +195,7 @@ a {
 .mv-section {
     padding-top: 50px;
     .underLine:hover:before {
-        border-bottom: 2px solid $black;
+        border-bottom: 2px solid $main_text_color;
     }
     .title, .desc, .menu {
         margin: 1em 20%;
@@ -215,8 +214,7 @@ a {
         text-align: center;
     }
     .menu {
-        margin-bottom: 5em;
-        padding: 50px 0;
+        padding: 0 0 1.5em;
         .logo {
             text-align: left;
             .img {
@@ -238,8 +236,6 @@ a {
 
         .nav-item {
             .nav-link {
-                position: relative;
-                top: 25%;
             }
             span {
                 text-transform: uppercase;
@@ -251,12 +247,13 @@ a {
             .active {
                 span {
                     width: auto;
-                    border-bottom: 2px solid $black;
+                    border-bottom: 2px solid $main_text_color;
                 }
             }
         }
     }
     .mv-section-content {
+        margin-top: 3em;
         margin-bottom: 5em !important;
         * {
             font-size: 1.05em;
@@ -370,8 +367,9 @@ a {
         }
     }
     .mv-packet {
-        margin: 0em auto;
-        padding: 2em 0;
+        margin: 1em auto;
+        padding: 2em 1em;
+        background: #fff;
         .image {
             background-color: $primary;
             border-radius: 100%;
@@ -381,17 +379,20 @@ a {
             background-size: cover !important;
             background-repeat: no-repeat !important;
             background-position: center !important;
-            transform: translateY(50%);
         }
         h3 {
             font-size: 1.5em;
-            font-weight: bolder;
+            font-weight: bold;
             text-align: center;
-            text-align: left;
+            text-transform: uppercase;
+            @extend .sans;
         }
         .info {
             padding: 0em 1em;
             text-align: left;
+            h3 {
+                margin: 0.5em auto;
+            }
             p {
                 font-size: 1.25em;
             }
@@ -409,7 +410,6 @@ a {
         text-align: left;
         h2 {
             text-transform: uppercase;
-            font-size: 1.3em;
             letter-spacing: .3em;
             font-weight: bold !important;
             margin: 0 auto 1em;
@@ -418,19 +418,24 @@ a {
                 display: block;
                 margin: 1em 0;
                 width: calc( 100% - 3em );;
-                border-bottom: 1px solid $black;
+                border-bottom: 1px solid $main_text_color;
             }
         }
         h3 {
-            font-size: 1em;
+            font-size: 1.1em;
             text-transform: uppercase;
             letter-spacing: .2em;
             font-weight: bold !important;
+            color: $dark !important;
+            margin: 1em 0;
             @extend .sans;
         }
         p {
-            margin: 1em 0;
-            font-size: 1.25em;
+            margin: 0.25em 0;
+            font-size: 0.8em;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            @extend .sans;
         }
         .social {
             margin: 2em auto;
@@ -484,7 +489,7 @@ footer {
         left: -.5em;
     }
     * {
-        color: $white;
+        color: $main_text_color;
         @extend .serif;
     }
     .map-site {
@@ -492,9 +497,17 @@ footer {
         ul {
             list-style: none;
             padding: 0;
+            margin: 0;
+            a {
+                display: inline-block;
+                margin: 0 0.5em;
+            }
             li {
-                text-transform: uppercase;
-                margin: 2em 0;
+                margin: 1em 0;
+            }
+            a:first-of-type li {
+                border-right: 2px solid $main_text_color;
+                padding: 0 1em;
             }
         }
     }
@@ -525,6 +538,7 @@ footer {
     .sponsors h3 {
         @extend .sans;
         font-size: 0.6em;
+        font-weight: 600;
         letter-spacing: 0.3em;
     }
 }

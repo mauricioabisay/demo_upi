@@ -2,7 +2,7 @@
 <div class="mv-scrollify" data-section-name="itg">
   <div class="row mv-row-center">
     <div class="col">
-      <p class="" style="margin: 2em auto;text-align: center;">
+      <p class="" style="margin: 2em auto 0.5em;text-align: center;">
         Molino Viejo, donde la tranquilidad fluye con sensación de libertad y paz; un espacio de fusión clásica y contemporánea, que convive con actividades de deporte y entretenimiento como el golf, equitación y gastronomía. Perfecta armonía del bienestar, la cercanía, la atención e instalaciones de primera.
       </p>
     </div>
@@ -96,7 +96,7 @@
     <div class="nav-item col hidden-md <?php echo ($key==0) ? 'mv-default-content' : '';?>" style="<?php echo 'padding:0em;width: calc( ( 100% - 6em ) / '.$len.' );';?>">
       <a href="javascript:void(0)" class="nav-link mv-section-option" href="#" data-id="<?php echo $menu_item->ID;?>" data-url="<?php echo admin_url('admin-ajax.php');?>" data-target="#mv-section-content-<?php echo $category->slug;?>"><span><?php echo $menu_item->post_title;?></span></a>
     </div>
-    <div class="nav-item col-12 hidden-lg">
+    <div class="nav-item col-12 hidden-lg <?php echo ($key==0) ? 'mv-default-content' : '';?>">
       <a href="javascript:void(0)" class="nav-link mv-section-option" href="#" data-id="<?php echo $menu_item->ID;?>" data-url="<?php echo admin_url('admin-ajax.php');?>" data-target="#mv-section-content-<?php echo $category->slug;?>"><span><?php echo $menu_item->post_title;?></span></a>
     </div>
     <?php
@@ -252,7 +252,7 @@
     <div class="row title">
       <h2 class="">Membresías</h2>
     </div>
-    <div class="desc">
+    <div class="desc row">
       <?php
         $memberships = new WP_Query(array(
           'post_type' => 'mv-membresias'
@@ -260,15 +260,15 @@
         while($memberships->have_posts()):
           $memberships->the_post();
       ?>
-      <div class="row mv-packet">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 mv-packet-img">
+      <div class="row mv-packet col-md-12 col-lg-3 col-xl-3">
+        <div class="mv-packet-img col-12">
           <?php if(has_post_thumbnail(get_the_ID())) : ?>
             <div class="image" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>);background-size: cover;background-position: center;background-repeat: no-repeat;"></div>
           <?php else : ?>
             <div class="image" style=""></div>
           <?php endif;?>
         </div>
-        <div class="info col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 post_content">
+        <div class="info post_content col-12">
           <h3><?php the_title();?></h3>
           <?php the_content();?>
         </div>
@@ -281,13 +281,15 @@
   </div>
   <div id="molino-contacto"></div>
   <div id="contacto" class="mv-section mv-contact">
-    <div class="row desc">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-        <h2 class="title">Contacto</h2>
-        <h3><?php echo get_option('contact_calle');?> <?php echo get_option('contact_colonia');?></h3>
-        <p><?php echo get_option('contact_ciudad');?>, <?php echo get_option('contact_estado');?></p>
-        <p>C.P. <?php echo get_option('contact_cp');?></p>
+    <div class="desc">
+      <div class="info">
+        <h3>Dirección</h3>
+        <p><?php echo get_option('contact_calle');?> <?php echo get_option('contact_colonia');?></p>
+        <p><?php echo get_option('contact_ciudad');?>, <?php echo get_option('contact_estado');?> C.P. <?php echo get_option('contact_cp');?></p>
+        <h3>Teléfonos</h3>
         <p><?php echo get_option('contact_phone');?></p>
+        <h3>Correo electrónico</h3>
+        <p>mail@mail.com</p>
         <div class="social">
           <?php if (get_option('fb')) : ?>
             <a target="_blank" href="<?php echo get_option('fb');?>"><div class="fb"></div></a>
@@ -300,7 +302,7 @@
           <?php endif;?>
         </div>
       </div>
-      <div id="mv-map-contact" class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 map">
+      <div id="mv-map-contact" class="map">
       </div>
     </div>
   </div>

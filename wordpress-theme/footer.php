@@ -2,9 +2,30 @@
 <div id="mv-scrollify-footer" class="mv-scrollify" style="height: auto !important;">
     <footer class="mv-section">
       <div class="wrapper"></div>
+        <div class="row logos">
+            <div class="gallery col">
+                <?php
+                    $sponsors = new WP_Query(array(
+                        'post_type' => 'mv-sponsor'
+                    ));
+                    while($sponsors->have_posts()):
+                        $sponsors->the_post();
+                        $link = get_post_meta(get_the_ID(), 'mv-sponsor-link', true);
+                ?>
+                <a href="<?php echo $link;?>"><div class="sponsor" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>);background-size: contain;background-position: center;background-repeat: no-repeat;"></div></a>
+                <?php
+                    endwhile;
+                    wp_reset_postdata();
+                ?>
+            </div>
+        </div>
+        <div class="row sponsors">
+            <div class="col"></div>
+        </div>
         <div class="row map-site">
             <div class="col">
                 <ul>
+                    <a href="javascript:void(0)"><li>Molino Viejo 2018</li></a>
                     <a href="#"><li>Terminos y Condiciones</li></a>
                     <?php
                       $categories = get_categories(array(
@@ -23,26 +44,7 @@
                 </ul>
             </div>
         </div>
-        <div class="row sponsors">
-            <div class="col"></div>
-        </div>
-        <div class="row logos">
-            <div class="gallery col">
-                <?php
-                    $sponsors = new WP_Query(array(
-                        'post_type' => 'mv-sponsor'
-                    ));
-                    while($sponsors->have_posts()):
-                        $sponsors->the_post();
-                        $link = get_post_meta(get_the_ID(), 'mv-sponsor-link', true);
-                ?>
-                <a href="<?php echo $link;?>"><div class="sponsor" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>);background-size: contain;background-position: center;background-repeat: no-repeat;"></div></a>
-                <?php
-                    endwhile;
-                    wp_reset_postdata();
-                ?>
-            </div>
-        </div>
+        
     </footer>
 </div>
 <?php wp_footer(); ?>
@@ -74,7 +76,7 @@
         function(data) {
           data = JSON.parse(data);
           if(data.msg) {
-            jQuery(element.children[0].dataset.target).text(data.msg);
+            jQuery(element.children[0].dataset.target).html(data.msg);
           }
         }
         );

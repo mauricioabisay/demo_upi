@@ -1,3 +1,24 @@
+@media screen and (min-width: 770px) {
+    #contacto {
+        width: 100%;
+        clear: both;
+        .desc {
+            margin: 0;
+            padding: 0 0 0 4em;
+            .info {
+                width: calc( 40vw - 4em );
+                display: inline-block;
+                float: left;
+            }
+            .map {
+                width: calc( 59vw - 4em );
+                height: 33em;
+                display: inline-block;
+                float: right;
+            }
+        }
+    }
+}
 @media screen and (min-width: 769px) {
     .hidden-lg {
         display: none;
@@ -65,7 +86,7 @@
             float: left;
             a {
                 position: relative;
-                top: calc( 25px - 0.7em );
+                top: calc( 25px - 1.15em );
             }
             .networks {
                 display: inline-block;
@@ -151,13 +172,23 @@
                     margin-bottom: 1em;
                 }
             }
+            h3 {
+                text-align: center;
+            }
             .info {
+                text-align: center;
             }
         }
     }
 }
 
 @media screen and (max-width: 768px) {
+    .container * p, .mv-contact .desc h3, .mv-contact .desc p {
+        font-size: 5vw;
+    }
+    .mv-contact .desc p {
+        font-size: 3.5vw;
+    }
     .hidden-md {
         display: none;
     }
@@ -198,6 +229,7 @@
         }
         .desc {
             padding: 0 1em;
+            font-size: 5vw;
         }
         .menu {
             padding: 0;
@@ -206,6 +238,7 @@
             }
             .nav-item {
                 text-align: center;
+                font-size: 4vw;
             }
         }
     }
@@ -218,6 +251,14 @@
                     display: none;
                 }
             }
+            h3 {
+                font-size: 4.5vw;
+            }
+            .info {
+                p {
+                    font-size: 5vw;
+                }
+            }
         }
     }
     .mv-scrollify.wrapper {
@@ -228,12 +269,19 @@
             padding: 0;
         }
         .desc {
+            padding: 0;
+            margin: 0;
             h2 {
                 font-size: 5vw;
             }
+            h3 {
+                font-size: 4vw;
+            }
+            .info {
+                padding: 0 1em;
+            }
             .map {
                 height: 40vh;
-                margin-bottom: 1em;
             }
             .social {
                 margin: 0.5em auto;
@@ -244,6 +292,12 @@
         .map-site {
             ul {
                 text-align: center;
+                a {
+                    display: block;
+                }
+                a:first-of-type li {
+                    border: none;
+                }
             }
         }
     }
@@ -252,7 +306,7 @@
 @media screen and (min-width: 576px) {
     .mv-section {
         .desc p {
-            margin: 1em 0;
+            margin: 0.5em 0;
         }
     }
 }
