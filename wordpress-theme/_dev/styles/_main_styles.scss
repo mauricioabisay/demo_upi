@@ -119,11 +119,11 @@ a {
 .nav.mv-nav-secondary {
     .nav-item {
         text-transform: uppercase;
-        font-weight: bolder;
         letter-spacing: .1em;
         margin: 0 0.5em;
         text-align: center;
         span {
+            font-weight: bold;
             @extend .underLine;
             &:hover:before {
                 bottom: -0.2em;
@@ -141,15 +141,15 @@ a {
 }
 
 .mv-image-feed {
-    margin: 5em auto 0;
+    margin: 0 auto;
     padding: 0 1em;
+    background-color: white;
     .mv-feed {
-        padding: 0em 5px;
+        padding: 1em 5px;
     }
     .image {
         height: auto;
         width: 100%;
-        margin-bottom: 1em;
     }
 }
 
@@ -234,30 +234,32 @@ a {
         .active {
             span {
                 font-weight: 700 !important;
+                color: $dark !important;
             }
         }
 
         .nav-item {
             .nav-link {
+                &:hover {
+                    span {
+                        color: $dark !important;
+                    }
+                }
             }
             span {
                 text-transform: uppercase;
                 font-size: 1em;
-                font-weight: 500;
+                font-weight: 700;
                 letter-spacing: 0.3em;
-                @extend .mv-underline, .sans;
-            }
-            .active {
-                span {
-                    width: auto;
-                    border-bottom: 2px solid $main_text_color;
-                }
+                transition: 0.6s;
+                @extend .sans;
             }
         }
     }
     .mv-section-content {
         margin-top: 3em;
         margin-bottom: 5em !important;
+        transition: 1s;
         * {
             font-size: 1.05em;
             text-align: center;

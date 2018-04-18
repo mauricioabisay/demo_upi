@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="mv-scrollify" data-section-name="itg">
+<div class="mv-scrollify">
   <div class="row mv-row-center">
     <div class="col">
       <p class="" style="margin: 2em auto 0.5em;text-align: center;">
@@ -28,22 +28,8 @@
       </ul>
   </div>
 
-  <div id="mv-instagram" class="row mv-image-feed">
-    <div class="col-md-6 col-lg mv-feed">
-      <img id="mv-itg-1" class="image">
-    </div>
-    <div class="col-md-6 col-lg mv-feed">
-      <img id="mv-itg-2" class="image">
-    </div>
-    <div class="col-md-6 col-lg d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mv-feed">
-      <img id="mv-itg-3" class="image">
-    </div>
-    <div class="col-md-6 col-lg d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mv-feed">
-      <img id="mv-itg-4" class="image">
-    </div>
-    <div class="col-sm-12 col-lg d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mv-feed">
-      <img id="mv-itg-5" class="image">
-    </div>
+  <div class="jarallax" style="height: 40vh; width: auto;margin-top: 50px;">
+    <img src="<?php echo get_stylesheet_directory_uri();?>/img/valle.jpg" class="jarallax-img">
   </div>
 </div>
 
@@ -304,6 +290,26 @@
       </div>
       <div id="mv-map-contact" class="map">
       </div>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+</div>
+<div id="mv-instagram" class="mv-image-feed">
+  <div class="row">
+    <div class="col-md-6 col-lg mv-feed">
+      <img id="mv-itg-1" class="image">
+    </div>
+    <div class="col-md-6 col-lg mv-feed">
+      <img id="mv-itg-2" class="image">
+    </div>
+    <div class="col-md-6 col-lg d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mv-feed">
+      <img id="mv-itg-3" class="image">
+    </div>
+    <div class="col-md-6 col-lg d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mv-feed">
+      <img id="mv-itg-4" class="image">
+    </div>
+    <div class="col-sm-12 col-lg d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block mv-feed">
+      <img id="mv-itg-5" class="image">
     </div>
   </div>
 </div>

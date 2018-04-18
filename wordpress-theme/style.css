@@ -27,39 +27,36 @@ footer .sponsors h3 {
  *
  * Copyright (c) 2017 Daniel Eden
  */
-.animated, .underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item span:hover:before, .mv-animate .col-6:hover h1, .mv-section .gallery .image.link:hover .info {
+.animated, .underLine:hover:before, .mv-underline:hover:before, .nav.mv-nav-secondary .nav-item span:hover:before, .mv-animate .col-6:hover h1, .mv-section .gallery .image.link:hover .info {
   -webkit-animation-duration: .5s;
           animation-duration: .5s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
-.animated.infinite, .infinite.underLine:hover:before, .infinite.mv-underline:hover:before, .mv-section .menu .nav-item span.infinite:hover:before, .nav.mv-nav-secondary .nav-item span.infinite:hover:before, .mv-animate .col-6:hover h1.infinite, .mv-section .gallery .image.link:hover .infinite.info {
+.animated.infinite, .infinite.underLine:hover:before, .infinite.mv-underline:hover:before, .nav.mv-nav-secondary .nav-item span.infinite:hover:before, .mv-animate .col-6:hover h1.infinite, .mv-section .gallery .image.link:hover .infinite.info {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite; }
 
-.animated.hinge, .hinge.underLine:hover:before, .hinge.mv-underline:hover:before, .mv-section .menu .nav-item span.hinge:hover:before, .nav.mv-nav-secondary .nav-item span.hinge:hover:before, .mv-animate .col-6:hover h1.hinge, .mv-section .gallery .image.link:hover .hinge.info {
+.animated.hinge, .hinge.underLine:hover:before, .hinge.mv-underline:hover:before, .nav.mv-nav-secondary .nav-item span.hinge:hover:before, .mv-animate .col-6:hover h1.hinge, .mv-section .gallery .image.link:hover .hinge.info {
   -webkit-animation-duration: 2s;
           animation-duration: 2s; }
 
-.animated.flipOutX, .flipOutX.underLine:hover:before, .flipOutX.mv-underline:hover:before, .mv-section .menu .nav-item span.flipOutX:hover:before, .nav.mv-nav-secondary .nav-item span.flipOutX:hover:before, .mv-animate .col-6:hover h1.flipOutX, .mv-section .gallery .image.link:hover .flipOutX.info,
+.animated.flipOutX, .flipOutX.underLine:hover:before, .flipOutX.mv-underline:hover:before, .nav.mv-nav-secondary .nav-item span.flipOutX:hover:before, .mv-animate .col-6:hover h1.flipOutX, .mv-section .gallery .image.link:hover .flipOutX.info,
 .animated.flipOutY,
 .flipOutY.underLine:hover:before,
 .flipOutY.mv-underline:hover:before,
-.mv-section .menu .nav-item span.flipOutY:hover:before,
 .nav.mv-nav-secondary .nav-item span.flipOutY:hover:before,
 .mv-animate .col-6:hover h1.flipOutY,
 .mv-section .gallery .image.link:hover .flipOutY.info,
 .animated.bounceIn,
 .bounceIn.underLine:hover:before,
 .bounceIn.mv-underline:hover:before,
-.mv-section .menu .nav-item span.bounceIn:hover:before,
 .nav.mv-nav-secondary .nav-item span.bounceIn:hover:before,
 .mv-animate .col-6:hover h1.bounceIn,
 .mv-section .gallery .image.link:hover .bounceIn.info,
 .animated.bounceOut,
 .bounceOut.underLine:hover:before,
 .bounceOut.mv-underline:hover:before,
-.mv-section .menu .nav-item span.bounceOut:hover:before,
 .nav.mv-nav-secondary .nav-item span.bounceOut:hover:before,
 .mv-animate .col-6:hover h1.bounceOut,
 .mv-section .gallery .image.link:hover .bounceOut.info {
@@ -1286,7 +1283,7 @@ footer .sponsors h3 {
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in; } }
 
-.animated.flip, .flip.underLine:hover:before, .flip.mv-underline:hover:before, .mv-section .menu .nav-item span.flip:hover:before, .nav.mv-nav-secondary .nav-item span.flip:hover:before, .mv-animate .col-6:hover h1.flip, .mv-section .gallery .image.link:hover .flip.info {
+.animated.flip, .flip.underLine:hover:before, .flip.mv-underline:hover:before, .nav.mv-nav-secondary .nav-item span.flip:hover:before, .mv-animate .col-6:hover h1.flip, .mv-section .gallery .image.link:hover .flip.info {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
   -webkit-animation-name: flip;
@@ -2464,11 +2461,11 @@ footer .sponsors h3 {
   to {
     width: auto; } }
 
-.underLine, .mv-underline, .mv-section .menu .nav-item span, .nav.mv-nav-secondary .nav-item span {
+.underLine, .mv-underline, .nav.mv-nav-secondary .nav-item span {
   display: inline-block;
   position: relative; }
 
-.underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item span:hover:before {
+.underLine:hover:before, .mv-underline:hover:before, .nav.mv-nav-secondary .nav-item span:hover:before {
   position: absolute;
   bottom: 0;
   content: '';
@@ -2487,6 +2484,11 @@ footer .sponsors h3 {
 .rollUp, .mv-section .gallery .image.link:hover .info {
   -webkit-animation-name: rollUp;
           animation-name: rollUp; }
+
+.block-transparency {
+  opacity: 1 !important; }
+  .block-transparency:before {
+    opacity: 1 !important; }
 
 nav.side {
   position: fixed;
@@ -2526,10 +2528,10 @@ nav.side {
     text-decoration: none;
     color: #ffffff;
     display: block;
-    -webkit-transition: .3s;
-    transition: .3s; }
+    -webkit-transition: .6s;
+    transition: .6s; }
     nav.side a:hover, nav.side a.page-link:hover {
-      color: #272742; }
+      color: #ee9a5d; }
   nav.side .links {
     margin: 2em auto; }
   nav.side .social a {
@@ -2605,10 +2607,10 @@ a {
 #mv-membership * {
   color: #37396b; }
 
-.underLine:hover, .mv-underline:hover, .mv-section .menu .nav-item span:hover, .nav.mv-nav-secondary .nav-item span:hover {
+.underLine:hover, .mv-underline:hover, .nav.mv-nav-secondary .nav-item span:hover {
   font-weight: 700; }
 
-.underLine:hover:before, .mv-underline:hover:before, .mv-section .menu .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item span:hover:before {
+.underLine:hover:before, .mv-underline:hover:before, .nav.mv-nav-secondary .nav-item span:hover:before {
   border-bottom: 2px solid #ffffff; }
 
 .mv-featured-img {
@@ -2642,31 +2644,32 @@ a {
     background-repeat: no-repeat !important;
     background-position: center !important; }
 
-.mv-underline:hover:before, .mv-section .menu .nav-item span:hover:before {
+.mv-underline:hover:before {
   bottom: -0.2em; }
 
 .nav.mv-nav-secondary .nav-item {
   text-transform: uppercase;
-  font-weight: bolder;
   letter-spacing: .1em;
   margin: 0 0.5em;
   text-align: center; }
-  .nav.mv-nav-secondary .nav-item span:hover:before {
-    bottom: -0.2em; }
+  .nav.mv-nav-secondary .nav-item span {
+    font-weight: bold; }
+    .nav.mv-nav-secondary .nav-item span:hover:before {
+      bottom: -0.2em; }
 
 .mv-nav-secondary {
   margin: 0 auto;
   font-size: 1em; }
 
 .mv-image-feed {
-  margin: 5em auto 0;
-  padding: 0 1em; }
+  margin: 0 auto;
+  padding: 0 1em;
+  background-color: white; }
   .mv-image-feed .mv-feed {
-    padding: 0em 5px; }
+    padding: 1em 5px; }
   .mv-image-feed .image {
     height: auto;
-    width: 100%;
-    margin-bottom: 1em; }
+    width: 100%; }
 
 .mv-section.golf .gallery .image .info .bg {
   background: #115b9b; }
@@ -2685,7 +2688,7 @@ a {
 
 .mv-section {
   padding-top: 50px; }
-  .mv-section .underLine:hover:before, .mv-section .mv-underline:hover:before, .mv-section .menu .nav-item span:hover:before, .mv-section .nav.mv-nav-secondary .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item .mv-section span:hover:before {
+  .mv-section .underLine:hover:before, .mv-section .mv-underline:hover:before, .mv-section .nav.mv-nav-secondary .nav-item span:hover:before, .nav.mv-nav-secondary .nav-item .mv-section span:hover:before {
     border-bottom: 2px solid #ffffff; }
   .mv-section .title, .mv-section .desc, .mv-section .menu {
     margin: 1em 20%; }
@@ -2713,18 +2716,22 @@ a {
         width: 5em;
         height: 5em; }
     .mv-section .menu .active span {
-      font-weight: 700 !important; }
+      font-weight: 700 !important;
+      color: #272742 !important; }
+    .mv-section .menu .nav-item .nav-link:hover span {
+      color: #272742 !important; }
     .mv-section .menu .nav-item span {
       text-transform: uppercase;
       font-size: 1em;
-      font-weight: 500;
-      letter-spacing: 0.3em; }
-    .mv-section .menu .nav-item .active span {
-      width: auto;
-      border-bottom: 2px solid #ffffff; }
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      -webkit-transition: 0.6s;
+      transition: 0.6s; }
   .mv-section .mv-section-content {
     margin-top: 3em;
-    margin-bottom: 5em !important; }
+    margin-bottom: 5em !important;
+    -webkit-transition: 1s;
+    transition: 1s; }
     .mv-section .mv-section-content * {
       font-size: 1.05em;
       text-align: center; }
@@ -3305,6 +3312,8 @@ footer {
       font-size: 5vw; }
     .mv-contact .desc h3 {
       font-size: 4vw; }
+    .mv-contact .desc h3:first-of-type {
+      margin-top: 2em; }
     .mv-contact .desc .info {
       padding: 0 1em; }
     .mv-contact .desc .map {

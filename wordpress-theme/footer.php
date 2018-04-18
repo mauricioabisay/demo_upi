@@ -98,29 +98,20 @@
       ?>
       var numPhotos = 5;
       jQuery.ajax({
-        url: 'https://api.instagram.com/v1/users/search',
-        data: {access_token: token, q: '<?php echo $account[$len];?>'},
+        url: 'https://api.instagram.com/v1/users/self/media/recent/',
+        data: {access_token: token, count: numPhotos},
         type: 'GET',
-        success: function(userData) {
-          jQuery.ajax({
-            url: 'https://api.instagram.com/v1/users/'+userData.data[0].id+'/media/recent',
-            dataType: 'jsonp',
-            type: 'GET',
-            data: {access_token: token, count: numPhotos},
-            success: function(data) {
-              var i = 1;
-              for(x in data.data) {
-                jQuery('#mv-itg-'+i).attr('src', ''+data.data[x].images.thumbnail.url+'');
-                i++;
-              }
-            },
-            error: function() {
-              console.log('Error retrieving data from user account');
-            }
-          });
+        success: function(data) {
+          console.log(data);
+          var i = 1;
+          for(x in data.data) {
+            jQuery('#mv-itg-'+i).attr('src', ''+data.data[x].images.thumbnail.url+'');
+            i++;
+          }
         },
-        error: function() {
+        error: function(data) {
           console.log('Error connecting to Instagram or finding user account');
+          console.log(data);
         }
       });
     });
