@@ -2503,7 +2503,7 @@ nav.side {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   padding-top: 2em;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
   font-size: 0.7em;
   letter-spacing: 0.3em; }
@@ -2814,7 +2814,7 @@ a {
     padding: 2em 1em;
     background: #fff; }
     .mv-section.mv-membership .mv-packet .image {
-      background-color: #4d657f;
+      background-color: transparent;
       border-radius: 100%;
       height: 8em;
       width: 8em;
@@ -3296,11 +3296,14 @@ footer {
     display: block;
     padding: 0; }
     .mv-section.mv-membership .mv-packet .mv-packet-img .image {
-      display: none; }
+      margin: 1em auto; }
     .mv-section.mv-membership .mv-packet h3 {
       font-size: 4.5vw; }
-    .mv-section.mv-membership .mv-packet .info p {
-      font-size: 5vw; }
+    .mv-section.mv-membership .mv-packet .info {
+      padding: 0em 1.5em; }
+      .mv-section.mv-membership .mv-packet .info p {
+        font-size: 5vw;
+        text-align: justify; }
   .mv-scrollify.wrapper {
     height: auto !important; }
   .mv-contact .title {
@@ -3315,7 +3318,7 @@ footer {
     .mv-contact .desc h3:first-of-type {
       margin-top: 2em; }
     .mv-contact .desc .info {
-      padding: 0 1em; }
+      padding: 0 2.5em; }
     .mv-contact .desc .map {
       height: 40vh; }
     .mv-contact .desc .social {

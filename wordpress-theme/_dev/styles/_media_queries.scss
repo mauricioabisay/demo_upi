@@ -253,15 +253,17 @@
             padding: 0;
             .mv-packet-img {
                 .image {
-                    display: none;
+                    margin: 1em auto;
                 }
             }
             h3 {
                 font-size: 4.5vw;
             }
             .info {
+                padding: 0em 1.5em;
                 p {
                     font-size: 5vw;
+                    text-align: justify;
                 }
             }
         }
@@ -286,7 +288,7 @@
                 margin-top: 2em;
             }
             .info {
-                padding: 0 1em;
+                padding: 0 2.5em;
             }
             .map {
                 height: 40vh;
