@@ -1,28 +1,25 @@
 
 /*
-Theme Name: Molino Viejo
+Theme Name: UPAEP Proyectos Investigacion
 Theme URI: http://mauricioabisay.es/nwm_dev/molino_viejo
-Author: mauricio@nwm.mx
-Description: Molino Viejo custom Wordpress theme
+Author: mauricioabisay.lopez@gmail.com
+Description: Tema para Proyectos deInvestigacion UPAEP
 Version: 0.1
 License: GNU General Public License v2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags:
-Text Domain: nwm-dev-wp
+Text Domain: mauricioabisay-dev-upaep-proyectos
 
 This theme, like WordPress, is licensed under the GPL.
 */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,700');
-$primary: #4d657f;
+
+$primary: #dc3545;
 $secondary: #37396b;
 $strong: #cddbd9;
 
-$gastro: #ee9a5d;
-$golf: #115b9b;
-$horse: #983620;
-
-$dark: #272742;
+$dark: #680a13;
 $main_text_color: #ffffff;
 $secondary_text_color: #ee9a5d;
 $text: #fee0c7;
@@ -40,6 +37,7 @@ $black: #1d2c3c;
 @import 'animate';
 @import 'menu';
 @import 'main_styles';
+@import 'post';
 @import 'modals';
 @import 'overrides';
 @import 'post_content';

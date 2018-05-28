@@ -3,31 +3,51 @@
 	margin: -10em 3em 2em;
 	overflow-y: auto;
 	overflow-x: hidden;
-	.header {
-		h2, .share {
-			padding: 1em 0;
+	.container {
+		.date {
+			font-size: 1em;
 		}
-		h2 {
-			font-size: 1.1em;
-			background: black;
-			color: white;
-			margin: 0;
-			text-align: center;
-			text-transform: uppercase;
+		.section {
+			margin: 0 auto 2em;
+			h2 {
+				margin: 1em auto;
+				&:after {
+					content: '';
+					display: block;
+					width: 1em;
+					height: 2px;
+					background: $primary;
+					position: relative;
+					top: 0.1em;
+				}
+			}
+			.participant-profile {
+				text-align: center;
+				.picture {
+					height: 10vh;
+					width: 10vh;
+					background: grey;
+					border-radius: 100%;
+					margin: 0 auto;
+				}
+				.name {
+					margin: 0.5em auto 0;
+				}
+			}
 		}
-		.share {
+		.content {
+			* {
+				p {
+					font-size: 1em;
+				}
+			}
 		}
-	}
-	.date {
-		h3 {
-			text-align: center;
-			font-size: 1.1em;
+		.social {
+			.link {
+				margin: 1em;
+			}
 		}
-	}
-	.info {
-		h1 {
+		.tags {
 		}
-	}
-	.content {
 	}
 }

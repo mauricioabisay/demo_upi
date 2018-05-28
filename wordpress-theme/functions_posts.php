@@ -4,16 +4,85 @@ use NWM\WC;
 require_once('nwm_wp/nwm_wp.php');
 require_once('nwm_wp/nwm_wc.php');
 
-class Membership extends NWM\WP\SimplePost {
+class Research extends NWM\WP\SimplePost {
     function __construct() {
-        parent::__construct('mv-membresias', 'Membresia', 'Membresias');
+        parent::__construct('upaep-research', 'Investigación', 'Investigaciones');
+        //Lider del proyecto
+        $this->add_field(
+            'upaep-research-leader', 
+            'Líder de proyecto', 
+            'dropdown', 
+            'Líder del proyecto', 
+            'upaep-student');
+        //Alumnos participantes
+        $this->add_field(
+            'upaep-research-alumno', 
+            'Alumno', 
+            'dropdown', 
+            'Selecciona un alumno', 
+            'upaep-student'
+        );
+        //Instituciones participantes
+        //Carreas participantes
+        //Equipo y software que usa el proyecto
+        $this->add_field(
+            'upaep-research-herramientas', 
+            'Equipo y software que usa el proyecto',
+            'description',
+            'Describe el equipo que se usará para desarrollar el proyecto'
+        );
+        //Necesidades resueltas
+        $this->add_field(
+            'upaep-research-logros', 
+            'Logros',
+            'description',
+            'Describe las necesidades que ha resuelto el proyecto'
+        );
+        //Desc breve del trabajo a futuro
+        $this->add_field(
+            'upaep-research-futuro', 
+            'Trabajo a futuro',
+            'description',
+            'Describe el trabajo a futuro del proyecto'
+        );
+        //Desc del financiamiento
+        //Comentarios adicionales
+        $this->add_field(
+            'upaep-research-comentarios', 
+            'Comentarios adicionales',
+            'description',
+            'Comentarios adicionales del proyecto'
+        );
+
+        /*/ Create the WP_User_Query object
+        $wp_user_query = new WP_User_Query(array('order' => 'ASC'));
+
+        // Get the results
+        $authors = $wp_user_query->get_results();
+
+        // Check for results
+        if ( ! empty( $authors ) ) {
+            echo '<ul>';
+            // loop through each author
+            foreach ( $authors as $author ) {
+                // get all the user's data
+                $author_info = get_userdata( $author->ID );
+                echo '<li>';
+                print_r($author_info);
+                echo '</li>';
+            }
+            echo '</ul>';
+        } else {
+            echo 'No authors found';
+        }
+        exit();*/
     }
 }
 
-class Sponsor extends NWM\WP\SimplePost {
+class Student extends NWM\WP\SimplePost {
     function __construct() {
-        parent::__construct('mv-sponsor', 'Patrocinador', 'Patrocinadores');
-        $this->add_field('mv-sponsor-link', 'Link', 'text');
+        parent::__construct('upaep-student', 'Alumno', 'Alumnos');
+        $this->add_field('upaep-student-name', 'Nombre', 'text');
     }
 }
 

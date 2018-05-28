@@ -57,7 +57,7 @@
 
   <nav id="main-menu" class="side">
     <a href="javascript:void(0)" class="side-close">&times;</a>
-    <div class="side-open-internal"><a href="<?php echo (is_home()) ? '#' : site_url();?>"><img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg" width="40" height="40" alt=""></a></div>
+    <div class="side-open-internal"><a href="<?php echo (is_home()) ? '#' : site_url();?>"><img src="<?php echo get_stylesheet_directory_uri();?>/img/u_logo.svg" width="40" height="40" alt=""></a></div>
     <div class="links">
       <?php
         $categories = get_categories(array(
@@ -77,8 +77,7 @@
           endif;
         endforeach;
       ?>
-      <a href="<?php echo (is_home()) ? '#mv-membership' : site_url().'/#mv-membership';?>">Membresías</a>
-      <a href="<?php echo (is_home()) ? '#contacto' : site_url().'/#contacto';?>">Contacto</a>
+      
       <div class="networks">
       <?php if (get_option('fb')) : ?>
         <a target="_blank" href="<?php echo get_option('fb');?>"><div class="fb"></div></a>
@@ -93,29 +92,27 @@
     </div>
   </nav>
 
-  <div class="side-open"><img src="<?php echo get_stylesheet_directory_uri();?>/img/logo.svg" width="40" height="40" alt=""></div>
+  <div class="side-open"><img src="<?php echo get_stylesheet_directory_uri();?>/img/u_logo.svg" width="40" height="40" alt=""></div>
 
 
-  <div id="fullpage" class="container">
+  <div class="fullpage container">
     <?php if (is_home()) : ?>
       <div id="mv-featured-img" class="mv-scrollify" data-section-name="home">
-        <div class="mv-featured-img jarallax" style="height: 99vh;width: auto;">
+        <div class="mv-featured-img jarallax" style="height: 90vh;width: auto;">
           <img src="<?php echo get_stylesheet_directory_uri();?>/img/home.jpg" class="jarallax-img">
-          <h1 class="mv-title title">Molino Viejo</h1>
-          <h2>Golf and Country Club</h2>
-        </div>
-        <div class="mv-scroll-hint">
-          <span style="background: url(<?php echo get_stylesheet_directory_uri();?>/img/logo_bg.svg)"></span>
+          <h1 class="mv-title title">Proyectos de Investigación</h1>
         </div>
       </div>
     <?php else : ?>
       <div id="mv-featured-img" class="mv-scrollify" data-section-name="home">
-        <div class="mv-featured-img jarallax" style="height: 99vh;width: auto;">
-          <img src="<?php echo get_stylesheet_directory_uri();?>/img/home.jpg" class="jarallax-img">
+        <div class="mv-featured-img jarallax" style="height: 90vh;width: auto;">
+          <div class="trans"></div>
+          <?php if ( has_post_thumbnail() ) : ?>
+            <img src="<?php echo get_the_post_thumbnail_url();?>" class="jarallax-img">
+          <?php else : ?>
+            <img src="<?php echo get_stylesheet_directory_uri();?>/img/home.jpg" class="jarallax-img">
+          <?php endif;?>
           <h1 class="mv-title title"><?php the_title();?></h1>
-        </div>
-        <div class="mv-scroll-hint">
-          <span style="background: url(<?php echo get_stylesheet_directory_uri();?>/img/logo_bg.svg)"></span>
         </div>
       </div>
     <?php endif;?>

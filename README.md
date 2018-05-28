@@ -1,5 +1,5 @@
 # README #
-Molino Viejo Wordpress custom theme
+Proyectos de Investigacion UPAEP Wordpress custom theme, for demo purposes
 
 After cloning this repo run
 ```
@@ -27,7 +27,7 @@ gulp theme
 
 ### What is this repository for? ###
 
-* Molino Viejo Custom Wordpress Theme
+* Proyectos de Investigacion UPAEP Custom Wordpress Theme
 * Version 0.0.1
 
 ### How do I get set up? ###
@@ -42,4 +42,4 @@ gulp theme
 * Access using web browser and url localhost:8000
 
 ### Who do I talk to? ###
-* mauricio@nwm.mx
+* mauricioabisay.lopez@gmail.com

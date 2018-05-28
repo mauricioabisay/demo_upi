@@ -561,7 +561,7 @@ abstract class SimplePost {
 	*/
 	function meta_box_gen($post, $callback_args) {
 		$field = $callback_args['args']['field'];
-		if( isset($field->options) && sizeof($field->options) > 0 ) {
+		if( isset($field->options) && is_array($field->options) && sizeof($field->options) > 0 ) {
 			$search = array(
 				' ',
 				'á', 'é', 'í', 'ó', 'ú',

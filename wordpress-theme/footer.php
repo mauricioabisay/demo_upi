@@ -26,13 +26,12 @@
         <div class="wrapper"></div>
           <div class="col">
             <ul>
-                <a href="javascript:void(0)"><li>Molino Viejo 2018</li></a>
+                <a href="javascript:void(0)"><li>UPAEP 2018</li></a>
                 <a href="#"><li>Terminos y Condiciones</li></a>
             </ul>
           </div>
         
-      </div>
-        
+      </div>        
     </footer>
 </div>
 <?php wp_footer(); ?>
@@ -49,11 +48,13 @@
             }
         );
     });
-    <?php if(is_home()): ?>
     jQuery(document).ready(function () {
       jarallax(document.querySelectorAll('.jarallax'), {
           speed: 0.2
       });
+    });
+    <?php if(is_home()): ?>
+    jQuery(document).ready(function () {
       jQuery('.mv-default-content').each(function (index, element) {
         jQuery(element).addClass('active');
         jQuery.get(element.children[0].dataset.url,
